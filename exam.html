@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Exam - Exam Prep</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Exam Prep</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="exam.html" class="active">Mock Exam</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <!-- Start screen -->
+      <div id="start-screen" class="card">
+        <h2>Mock Exam</h2>
+        <p class="text-muted mb-3">Test your knowledge under exam conditions. You'll have a time limit and won't see answers until you submit.</p>
+
+        <div class="mb-3">
+          <label for="time-select"><strong>Time Limit:</strong></label>
+          <select id="time-select" style="padding: 0.5rem; margin-left: 0.5rem; border-radius: var(--radius); border: 1px solid var(--gray-300);">
+            <option value="900">15 minutes</option>
+            <option value="1800">30 minutes</option>
+            <option value="2700">45 minutes</option>
+            <option value="3600" selected>60 minutes</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label for="question-count"><strong>Questions:</strong></label>
+          <select id="question-count" style="padding: 0.5rem; margin-left: 0.5rem; border-radius: var(--radius); border: 1px solid var(--gray-300);">
+            <option value="10">10 questions</option>
+            <option value="15" selected>15 questions</option>
+            <option value="25">25 questions</option>
+            <option value="all">All questions</option>
+          </select>
+        </div>
+
+        <button class="btn btn-primary btn-lg" id="start-btn">Start Exam</button>
+      </div>
+
+      <!-- Exam screen -->
+      <div id="exam-screen" class="hidden">
+        <div class="card">
+          <div class="card-header">
+            <div class="timer" id="timer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              <span id="timer-display">60:00</span>
+            </div>
+            <button class="flag-btn" id="flag-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                <line x1="4" y1="22" x2="4" y2="15"/>
+              </svg>
+              <span>Flag</span>
+            </button>
+          </div>
+
+          <div class="question-nav" id="question-nav"></div>
+
+          <div id="question-container">
+            <p>Loading...</p>
+          </div>
+
+          <div class="question-actions">
+            <button class="btn btn-secondary" id="prev-btn" disabled>Previous</button>
+            <button class="btn btn-primary" id="next-exam-btn">Next</button>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem; text-align: center;">
+          <button class="btn btn-success btn-lg" id="submit-btn">Submit Exam</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Submit confirmation modal -->
+  <div class="modal-overlay" id="submit-modal">
+    <div class="modal">
+      <h3>Submit Exam?</h3>
+      <p id="submit-modal-text">You have answered X of Y questions. Are you sure you want to submit?</p>
+      <div class="modal-actions">
+        <button class="btn btn-secondary" id="cancel-submit">Continue Exam</button>
+        <button class="btn btn-success" id="confirm-submit">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+  <script src="js/progress.js"></script>
+  <script src="js/exam.js"></script>
+</body>
+</html>

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Exam Prep</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .admin-login {
+      max-width: 300px;
+      margin: 4rem auto;
+    }
+    .admin-login input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
+      font-size: 1rem;
+    }
+    .question-list {
+      margin-top: 1.5rem;
+    }
+    .question-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 1rem;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      margin-bottom: 0.5rem;
+      background: white;
+    }
+    .question-item:hover {
+      border-color: var(--gray-300);
+    }
+    .question-item-content {
+      flex: 1;
+      margin-right: 1rem;
+    }
+    .question-item-id {
+      font-size: 0.75rem;
+      color: var(--gray-500);
+      margin-bottom: 0.25rem;
+    }
+    .question-item-text {
+      font-weight: 500;
+    }
+    .question-item-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-shrink: 0;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .form-group textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+    .options-editor {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .option-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .option-row input[type="text"] {
+      flex: 1;
+    }
+    .option-row input[type="radio"] {
+      width: auto;
+    }
+    .form-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .alert {
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin-bottom: 1rem;
+    }
+    .alert-success {
+      background: var(--success-light);
+      color: var(--success);
+    }
+    .alert-error {
+      background: var(--error-light);
+      color: var(--error);
+    }
+    .search-box {
+      margin-bottom: 1rem;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Exam Prep</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="exam.html">Mock Exam</a>
+        <a href="admin.html" class="active">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <!-- Login screen -->
+      <div id="login-screen" class="card admin-login">
+        <h2 class="text-center mb-2">Admin Login</h2>
+        <input type="password" id="password-input" placeholder="Enter password" autofocus>
+        <button class="btn btn-primary" style="width: 100%;" id="login-btn">Login</button>
+        <p id="login-error" class="text-center text-muted" style="margin-top: 1rem; color: var(--error); display: none;">Incorrect password</p>
+      </div>
+
+      <!-- Admin panel -->
+      <div id="admin-panel" class="hidden">
+        <div class="card">
+          <div class="card-header">
+            <h2>Question Manager</h2>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" id="add-btn">Add Question</button>
+              <button class="btn btn-secondary" id="import-btn">Import JSON</button>
+              <button class="btn btn-secondary" id="export-btn">Export JSON</button>
+              <button class="btn btn-secondary" id="reset-btn">Reset to Default</button>
+              <input type="file" id="import-file" accept=".json" style="display: none;">
+            </div>
+          </div>
+
+          <div id="alert-container"></div>
+
+          <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search questions...">
+          </div>
+
+          <p class="text-muted mb-2"><span id="question-count">0</span> questions</p>
+
+          <div class="question-list" id="question-list"></div>
+        </div>
+
+        <!-- Question form modal -->
+        <div class="modal-overlay" id="form-modal">
+          <div class="modal" style="max-width: 600px; text-align: left; max-height: 90vh; overflow-y: auto;">
+            <h3 id="form-title">Add Question</h3>
+            <form id="question-form">
+              <input type="hidden" id="form-id">
+
+              <div class="form-group">
+                <label for="form-question">Question *</label>
+                <textarea id="form-question" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label>Answer Options * (select correct answer)</label>
+                <div class="options-editor" id="options-editor">
+                  <div class="option-row">
+                    <input type="radio" name="correct" value="0" required>
+                    <span>A.</span>
+                    <input type="text" id="option-0" placeholder="Option A" required>
+                  </div>
+                  <div class="option-row">
+                    <input type="radio" name="correct" value="1">
+                    <span>B.</span>
+                    <input type="text" id="option-1" placeholder="Option B" required>
+                  </div>
+                  <div class="option-row">
+                    <input type="radio" name="correct" value="2">
+                    <span>C.</span>
+                    <input type="text" id="option-2" placeholder="Option C" required>
+                  </div>
+                  <div class="option-row">
+                    <input type="radio" name="correct" value="3">
+                    <span>D.</span>
+                    <input type="text" id="option-3" placeholder="Option D" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-explanation">Explanation *</label>
+                <textarea id="form-explanation" required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="form-source-name">Source Name</label>
+                <input type="text" id="form-source-name" placeholder="e.g., NEC 2023 Article 210.8">
+              </div>
+
+              <div class="form-group">
+                <label for="form-source-url">Source URL</label>
+                <input type="url" id="form-source-url" placeholder="https://...">
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Question</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Delete confirmation modal -->
+        <div class="modal-overlay" id="delete-modal">
+          <div class="modal">
+            <h3>Delete Question?</h3>
+            <p>This action cannot be undone.</p>
+            <div class="modal-actions">
+              <button class="btn btn-secondary" id="cancel-delete">Cancel</button>
+              <button class="btn btn-danger" id="confirm-delete">Delete</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import modal -->
+        <div class="modal-overlay" id="import-modal">
+          <div class="modal" style="max-width: 500px; text-align: left;">
+            <h3>Import Questions</h3>
+            <p class="text-muted mb-2" id="import-preview">Select a JSON file to import.</p>
+            <div class="form-group">
+              <label>Import Mode</label>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                  <input type="radio" name="import-mode" value="merge" checked>
+                  <span><strong>Merge</strong> - Add new questions, skip duplicates (by ID)</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                  <input type="radio" name="import-mode" value="replace">
+                  <span><strong>Replace</strong> - Replace all existing questions</span>
+                </label>
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button class="btn btn-secondary" id="cancel-import">Cancel</button>
+              <button class="btn btn-primary" id="confirm-import" disabled>Import</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    const ADMIN_PASSWORD = 'admin123';
+    const STORAGE_KEY = 'exam_prep_questions';
+
+    const Admin = {
+      questions: [],
+      editingId: null,
+      deleteId: null,
+      importData: null,
+
+      init() {
+        // Check if already logged in this session
+        if (sessionStorage.getItem('admin_logged_in')) {
+          this.showAdminPanel();
+        }
+
+        this.bindLoginEvents();
+      },
+
+      bindLoginEvents() {
+        document.getElementById('login-btn').addEventListener('click', () => this.login());
+        document.getElementById('password-input').addEventListener('keypress', (e) => {
+          if (e.key === 'Enter') this.login();
+        });
+      },
+
+      login() {
+        const password = document.getElementById('password-input').value;
+        if (password === ADMIN_PASSWORD) {
+          sessionStorage.setItem('admin_logged_in', 'true');
+          this.showAdminPanel();
+        } else {
+          document.getElementById('login-error').style.display = 'block';
+          document.getElementById('password-input').value = '';
+          document.getElementById('password-input').focus();
+        }
+      },
+
+      showAdminPanel() {
+        document.getElementById('login-screen').classList.add('hidden');
+        document.getElementById('admin-panel').classList.remove('hidden');
+        this.loadQuestions();
+        this.bindAdminEvents();
+        this.renderQuestions();
+      },
+
+      loadQuestions() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+          this.questions = JSON.parse(stored);
+        } else {
+          // Copy from embedded data
+          this.questions = [...EXAM_DATA['journeyman-electrical'].questions];
+          this.saveQuestions();
+        }
+      },
+
+      saveQuestions() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.questions));
+      },
+
+      bindAdminEvents() {
+        // Add button
+        document.getElementById('add-btn').addEventListener('click', () => this.openForm());
+
+        // Export button
+        document.getElementById('export-btn').addEventListener('click', () => this.exportJson());
+
+        // Reset button
+        document.getElementById('reset-btn').addEventListener('click', () => this.resetToDefault());
+
+        // Import button and file input
+        document.getElementById('import-btn').addEventListener('click', () => {
+          document.getElementById('import-file').click();
+        });
+        document.getElementById('import-file').addEventListener('change', (e) => this.handleFileSelect(e));
+        document.getElementById('cancel-import').addEventListener('click', () => this.closeImportModal());
+        document.getElementById('confirm-import').addEventListener('click', () => this.importQuestions());
+
+        // Search
+        document.getElementById('search-input').addEventListener('input', (e) => {
+          this.renderQuestions(e.target.value);
+        });
+
+        // Form events
+        document.getElementById('question-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          this.saveQuestion();
+        });
+        document.getElementById('cancel-btn').addEventListener('click', () => this.closeForm());
+
+        // Delete events
+        document.getElementById('cancel-delete').addEventListener('click', () => this.closeDeleteModal());
+        document.getElementById('confirm-delete').addEventListener('click', () => this.deleteQuestion());
+
+        // Question list delegation
+        document.getElementById('question-list').addEventListener('click', (e) => {
+          const editBtn = e.target.closest('.edit-btn');
+          const deleteBtn = e.target.closest('.delete-btn');
+
+          if (editBtn) {
+            this.openForm(editBtn.dataset.id);
+          } else if (deleteBtn) {
+            this.openDeleteModal(deleteBtn.dataset.id);
+          }
+        });
+      },
+
+      renderQuestions(filter = '') {
+        const list = document.getElementById('question-list');
+        const filterLower = filter.toLowerCase();
+
+        const filtered = this.questions.filter(q =>
+          !filter ||
+          q.question.toLowerCase().includes(filterLower) ||
+          q.id.toLowerCase().includes(filterLower)
+        );
+
+        document.getElementById('question-count').textContent = this.questions.length;
+
+        if (filtered.length === 0) {
+          list.innerHTML = '<p class="text-muted">No questions found.</p>';
+          return;
+        }
+
+        list.innerHTML = filtered.map(q => `
+          <div class="question-item">
+            <div class="question-item-content">
+              <div class="question-item-id">${q.id}</div>
+              <div class="question-item-text">${q.question}</div>
+            </div>
+            <div class="question-item-actions">
+              <button class="btn btn-sm btn-secondary edit-btn" data-id="${q.id}">Edit</button>
+              <button class="btn btn-sm btn-danger delete-btn" data-id="${q.id}">Delete</button>
+            </div>
+          </div>
+        `).join('');
+      },
+
+      openForm(id = null) {
+        this.editingId = id;
+        const form = document.getElementById('question-form');
+        form.reset();
+
+        if (id) {
+          document.getElementById('form-title').textContent = 'Edit Question';
+          const q = this.questions.find(q => q.id === id);
+          if (q) {
+            document.getElementById('form-id').value = q.id;
+            document.getElementById('form-question').value = q.question;
+            q.options.forEach((opt, i) => {
+              document.getElementById(`option-${i}`).value = opt;
+            });
+            document.querySelector(`input[name="correct"][value="${q.correct}"]`).checked = true;
+            document.getElementById('form-explanation').value = q.explanation;
+            document.getElementById('form-source-name').value = q.source?.name || '';
+            document.getElementById('form-source-url').value = q.source?.url || '';
+          }
+        } else {
+          document.getElementById('form-title').textContent = 'Add Question';
+          document.getElementById('form-id').value = this.generateId();
+        }
+
+        document.getElementById('form-modal').classList.add('show');
+      },
+
+      closeForm() {
+        document.getElementById('form-modal').classList.remove('show');
+        this.editingId = null;
+      },
+
+      generateId() {
+        const nums = this.questions
+          .map(q => parseInt(q.id.replace('je-', ''), 10))
+          .filter(n => !isNaN(n));
+        const next = nums.length > 0 ? Math.max(...nums) + 1 : 1;
+        return `je-${String(next).padStart(3, '0')}`;
+      },
+
+      saveQuestion() {
+        const id = document.getElementById('form-id').value;
+        const question = {
+          id,
+          question: document.getElementById('form-question').value.trim(),
+          options: [
+            document.getElementById('option-0').value.trim(),
+            document.getElementById('option-1').value.trim(),
+            document.getElementById('option-2').value.trim(),
+            document.getElementById('option-3').value.trim()
+          ],
+          correct: parseInt(document.querySelector('input[name="correct"]:checked').value, 10),
+          explanation: document.getElementById('form-explanation').value.trim(),
+          source: {
+            name: document.getElementById('form-source-name').value.trim(),
+            url: document.getElementById('form-source-url').value.trim()
+          }
+        };
+
+        if (this.editingId) {
+          const index = this.questions.findIndex(q => q.id === this.editingId);
+          if (index !== -1) {
+            this.questions[index] = question;
+          }
+          this.showAlert('Question updated successfully', 'success');
+        } else {
+          this.questions.push(question);
+          this.showAlert('Question added successfully', 'success');
+        }
+
+        this.saveQuestions();
+        this.renderQuestions(document.getElementById('search-input').value);
+        this.closeForm();
+      },
+
+      openDeleteModal(id) {
+        this.deleteId = id;
+        document.getElementById('delete-modal').classList.add('show');
+      },
+
+      closeDeleteModal() {
+        document.getElementById('delete-modal').classList.remove('show');
+        this.deleteId = null;
+      },
+
+      deleteQuestion() {
+        this.questions = this.questions.filter(q => q.id !== this.deleteId);
+        this.saveQuestions();
+        this.renderQuestions(document.getElementById('search-input').value);
+        this.closeDeleteModal();
+        this.showAlert('Question deleted', 'success');
+      },
+
+      exportJson() {
+        const data = {
+          exam: "Journeyman Electrician",
+          version: "1.0",
+          passingScore: 70,
+          timeLimit: 3600,
+          questions: this.questions
+        };
+
+        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'journeyman-electrical.json';
+        a.click();
+        URL.revokeObjectURL(url);
+
+        this.showAlert('JSON exported - replace js/app.js EXAM_DATA to make permanent', 'success');
+      },
+
+      resetToDefault() {
+        if (confirm('Reset all questions to the original set? Your changes will be lost.')) {
+          localStorage.removeItem(STORAGE_KEY);
+          this.questions = [...EXAM_DATA['journeyman-electrical'].questions];
+          this.saveQuestions();
+          this.renderQuestions();
+          this.showAlert('Questions reset to default', 'success');
+        }
+      },
+
+      handleFileSelect(e) {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          try {
+            const data = JSON.parse(event.target.result);
+            const questions = data.questions || data;
+
+            if (!Array.isArray(questions)) {
+              throw new Error('Invalid format: expected questions array');
+            }
+
+            // Validate structure
+            const valid = questions.every(q =>
+              q.question && Array.isArray(q.options) && typeof q.correct === 'number'
+            );
+
+            if (!valid) {
+              throw new Error('Invalid question format');
+            }
+
+            this.importData = questions;
+            document.getElementById('import-preview').textContent =
+              `Found ${questions.length} questions ready to import.`;
+            document.getElementById('confirm-import').disabled = false;
+            document.getElementById('import-modal').classList.add('show');
+          } catch (err) {
+            this.showAlert('Invalid JSON file: ' + err.message, 'error');
+          }
+        };
+        reader.readAsText(file);
+
+        // Reset file input so same file can be selected again
+        e.target.value = '';
+      },
+
+      closeImportModal() {
+        document.getElementById('import-modal').classList.remove('show');
+        this.importData = null;
+        document.getElementById('confirm-import').disabled = true;
+      },
+
+      importQuestions() {
+        if (!this.importData) return;
+
+        const mode = document.querySelector('input[name="import-mode"]:checked').value;
+
+        if (mode === 'replace') {
+          this.questions = this.importData.map((q, i) => ({
+            ...q,
+            id: q.id || `je-${String(i + 1).padStart(3, '0')}`
+          }));
+          this.showAlert(`Replaced with ${this.questions.length} questions`, 'success');
+        } else {
+          // Merge mode - add new, skip duplicates
+          const existingIds = new Set(this.questions.map(q => q.id));
+          let added = 0;
+          let skipped = 0;
+
+          this.importData.forEach((q, i) => {
+            const id = q.id || this.generateId();
+            if (existingIds.has(id)) {
+              skipped++;
+            } else {
+              this.questions.push({ ...q, id });
+              existingIds.add(id);
+              added++;
+            }
+          });
+
+          this.showAlert(`Added ${added} questions, skipped ${skipped} duplicates`, 'success');
+        }
+
+        this.saveQuestions();
+        this.renderQuestions();
+        this.closeImportModal();
+      },
+
+      showAlert(message, type) {
+        const container = document.getElementById('alert-container');
+        container.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
+        setTimeout(() => {
+          container.innerHTML = '';
+        }, 3000);
+      }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => Admin.init());
+  </script>
+</body>
+</html>

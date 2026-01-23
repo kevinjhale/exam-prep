@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Prep - Electrician License Practice</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Exam Prep</a>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="exam.html">Mock Exam</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <section class="hero">
+        <h1>Electrician License Exam Prep</h1>
+        <p>Practice questions and timed mock exams for your journeyman's license</p>
+      </section>
+
+      <section class="exam-cards">
+        <div class="card exam-card" id="exam-card">
+          <h3>Journeyman Electrician</h3>
+          <p>NEC 2023 based practice questions covering electrical theory, code requirements, and safety.</p>
+          <div class="exam-stats" id="exam-stats">
+            <span class="stat">
+              <span class="stat-value" id="stat-questions">--</span> questions
+            </span>
+            <span class="stat">
+              <span class="stat-value" id="stat-attempted">0%</span> attempted
+            </span>
+            <span class="stat">
+              Best: <span class="stat-value" id="stat-best">--</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="mode-selection">
+        <a href="practice.html" class="card mode-card">
+          <h3>Practice Mode</h3>
+          <p>Study at your own pace with instant feedback and explanations.</p>
+          <span class="btn btn-primary">Start Practice</span>
+        </a>
+        <a href="exam.html" class="card mode-card">
+          <h3>Mock Exam</h3>
+          <p>Timed exam simulation to test your readiness.</p>
+          <span class="btn btn-secondary">Take Exam</span>
+        </a>
+      </section>
+
+      <section class="progress-section card" id="progress-section">
+        <h3>Your Progress</h3>
+        <div class="progress-bar-container">
+          <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
+        </div>
+        <div class="progress-stats">
+          <span id="progress-text">0 of 0 questions attempted</span>
+          <span id="accuracy-text">Accuracy: --</span>
+        </div>
+        <div style="margin-top: 1rem;">
+          <button class="btn btn-sm btn-secondary" id="reset-btn">Reset Progress</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script src="js/progress.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const examData = await App.loadExamData();
+      if (!examData) {
+        document.getElementById('exam-card').innerHTML = '<p>Error loading exam data.</p>';
+        return;
+      }
+
+      const totalQuestions = examData.questions.length;
+      const stats = Progress.getStats(App.currentExamId, totalQuestions);
+
+      // Update exam card stats
+      document.getElementById('stat-questions').textContent = totalQuestions;
+      document.getElementById('stat-attempted').textContent = stats.percentComplete + '%';
+      document.getElementById('stat-best').textContent = stats.bestScore !== null ? stats.bestScore + '%' : '--';
+
+      // Update progress section
+      document.getElementById('progress-bar').style.width = stats.percentComplete + '%';
+      document.getElementById('progress-text').textContent =
+        `${stats.questionsAttempted} of ${totalQuestions} questions attempted`;
+      document.getElementById('accuracy-text').textContent =
+        stats.accuracy > 0 ? `Accuracy: ${stats.accuracy}%` : 'Accuracy: --';
+
+      // Reset button
+      document.getElementById('reset-btn').addEventListener('click', () => {
+        if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+          Progress.reset(App.currentExamId);
+          location.reload();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
