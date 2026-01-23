@@ -157,4 +157,7 @@ const Practice = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => Practice.init());
+document.addEventListener('DOMContentLoaded', () => {
+  initVocabHandlers();
+  Practice.init();
+});

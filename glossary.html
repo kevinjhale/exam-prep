@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossary - Exam Prep</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="container">
+      <a href="index.html" class="logo">Exam Prep</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="practice.html">Practice</a>
+        <a href="exam.html">Mock Exam</a>
+        <a href="glossary.html" class="active">Glossary</a>
+        <a href="admin.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <div class="card">
+        <h1 class="mb-2">Electrical Terms Glossary</h1>
+        <p class="text-muted mb-3">Key vocabulary terms for the journeyman electrician exam. Click any term for details.</p>
+
+        <div class="glossary-search">
+          <input type="text" id="search-input" placeholder="Search terms..." aria-label="Search glossary">
+        </div>
+
+        <p class="text-muted mb-2"><span id="term-count">0</span> terms</p>
+
+        <div class="glossary-list" id="glossary-list"></div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const list = document.getElementById('glossary-list');
+      const searchInput = document.getElementById('search-input');
+      const countEl = document.getElementById('term-count');
+
+      // Sort terms alphabetically
+      const sortedTerms = Object.entries(GLOSSARY)
+        .sort((a, b) => a[1].term.localeCompare(b[1].term));
+
+      function renderGlossary(filter = '') {
+        const filterLower = filter.toLowerCase();
+        const filtered = sortedTerms.filter(([key, data]) =>
+          !filter ||
+          data.term.toLowerCase().includes(filterLower) ||
+          data.definition.toLowerCase().includes(filterLower)
+        );
+
+        countEl.textContent = filtered.length;
+
+        if (filtered.length === 0) {
+          list.innerHTML = '<p class="text-muted">No terms found.</p>';
+          return;
+        }
+
+        list.innerHTML = filtered.map(([key, data]) => `
+          <div class="glossary-item" data-term="${key}" tabindex="0">
+            <div class="glossary-item-term">${data.term}</div>
+            <div class="glossary-item-definition">${data.definition}</div>
+            <div class="glossary-item-reference">Reference: ${data.reference}</div>
+          </div>
+        `).join('');
+      }
+
+      renderGlossary();
+
+      // Search
+      searchInput.addEventListener('input', (e) => {
+        renderGlossary(e.target.value);
+      });
+
+      // Click to expand/highlight
+      list.addEventListener('click', (e) => {
+        const item = e.target.closest('.glossary-item');
+        if (!item) return;
+
+        // Toggle selected state
+        const wasSelected = item.classList.contains('selected');
+        document.querySelectorAll('.glossary-item.selected').forEach(el => el.classList.remove('selected'));
+
+        if (!wasSelected) {
+          item.classList.add('selected');
+          item.style.background = 'linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%)';
+          item.style.borderColor = 'var(--primary)';
+        } else {
+          item.style.background = '';
+          item.style.borderColor = '';
+        }
+      });
+
+      // Keyboard support
+      list.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const item = e.target.closest('.glossary-item');
+          if (item) item.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>

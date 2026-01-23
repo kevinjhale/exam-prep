@@ -288,4 +288,7 @@ const Exam = {
   }
 };
 
-document.addEventListener('DOMContentLoaded', () => Exam.init());
+document.addEventListener('DOMContentLoaded', () => {
+  initVocabHandlers();
+  Exam.init();
+});

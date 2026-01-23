@@ -729,6 +729,355 @@ const EXAM_DATA = {
   }
 };
 
+// Glossary of electrical terms
+const GLOSSARY = {
+  "ampacity": {
+    term: "Ampacity",
+    definition: "The maximum current, in amperes, that a conductor can carry continuously under conditions of use without exceeding its temperature rating.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "branch circuit": {
+    term: "Branch Circuit",
+    definition: "The circuit conductors between the final overcurrent device protecting the circuit and the outlet(s). It distributes power from the panelboard to utilization equipment.",
+    reference: "NEC Article 100, Article 210",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "circuit breaker": {
+    term: "Circuit Breaker",
+    definition: "A device designed to open and close a circuit by nonautomatic means and to open the circuit automatically on a predetermined overcurrent without damage to itself when properly applied within its rating.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "conductor": {
+    term: "Conductor",
+    definition: "A material, usually in the form of a wire, cable, or bus bar, suitable for carrying an electric current. Copper and aluminum are the most common conductor materials.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "conduit": {
+    term: "Conduit",
+    definition: "A raceway of circular cross section, such as EMT (Electrical Metallic Tubing), RMC (Rigid Metal Conduit), or PVC, used to protect and route electrical wiring.",
+    reference: "NEC Chapter 3",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "demand factor": {
+    term: "Demand Factor",
+    definition: "The ratio of the maximum demand of a system to the total connected load of the system. Used in load calculations to account for the fact that not all loads operate simultaneously.",
+    reference: "NEC Article 100, Article 220",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "dwelling unit": {
+    term: "Dwelling Unit",
+    definition: "A single unit providing complete and independent living facilities for one or more persons, including permanent provisions for living, sleeping, cooking, and sanitation.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "emt": {
+    term: "EMT (Electrical Metallic Tubing)",
+    definition: "A thin-walled, unthreaded steel raceway used to protect and route electrical conductors. Also called thin-wall conduit. Connected using compression or set-screw fittings.",
+    reference: "NEC Article 358",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "equipment grounding conductor": {
+    term: "Equipment Grounding Conductor (EGC)",
+    definition: "The conductive path that connects normally non-current-carrying metal parts of equipment to the system grounded conductor, the grounding electrode conductor, or both. Provides a low-impedance fault current path.",
+    reference: "NEC Article 100, Article 250.118",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "feeder": {
+    term: "Feeder",
+    definition: "All circuit conductors between the service equipment, the source of a separately derived system, or other power supply source and the final branch-circuit overcurrent device.",
+    reference: "NEC Article 100, Article 215",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "gfci": {
+    term: "GFCI (Ground-Fault Circuit Interrupter)",
+    definition: "A device intended for the protection of personnel that de-energizes a circuit when the current to ground exceeds a predetermined value (typically 5mA). Required in wet locations, bathrooms, kitchens, etc.",
+    reference: "NEC Article 100, Article 210.8",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "afci": {
+    term: "AFCI (Arc-Fault Circuit Interrupter)",
+    definition: "A device intended to provide protection from the effects of arc faults by recognizing characteristics unique to arcing and de-energizing the circuit when an arc fault is detected.",
+    reference: "NEC Article 100, Article 210.12",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "grounded conductor": {
+    term: "Grounded Conductor (Neutral)",
+    definition: "A system or circuit conductor that is intentionally grounded. In a typical residential system, this is the neutral conductor, identified by white or gray insulation.",
+    reference: "NEC Article 100, Article 200",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "grounding electrode conductor": {
+    term: "Grounding Electrode Conductor (GEC)",
+    definition: "A conductor used to connect the system grounded conductor or the equipment to a grounding electrode or to a point on the grounding electrode system.",
+    reference: "NEC Article 100, Article 250.62",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "overcurrent": {
+    term: "Overcurrent",
+    definition: "Any current in excess of the rated current of equipment or the ampacity of a conductor. It may result from overload, short circuit, or ground fault.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "overcurrent protection": {
+    term: "Overcurrent Protection",
+    definition: "A device such as a fuse or circuit breaker that opens a circuit when current exceeds a predetermined value, protecting conductors and equipment from damage.",
+    reference: "NEC Article 240",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "panelboard": {
+    term: "Panelboard",
+    definition: "A single panel or group of panel units designed for assembly in the form of a single panel, including buses and automatic overcurrent devices. May include switches for the control of light, heat, or power circuits.",
+    reference: "NEC Article 100, Article 408",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "raceway": {
+    term: "Raceway",
+    definition: "An enclosed channel of metal or nonmetallic materials designed expressly for holding wires, cables, or busbars. Includes conduit, wireways, and cable trays.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "receptacle": {
+    term: "Receptacle",
+    definition: "A contact device installed at the outlet for the connection of an attachment plug. A single receptacle is a single contact device; a duplex receptacle has two contact devices.",
+    reference: "NEC Article 100, Article 406",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "service": {
+    term: "Service",
+    definition: "The conductors and equipment for delivering electric energy from the serving utility to the wiring system of the premises served.",
+    reference: "NEC Article 100, Article 230",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "service drop": {
+    term: "Service Drop",
+    definition: "The overhead conductors between the utility electric supply system and the service point, typically from the utility pole to the building.",
+    reference: "NEC Article 100, Article 230.24",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "voltage drop": {
+    term: "Voltage Drop",
+    definition: "The reduction in voltage in an electrical circuit between the source and load. NEC recommends no more than 3% drop for branch circuits and 5% total for feeders plus branch circuits.",
+    reference: "NEC Article 210.19(A) Informational Note, Article 215.2(A)(4)",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "working space": {
+    term: "Working Space",
+    definition: "Clear space required around electrical equipment for safe operation and maintenance. Minimum depth varies by voltage: 3 feet for 0-150V, 3.5 feet for 151-600V.",
+    reference: "NEC Article 110.26",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "bonding": {
+    term: "Bonding",
+    definition: "The permanent joining of metallic parts to form an electrically conductive path that ensures electrical continuity and the capacity to conduct safely any current likely to be imposed.",
+    reference: "NEC Article 100, Article 250.90",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "bonding jumper": {
+    term: "Bonding Jumper",
+    definition: "A reliable conductor to ensure the required electrical conductivity between metal parts required to be electrically connected.",
+    reference: "NEC Article 100, Article 250.102",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "continuous load": {
+    term: "Continuous Load",
+    definition: "A load where the maximum current is expected to continue for 3 hours or more. Conductors and overcurrent devices must be sized at 125% of the continuous load.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "neutral": {
+    term: "Neutral Conductor",
+    definition: "The conductor connected to the neutral point of a system that is intended to carry current under normal conditions. In residential systems, the white or gray wire.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "direct burial": {
+    term: "Direct Burial",
+    definition: "A wiring method where cables are installed directly in the earth without additional protection. Minimum burial depths are specified in NEC Table 300.5.",
+    reference: "NEC Article 300.5",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "burial depth": {
+    term: "Burial Depth",
+    definition: "The minimum depth at which cables or conduits must be installed underground. Varies based on wiring method and location (under driveways, buildings, etc.).",
+    reference: "NEC Table 300.5",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "box fill": {
+    term: "Box Fill",
+    definition: "The calculation to determine if an electrical box has adequate volume for the conductors, devices, and fittings it contains. Each conductor size has a specified volume allowance.",
+    reference: "NEC Article 314.16",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "full load current": {
+    term: "Full Load Current (FLC)",
+    definition: "The current required to produce full-load torque at the motor's rated speed. Used for sizing motor branch circuit conductors and overcurrent protection.",
+    reference: "NEC Article 430, Tables 430.248-430.250",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "power factor": {
+    term: "Power Factor",
+    definition: "The ratio of real power (watts) to apparent power (volt-amperes) in an AC circuit. A power factor of 1.0 means voltage and current are in phase (purely resistive load).",
+    reference: "Electrical Theory",
+    url: ""
+  },
+  "impedance": {
+    term: "Impedance",
+    definition: "The total opposition to current flow in an AC circuit, measured in ohms. Includes both resistance and reactance (inductive and capacitive).",
+    reference: "Electrical Theory",
+    url: ""
+  },
+  "resistance": {
+    term: "Resistance",
+    definition: "Opposition to current flow in a circuit, measured in ohms. Determined by conductor material, length, and cross-sectional area. Causes voltage drop and power dissipation as heat.",
+    reference: "Electrical Theory (Ohm's Law)",
+    url: ""
+  },
+  "capacitive reactance": {
+    term: "Capacitive Reactance",
+    definition: "Opposition to AC current flow caused by capacitance, measured in ohms. Decreases as frequency increases. Xc = 1/(2πfC).",
+    reference: "Electrical Theory",
+    url: ""
+  },
+  "small appliance circuit": {
+    term: "Small Appliance Circuit",
+    definition: "A 20-amp branch circuit required in kitchens, dining rooms, and similar areas to serve receptacle outlets for portable appliances. Minimum of two required per dwelling.",
+    reference: "NEC Article 210.52(B)",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "tamper-resistant": {
+    term: "Tamper-Resistant Receptacle",
+    definition: "A receptacle with a built-in shutter mechanism that prevents insertion of foreign objects. Required in all dwelling unit locations for 15 and 20-amp, 125V receptacles.",
+    reference: "NEC Article 406.12",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "disconnect": {
+    term: "Disconnecting Means",
+    definition: "A device, or group of devices, by which the conductors of a circuit can be disconnected from their source of supply. Required for services, motors, and other equipment.",
+    reference: "NEC Article 100",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "rmc": {
+    term: "RMC (Rigid Metal Conduit)",
+    definition: "A thick-walled, threaded metal raceway providing excellent mechanical protection. Permitted in all locations including direct burial and concrete encasement.",
+    reference: "NEC Article 344",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "thwn": {
+    term: "THWN/THHN",
+    definition: "Common insulation types for building wire. THWN is rated for wet and dry locations at 75°C. THHN is rated for dry locations at 90°C. THWN-2/THHN is dual-rated.",
+    reference: "NEC Table 310.4(1)",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  },
+  "awg": {
+    term: "AWG (American Wire Gauge)",
+    definition: "The standard system for measuring wire diameter in North America. Lower numbers indicate larger wire sizes. Common sizes: #14 (15A), #12 (20A), #10 (30A).",
+    reference: "NEC Chapter 9",
+    url: "https://www.nfpa.org/codes-and-standards/nfpa-70-standard-development/70"
+  }
+};
+
+// Build a sorted array of glossary terms for matching (longest first to avoid partial matches)
+const GLOSSARY_TERMS = Object.keys(GLOSSARY).sort((a, b) => b.length - a.length);
+
+// Highlight vocabulary terms in text
+function highlightVocabTerms(text) {
+  let result = text;
+  const matched = new Set();
+
+  for (const termKey of GLOSSARY_TERMS) {
+    // Create case-insensitive regex that matches whole words/phrases
+    const regex = new RegExp(`\\b(${termKey.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})\\b`, 'gi');
+
+    result = result.replace(regex, (match) => {
+      const lowerMatch = match.toLowerCase();
+      if (matched.has(lowerMatch)) return match; // Already highlighted
+      matched.add(lowerMatch);
+      return `<span class="vocab-term" data-term="${termKey}" tabindex="0">${match}</span>`;
+    });
+  }
+
+  return result;
+}
+
+// Show vocabulary definition panel
+function showVocabDefinition(termKey) {
+  const term = GLOSSARY[termKey];
+  if (!term) return;
+
+  // Remove any existing panel
+  hideVocabDefinition();
+
+  // Mark term as active
+  document.querySelectorAll('.vocab-term').forEach(el => el.classList.remove('active'));
+  const activeTerm = document.querySelector(`.vocab-term[data-term="${termKey}"]`);
+  if (activeTerm) activeTerm.classList.add('active');
+
+  // Create and insert panel
+  const panel = document.createElement('div');
+  panel.className = 'vocab-panel show';
+  panel.id = 'vocab-panel';
+
+  const refLink = term.url
+    ? `<a href="${term.url}" target="_blank" rel="noopener">${term.reference}</a>`
+    : term.reference;
+
+  panel.innerHTML = `
+    <div class="vocab-panel-header">
+      <span class="vocab-panel-term">${term.term}</span>
+      <button class="vocab-panel-close" aria-label="Close definition">&times;</button>
+    </div>
+    <p class="vocab-panel-definition">${term.definition}</p>
+    <p class="vocab-panel-reference">Reference: ${refLink}</p>
+  `;
+
+  // Insert after question text or feedback
+  const feedback = document.getElementById('feedback');
+  const questionText = document.querySelector('.question-text');
+  const insertAfter = (feedback && feedback.classList.contains('show')) ? feedback : questionText;
+
+  if (insertAfter) {
+    insertAfter.parentNode.insertBefore(panel, insertAfter.nextSibling);
+  }
+
+  // Close button handler
+  panel.querySelector('.vocab-panel-close').addEventListener('click', hideVocabDefinition);
+}
+
+// Hide vocabulary definition panel
+function hideVocabDefinition() {
+  const panel = document.getElementById('vocab-panel');
+  if (panel) panel.remove();
+  document.querySelectorAll('.vocab-term.active').forEach(el => el.classList.remove('active'));
+}
+
+// Initialize vocab term click handlers
+function initVocabHandlers() {
+  document.addEventListener('click', (e) => {
+    const term = e.target.closest('.vocab-term');
+    if (term) {
+      e.preventDefault();
+      const termKey = term.dataset.term;
+      showVocabDefinition(termKey);
+    } else if (!e.target.closest('.vocab-panel')) {
+      // Click outside panel closes it
+      hideVocabDefinition();
+    }
+  });
+
+  // Keyboard support
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' && e.target.classList.contains('vocab-term')) {
+      e.preventDefault();
+      showVocabDefinition(e.target.dataset.term);
+    } else if (e.key === 'Escape') {
+      hideVocabDefinition();
+    }
+  });
+}
+
 const App = {
   examData: null,
   currentExamId: 'journeyman-electrical',
@@ -783,14 +1132,18 @@ function renderQuestion(question, questionIndex, totalQuestions, containerId = '
   const container = document.getElementById(containerId);
   if (!container) return;
 
+  // Highlight vocab terms in question and options
+  const highlightedQuestion = highlightVocabTerms(question.question);
+  const highlightedOptions = question.options.map(opt => highlightVocabTerms(opt));
+
   container.innerHTML = `
     <div class="question-header">
       <span class="question-number">Question ${questionIndex + 1} of ${totalQuestions}</span>
       <span class="question-id">${question.id}</span>
     </div>
-    <p class="question-text">${question.question}</p>
+    <p class="question-text">${highlightedQuestion}</p>
     <div class="options" role="radiogroup" aria-label="Answer options">
-      ${question.options.map((option, i) => `
+      ${highlightedOptions.map((option, i) => `
         <button class="option" data-index="${i}" role="radio" aria-checked="false" tabindex="0">
           <span class="option-letter">${LETTERS[i]}</span>
           <span class="option-text">${option}</span>
@@ -799,6 +1152,9 @@ function renderQuestion(question, questionIndex, totalQuestions, containerId = '
     </div>
     <div class="feedback" id="feedback"></div>
   `;
+
+  // Hide any open vocab panel when switching questions
+  hideVocabDefinition();
 }
 
 // Show feedback after answering
@@ -806,15 +1162,21 @@ function showFeedback(isCorrect, question, selectedIndex) {
   const feedback = document.getElementById('feedback');
   if (!feedback) return;
 
+  // Hide vocab panel first
+  hideVocabDefinition();
+
   feedback.className = `feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
 
   const sourceLink = question.source?.url
     ? `<a href="${question.source.url}" target="_blank" rel="noopener">${question.source.name}</a>`
     : question.source?.name || 'General knowledge';
 
+  // Highlight vocab terms in explanation
+  const highlightedExplanation = highlightVocabTerms(question.explanation);
+
   feedback.innerHTML = `
     <div class="feedback-header">${isCorrect ? 'Correct!' : 'Incorrect'}</div>
-    <p class="feedback-explanation">${question.explanation}</p>
+    <p class="feedback-explanation">${highlightedExplanation}</p>
     <p class="feedback-source">Source: ${sourceLink}</p>
   `;
 

@@ -801,3 +801,142 @@ button:focus-visible,
   outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
+
+/* Vocabulary terms */
+.vocab-term {
+  color: var(--primary);
+  background: #eff6ff;
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  cursor: help;
+  border-bottom: 1px dashed var(--primary);
+  transition: all 0.2s;
+}
+
+.vocab-term:hover {
+  background: #dbeafe;
+}
+
+.vocab-term.active {
+  background: var(--primary);
+  color: white;
+  border-bottom-color: transparent;
+}
+
+/* Vocabulary definition panel */
+.vocab-panel {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0e7ff 100%);
+  border: 1px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1rem;
+  display: none;
+  animation: slideDown 0.2s ease-out;
+}
+
+.vocab-panel.show {
+  display: block;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vocab-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.vocab-panel-term {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.vocab-panel-close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--gray-500);
+  padding: 0;
+  line-height: 1;
+}
+
+.vocab-panel-close:hover {
+  color: var(--gray-700);
+}
+
+.vocab-panel-definition {
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.vocab-panel-reference {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+}
+
+.vocab-panel-reference a {
+  color: var(--primary);
+}
+
+/* Glossary page styles */
+.glossary-search {
+  margin-bottom: 1.5rem;
+}
+
+.glossary-search input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.glossary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.glossary-item {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.glossary-item:hover {
+  border-color: var(--primary);
+  background: var(--gray-50);
+}
+
+.glossary-item-term {
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.glossary-item-definition {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.glossary-item-reference {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 0.5rem;
+}
