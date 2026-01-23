@@ -1,0 +1,112 @@
+{
+  "id": "chemistry-101",
+  "name": "Chemistry 101",
+  "description": "Basic chemistry concepts for high school students covering atoms, elements, and chemical reactions.",
+  "version": "1.0",
+  "passingScore": 70,
+  "timeLimit": 1800,
+  "questions": [
+    {
+      "id": "ch-001",
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Go", "Gd", "Au", "Ag"],
+      "correct": 2,
+      "explanation": "Gold's chemical symbol is Au, derived from the Latin word 'aurum' meaning gold. Ag is silver (argentum), Gd is gadolinium, and Go is not a valid element symbol.",
+      "source": { "name": "Periodic Table", "url": "" }
+    },
+    {
+      "id": "ch-002",
+      "question": "How many protons does a carbon atom have?",
+      "options": ["4", "6", "8", "12"],
+      "correct": 1,
+      "explanation": "Carbon has an atomic number of 6, which means it has 6 protons in its nucleus. The atomic number always equals the number of protons.",
+      "source": { "name": "Atomic Structure", "url": "" }
+    },
+    {
+      "id": "ch-003",
+      "question": "What type of bond forms when electrons are shared between atoms?",
+      "options": ["Ionic bond", "Covalent bond", "Metallic bond", "Hydrogen bond"],
+      "correct": 1,
+      "explanation": "A covalent bond forms when two atoms share one or more pairs of electrons. Ionic bonds involve electron transfer, metallic bonds occur in metals, and hydrogen bonds are weak intermolecular forces.",
+      "source": { "name": "Chemical Bonding", "url": "" }
+    },
+    {
+      "id": "ch-004",
+      "question": "What is the pH of a neutral solution?",
+      "options": ["0", "7", "10", "14"],
+      "correct": 1,
+      "explanation": "A neutral solution has a pH of 7. Solutions with pH less than 7 are acidic, and solutions with pH greater than 7 are basic (alkaline). The pH scale ranges from 0 to 14.",
+      "source": { "name": "Acids and Bases", "url": "" }
+    },
+    {
+      "id": "ch-005",
+      "question": "What is the molecular formula for water?",
+      "options": ["HO", "H2O", "H2O2", "OH"],
+      "correct": 1,
+      "explanation": "Water's molecular formula is H2O, meaning each molecule contains 2 hydrogen atoms and 1 oxygen atom. H2O2 is hydrogen peroxide, and OH is a hydroxide ion.",
+      "source": { "name": "Molecular Formulas", "url": "" }
+    }
+  ],
+  "glossary": {
+    "atom": {
+      "term": "Atom",
+      "definition": "The smallest unit of matter that retains all the chemical properties of an element. Atoms consist of protons, neutrons, and electrons.",
+      "reference": "Atomic Theory",
+      "url": ""
+    },
+    "element": {
+      "term": "Element",
+      "definition": "A pure substance made of only one type of atom. There are 118 known elements organized in the periodic table.",
+      "reference": "Periodic Table",
+      "url": ""
+    },
+    "molecule": {
+      "term": "Molecule",
+      "definition": "Two or more atoms bonded together. Molecules can be made of the same element (O2) or different elements (H2O).",
+      "reference": "Molecular Structure",
+      "url": ""
+    },
+    "proton": {
+      "term": "Proton",
+      "definition": "A positively charged particle found in the nucleus of an atom. The number of protons determines the element's atomic number.",
+      "reference": "Atomic Structure",
+      "url": ""
+    },
+    "electron": {
+      "term": "Electron",
+      "definition": "A negatively charged particle that orbits the nucleus of an atom. Electrons are involved in chemical bonding.",
+      "reference": "Atomic Structure",
+      "url": ""
+    },
+    "neutron": {
+      "term": "Neutron",
+      "definition": "A particle with no charge found in the nucleus of an atom. Neutrons help hold the nucleus together.",
+      "reference": "Atomic Structure",
+      "url": ""
+    },
+    "covalent bond": {
+      "term": "Covalent Bond",
+      "definition": "A chemical bond formed when two atoms share electrons. Common in molecules like water (H2O) and carbon dioxide (CO2).",
+      "reference": "Chemical Bonding",
+      "url": ""
+    },
+    "ionic bond": {
+      "term": "Ionic Bond",
+      "definition": "A chemical bond formed when one atom transfers electrons to another atom, creating positive and negative ions that attract each other.",
+      "reference": "Chemical Bonding",
+      "url": ""
+    },
+    "ph": {
+      "term": "pH",
+      "definition": "A scale from 0-14 that measures how acidic or basic a solution is. pH 7 is neutral, below 7 is acidic, above 7 is basic.",
+      "reference": "Acids and Bases",
+      "url": ""
+    },
+    "periodic table": {
+      "term": "Periodic Table",
+      "definition": "A chart organizing all known elements by atomic number and chemical properties. Elements in the same column have similar properties.",
+      "reference": "Chemistry Fundamentals",
+      "url": ""
+    }
+  }
+}

@@ -3,8 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exam Prep - Electrician License Practice</title>
+  <title>Exam Prep - Study Smarter</title>
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .exam-list {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .exam-option {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+    }
+    .exam-option:hover {
+      border-color: var(--gray-300);
+    }
+    .exam-option.selected {
+      border-color: var(--primary);
+      background: var(--primary-light);
+    }
+    .exam-option input {
+      margin-right: 1rem;
+      width: 18px;
+      height: 18px;
+    }
+    .exam-option-content {
+      flex: 1;
+    }
+    .exam-option-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .exam-option-desc {
+      color: var(--gray-600);
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+    .exam-option-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+    .no-exams {
+      text-align: center;
+      padding: 2rem;
+      color: var(--gray-500);
+    }
+  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -25,25 +78,14 @@
   <main id="main">
     <div class="container">
       <section class="hero">
-        <h1>Electrician License Exam Prep</h1>
-        <p>Practice questions and timed mock exams for your journeyman's license</p>
+        <h1>Exam Prep</h1>
+        <p>Practice questions and timed mock exams for any subject</p>
       </section>
 
-      <section class="exam-cards">
-        <div class="card exam-card" id="exam-card">
-          <h3>Journeyman Electrician</h3>
-          <p>NEC 2023 based practice questions covering electrical theory, code requirements, and safety.</p>
-          <div class="exam-stats" id="exam-stats">
-            <span class="stat">
-              <span class="stat-value" id="stat-questions">--</span> questions
-            </span>
-            <span class="stat">
-              <span class="stat-value" id="stat-attempted">0%</span> attempted
-            </span>
-            <span class="stat">
-              Best: <span class="stat-value" id="stat-best">--</span>
-            </span>
-          </div>
+      <section class="card" id="exam-selector-section">
+        <h2 class="mb-2">Select an Exam</h2>
+        <div class="exam-list" id="exam-list">
+          <p class="text-muted">Loading exams...</p>
         </div>
       </section>
 
@@ -62,6 +104,7 @@
 
       <section class="progress-section card" id="progress-section">
         <h3>Your Progress</h3>
+        <p class="text-muted mb-2" id="selected-exam-name">No exam selected</p>
         <div class="progress-bar-container">
           <div class="progress-bar" id="progress-bar" style="width: 0%"></div>
         </div>
@@ -79,33 +122,82 @@
   <script src="js/app.js"></script>
   <script src="js/progress.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', async () => {
-      const examData = await App.loadExamData();
-      if (!examData) {
-        document.getElementById('exam-card').innerHTML = '<p>Error loading exam data.</p>';
+    document.addEventListener('DOMContentLoaded', () => {
+      const exams = ExamManager.list();
+      const currentId = ExamManager.getCurrentId();
+      const examList = document.getElementById('exam-list');
+
+      if (exams.length === 0) {
+        examList.innerHTML = `
+          <div class="no-exams">
+            <p>No exams available.</p>
+            <a href="admin.html" class="btn btn-primary">Create an Exam</a>
+          </div>
+        `;
         return;
       }
 
-      const totalQuestions = examData.questions.length;
-      const stats = Progress.getStats(App.currentExamId, totalQuestions);
+      function renderExamList() {
+        const selectedId = ExamManager.getCurrentId();
 
-      // Update exam card stats
-      document.getElementById('stat-questions').textContent = totalQuestions;
-      document.getElementById('stat-attempted').textContent = stats.percentComplete + '%';
-      document.getElementById('stat-best').textContent = stats.bestScore !== null ? stats.bestScore + '%' : '--';
+        examList.innerHTML = exams.map(exam => {
+          const stats = Progress.getStats(exam.id, exam.questionCount);
+          const isSelected = exam.id === selectedId;
 
-      // Update progress section
-      document.getElementById('progress-bar').style.width = stats.percentComplete + '%';
-      document.getElementById('progress-text').textContent =
-        `${stats.questionsAttempted} of ${totalQuestions} questions attempted`;
-      document.getElementById('accuracy-text').textContent =
-        stats.accuracy > 0 ? `Accuracy: ${stats.accuracy}%` : 'Accuracy: --';
+          return `
+            <label class="exam-option ${isSelected ? 'selected' : ''}">
+              <input type="radio" name="exam" value="${exam.id}" ${isSelected ? 'checked' : ''}>
+              <div class="exam-option-content">
+                <div class="exam-option-name">${exam.name}</div>
+                <div class="exam-option-desc">${exam.description || 'No description'}</div>
+                <div class="exam-option-stats">
+                  <span>${exam.questionCount} questions</span>
+                  <span>${exam.glossaryCount} terms</span>
+                  <span>${stats.percentComplete}% complete</span>
+                  ${stats.bestScore !== null ? `<span>Best: ${stats.bestScore}%</span>` : ''}
+                </div>
+              </div>
+            </label>
+          `;
+        }).join('');
+
+        // Update progress section for selected exam
+        updateProgress(selectedId);
+      }
+
+      function updateProgress(examId) {
+        const exam = ExamManager.get(examId);
+        if (!exam) return;
+
+        const totalQuestions = exam.questions.length;
+        const stats = Progress.getStats(examId, totalQuestions);
+
+        document.getElementById('selected-exam-name').textContent = exam.name;
+        document.getElementById('progress-bar').style.width = stats.percentComplete + '%';
+        document.getElementById('progress-text').textContent =
+          `${stats.questionsAttempted} of ${totalQuestions} questions attempted`;
+        document.getElementById('accuracy-text').textContent =
+          stats.accuracy > 0 ? `Accuracy: ${stats.accuracy}%` : 'Accuracy: --';
+      }
+
+      // Initial render
+      renderExamList();
+
+      // Handle exam selection
+      examList.addEventListener('change', (e) => {
+        if (e.target.name === 'exam') {
+          ExamManager.setCurrentId(e.target.value);
+          renderExamList();
+        }
+      });
 
       // Reset button
       document.getElementById('reset-btn').addEventListener('click', () => {
-        if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
-          Progress.reset(App.currentExamId);
-          location.reload();
+        const currentId = ExamManager.getCurrentId();
+        const exam = ExamManager.get(currentId);
+        if (confirm(`Reset all progress for "${exam.name}"? This cannot be undone.`)) {
+          Progress.reset(currentId);
+          renderExamList();
         }
       });
     });

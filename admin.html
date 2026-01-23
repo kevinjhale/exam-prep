@@ -18,10 +18,62 @@
       border-radius: var(--radius);
       font-size: 1rem;
     }
-    .question-list {
-      margin-top: 1.5rem;
+    .exam-selector {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--gray-200);
     }
-    .question-item {
+    .exam-selector select {
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--gray-300);
+      border-radius: var(--radius);
+      font-size: 1rem;
+      min-width: 200px;
+    }
+    .exam-info {
+      font-size: 0.875rem;
+      color: var(--gray-500);
+      margin-left: auto;
+    }
+    .tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--gray-200);
+    }
+    .tab-btn {
+      padding: 0.75rem 1.5rem;
+      background: none;
+      border: none;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gray-500);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover {
+      color: var(--gray-700);
+    }
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .item-list {
+      margin-top: 1rem;
+    }
+    .item-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -31,22 +83,27 @@
       margin-bottom: 0.5rem;
       background: white;
     }
-    .question-item:hover {
+    .item-row:hover {
       border-color: var(--gray-300);
     }
-    .question-item-content {
+    .item-content {
       flex: 1;
       margin-right: 1rem;
     }
-    .question-item-id {
+    .item-id {
       font-size: 0.75rem;
       color: var(--gray-500);
       margin-bottom: 0.25rem;
     }
-    .question-item-text {
+    .item-title {
       font-weight: 500;
     }
-    .question-item-actions {
+    .item-subtitle {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      margin-top: 0.25rem;
+    }
+    .item-actions {
       display: flex;
       gap: 0.5rem;
       flex-shrink: 0;
@@ -117,6 +174,12 @@
       border-radius: var(--radius);
       font-size: 1rem;
     }
+    .toolbar {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -148,38 +211,92 @@
       <!-- Admin panel -->
       <div id="admin-panel" class="hidden">
         <div class="card">
-          <div class="card-header">
-            <h2>Question Manager</h2>
-            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-              <button class="btn btn-primary" id="add-btn">Add Question</button>
-              <button class="btn btn-secondary" id="import-btn">Import JSON</button>
-              <button class="btn btn-secondary" id="export-btn">Export JSON</button>
-              <button class="btn btn-secondary" id="reset-btn">Reset to Default</button>
-              <input type="file" id="import-file" accept=".json" style="display: none;">
-            </div>
+          <h2 style="margin-bottom: 1rem;">Exam Manager</h2>
+
+          <!-- Exam selector -->
+          <div class="exam-selector">
+            <label for="exam-select"><strong>Current Exam:</strong></label>
+            <select id="exam-select"></select>
+            <button class="btn btn-sm btn-secondary" id="new-exam-btn">New Exam</button>
+            <button class="btn btn-sm btn-danger" id="delete-exam-btn">Delete Exam</button>
+            <span class="exam-info" id="exam-info"></span>
+          </div>
+
+          <!-- Tabs -->
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="questions">Questions</button>
+            <button class="tab-btn" data-tab="glossary">Glossary</button>
+            <button class="tab-btn" data-tab="settings">Settings</button>
           </div>
 
           <div id="alert-container"></div>
 
-          <div class="search-box">
-            <input type="text" id="search-input" placeholder="Search questions...">
+          <!-- Questions Tab -->
+          <div class="tab-content active" id="tab-questions">
+            <div class="toolbar">
+              <button class="btn btn-primary" id="add-question-btn">Add Question</button>
+              <button class="btn btn-secondary" id="import-btn">Import Package</button>
+              <button class="btn btn-secondary" id="export-btn">Export Package</button>
+              <button class="btn btn-secondary" id="reset-btn">Reset to Default</button>
+              <input type="file" id="import-file" accept=".json" style="display: none;">
+            </div>
+
+            <div class="search-box">
+              <input type="text" id="question-search" placeholder="Search questions...">
+            </div>
+
+            <p class="text-muted mb-2"><span id="question-count">0</span> questions</p>
+            <div class="item-list" id="question-list"></div>
           </div>
 
-          <p class="text-muted mb-2"><span id="question-count">0</span> questions</p>
+          <!-- Glossary Tab -->
+          <div class="tab-content" id="tab-glossary">
+            <div class="toolbar">
+              <button class="btn btn-primary" id="add-term-btn">Add Term</button>
+            </div>
 
-          <div class="question-list" id="question-list"></div>
+            <div class="search-box">
+              <input type="text" id="glossary-search" placeholder="Search glossary terms...">
+            </div>
+
+            <p class="text-muted mb-2"><span id="glossary-count">0</span> terms</p>
+            <div class="item-list" id="glossary-list"></div>
+          </div>
+
+          <!-- Settings Tab -->
+          <div class="tab-content" id="tab-settings">
+            <form id="settings-form">
+              <div class="form-group">
+                <label for="settings-name">Exam Name</label>
+                <input type="text" id="settings-name" required>
+              </div>
+              <div class="form-group">
+                <label for="settings-description">Description</label>
+                <textarea id="settings-description"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="settings-passing">Passing Score (%)</label>
+                <input type="number" id="settings-passing" min="1" max="100" value="70">
+              </div>
+              <div class="form-group">
+                <label for="settings-time">Time Limit (seconds)</label>
+                <input type="number" id="settings-time" min="60" value="3600">
+              </div>
+              <button type="submit" class="btn btn-primary">Save Settings</button>
+            </form>
+          </div>
         </div>
 
         <!-- Question form modal -->
-        <div class="modal-overlay" id="form-modal">
+        <div class="modal-overlay" id="question-modal">
           <div class="modal" style="max-width: 600px; text-align: left; max-height: 90vh; overflow-y: auto;">
-            <h3 id="form-title">Add Question</h3>
+            <h3 id="question-form-title">Add Question</h3>
             <form id="question-form">
-              <input type="hidden" id="form-id">
+              <input type="hidden" id="question-form-id">
 
               <div class="form-group">
-                <label for="form-question">Question *</label>
-                <textarea id="form-question" required></textarea>
+                <label for="question-form-text">Question *</label>
+                <textarea id="question-form-text" required></textarea>
               </div>
 
               <div class="form-group">
@@ -209,23 +326,79 @@
               </div>
 
               <div class="form-group">
-                <label for="form-explanation">Explanation *</label>
-                <textarea id="form-explanation" required></textarea>
+                <label for="question-form-explanation">Explanation *</label>
+                <textarea id="question-form-explanation" required></textarea>
               </div>
 
               <div class="form-group">
-                <label for="form-source-name">Source Name</label>
-                <input type="text" id="form-source-name" placeholder="e.g., NEC 2023 Article 210.8">
+                <label for="question-form-source-name">Source Name</label>
+                <input type="text" id="question-form-source-name" placeholder="e.g., NEC 2023 Article 210.8">
               </div>
 
               <div class="form-group">
-                <label for="form-source-url">Source URL</label>
-                <input type="url" id="form-source-url" placeholder="https://...">
+                <label for="question-form-source-url">Source URL</label>
+                <input type="url" id="question-form-source-url" placeholder="https://...">
               </div>
 
               <div class="form-actions">
-                <button type="button" class="btn btn-secondary" id="cancel-btn">Cancel</button>
+                <button type="button" class="btn btn-secondary" id="question-cancel-btn">Cancel</button>
                 <button type="submit" class="btn btn-primary">Save Question</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Glossary term form modal -->
+        <div class="modal-overlay" id="glossary-modal">
+          <div class="modal" style="max-width: 500px; text-align: left; max-height: 90vh; overflow-y: auto;">
+            <h3 id="glossary-form-title">Add Term</h3>
+            <form id="glossary-form">
+              <input type="hidden" id="glossary-form-key">
+
+              <div class="form-group">
+                <label for="glossary-form-term">Term *</label>
+                <input type="text" id="glossary-form-term" required placeholder="e.g., GFCI">
+              </div>
+
+              <div class="form-group">
+                <label for="glossary-form-definition">Definition *</label>
+                <textarea id="glossary-form-definition" required placeholder="The meaning of this term..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="glossary-form-reference">Reference</label>
+                <input type="text" id="glossary-form-reference" placeholder="e.g., NEC Article 210.8">
+              </div>
+
+              <div class="form-group">
+                <label for="glossary-form-url">Reference URL</label>
+                <input type="url" id="glossary-form-url" placeholder="https://...">
+              </div>
+
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="glossary-cancel-btn">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save Term</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- New exam modal -->
+        <div class="modal-overlay" id="new-exam-modal">
+          <div class="modal" style="max-width: 400px; text-align: left;">
+            <h3>Create New Exam</h3>
+            <form id="new-exam-form">
+              <div class="form-group">
+                <label for="new-exam-name">Exam Name *</label>
+                <input type="text" id="new-exam-name" required placeholder="e.g., Chemistry 101">
+              </div>
+              <div class="form-group">
+                <label for="new-exam-description">Description</label>
+                <textarea id="new-exam-description" placeholder="Brief description of this exam..."></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="new-exam-cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary">Create Exam</button>
               </div>
             </form>
           </div>
@@ -234,8 +407,8 @@
         <!-- Delete confirmation modal -->
         <div class="modal-overlay" id="delete-modal">
           <div class="modal">
-            <h3>Delete Question?</h3>
-            <p>This action cannot be undone.</p>
+            <h3 id="delete-modal-title">Delete Item?</h3>
+            <p id="delete-modal-text">This action cannot be undone.</p>
             <div class="modal-actions">
               <button class="btn btn-secondary" id="cancel-delete">Cancel</button>
               <button class="btn btn-danger" id="confirm-delete">Delete</button>
@@ -246,18 +419,22 @@
         <!-- Import modal -->
         <div class="modal-overlay" id="import-modal">
           <div class="modal" style="max-width: 500px; text-align: left;">
-            <h3>Import Questions</h3>
+            <h3>Import Exam Package</h3>
             <p class="text-muted mb-2" id="import-preview">Select a JSON file to import.</p>
             <div class="form-group">
               <label>Import Mode</label>
               <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-top: 0.5rem;">
                 <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
-                  <input type="radio" name="import-mode" value="merge" checked>
-                  <span><strong>Merge</strong> - Add new questions, skip duplicates (by ID)</span>
+                  <input type="radio" name="import-mode" value="new" checked>
+                  <span><strong>New Exam</strong> - Import as a separate exam</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+                  <input type="radio" name="import-mode" value="merge">
+                  <span><strong>Merge</strong> - Add to current exam (skip duplicates)</span>
                 </label>
                 <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
                   <input type="radio" name="import-mode" value="replace">
-                  <span><strong>Replace</strong> - Replace all existing questions</span>
+                  <span><strong>Replace</strong> - Replace current exam entirely</span>
                 </label>
               </div>
             </div>
@@ -274,20 +451,19 @@
   <script src="js/app.js"></script>
   <script>
     const ADMIN_PASSWORD = 'admin123';
-    const STORAGE_KEY = 'exam_prep_questions';
 
     const Admin = {
-      questions: [],
-      editingId: null,
+      currentExam: null,
+      editingQuestionId: null,
+      editingTermKey: null,
+      deleteType: null,
       deleteId: null,
       importData: null,
 
       init() {
-        // Check if already logged in this session
         if (sessionStorage.getItem('admin_logged_in')) {
           this.showAdminPanel();
         }
-
         this.bindLoginEvents();
       },
 
@@ -313,84 +489,166 @@
       showAdminPanel() {
         document.getElementById('login-screen').classList.add('hidden');
         document.getElementById('admin-panel').classList.remove('hidden');
-        this.loadQuestions();
+        this.loadExamList();
         this.bindAdminEvents();
+      },
+
+      loadExamList() {
+        const select = document.getElementById('exam-select');
+        const exams = ExamManager.list();
+        const currentId = ExamManager.getCurrentId();
+
+        select.innerHTML = exams.map(e =>
+          `<option value="${e.id}" ${e.id === currentId ? 'selected' : ''}>${e.name}</option>`
+        ).join('');
+
+        this.loadCurrentExam();
+      },
+
+      loadCurrentExam() {
+        const examId = document.getElementById('exam-select').value;
+        this.currentExam = ExamManager.get(examId);
+        ExamManager.setCurrentId(examId);
+
+        // Update info display
+        const info = document.getElementById('exam-info');
+        info.textContent = `${this.currentExam.questions.length} questions, ${Object.keys(this.currentExam.glossary || {}).length} terms`;
+
         this.renderQuestions();
+        this.renderGlossary();
+        this.loadSettings();
       },
 
-      loadQuestions() {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored) {
-          this.questions = JSON.parse(stored);
-        } else {
-          // Copy from embedded data
-          this.questions = [...EXAM_DATA['journeyman-electrical'].questions];
-          this.saveQuestions();
-        }
-      },
-
-      saveQuestions() {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(this.questions));
+      saveCurrentExam() {
+        ExamManager.save(this.currentExam);
       },
 
       bindAdminEvents() {
-        // Add button
-        document.getElementById('add-btn').addEventListener('click', () => this.openForm());
+        // Exam selector
+        document.getElementById('exam-select').addEventListener('change', () => this.loadCurrentExam());
 
-        // Export button
-        document.getElementById('export-btn').addEventListener('click', () => this.exportJson());
+        // New exam
+        document.getElementById('new-exam-btn').addEventListener('click', () => {
+          document.getElementById('new-exam-form').reset();
+          document.getElementById('new-exam-modal').classList.add('show');
+        });
+        document.getElementById('new-exam-cancel').addEventListener('click', () => {
+          document.getElementById('new-exam-modal').classList.remove('show');
+        });
+        document.getElementById('new-exam-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          this.createExam();
+        });
 
-        // Reset button
-        document.getElementById('reset-btn').addEventListener('click', () => this.resetToDefault());
+        // Delete exam
+        document.getElementById('delete-exam-btn').addEventListener('click', () => {
+          this.deleteType = 'exam';
+          this.deleteId = this.currentExam.id;
+          document.getElementById('delete-modal-title').textContent = 'Delete Exam?';
+          document.getElementById('delete-modal-text').textContent =
+            `Delete "${this.currentExam.name}" and all its questions and glossary terms? This cannot be undone.`;
+          document.getElementById('delete-modal').classList.add('show');
+        });
 
-        // Import button and file input
+        // Tabs
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+          btn.addEventListener('click', () => this.switchTab(btn.dataset.tab));
+        });
+
+        // Questions tab events
+        document.getElementById('add-question-btn').addEventListener('click', () => this.openQuestionForm());
+        document.getElementById('export-btn').addEventListener('click', () => this.exportExam());
+        document.getElementById('reset-btn').addEventListener('click', () => this.resetExam());
         document.getElementById('import-btn').addEventListener('click', () => {
           document.getElementById('import-file').click();
         });
         document.getElementById('import-file').addEventListener('change', (e) => this.handleFileSelect(e));
         document.getElementById('cancel-import').addEventListener('click', () => this.closeImportModal());
-        document.getElementById('confirm-import').addEventListener('click', () => this.importQuestions());
-
-        // Search
-        document.getElementById('search-input').addEventListener('input', (e) => {
+        document.getElementById('confirm-import').addEventListener('click', () => this.importExam());
+        document.getElementById('question-search').addEventListener('input', (e) => {
           this.renderQuestions(e.target.value);
         });
 
-        // Form events
+        // Question form
         document.getElementById('question-form').addEventListener('submit', (e) => {
           e.preventDefault();
           this.saveQuestion();
         });
-        document.getElementById('cancel-btn').addEventListener('click', () => this.closeForm());
-
-        // Delete events
-        document.getElementById('cancel-delete').addEventListener('click', () => this.closeDeleteModal());
-        document.getElementById('confirm-delete').addEventListener('click', () => this.deleteQuestion());
+        document.getElementById('question-cancel-btn').addEventListener('click', () => {
+          document.getElementById('question-modal').classList.remove('show');
+        });
 
         // Question list delegation
         document.getElementById('question-list').addEventListener('click', (e) => {
           const editBtn = e.target.closest('.edit-btn');
           const deleteBtn = e.target.closest('.delete-btn');
-
           if (editBtn) {
-            this.openForm(editBtn.dataset.id);
+            this.openQuestionForm(editBtn.dataset.id);
           } else if (deleteBtn) {
-            this.openDeleteModal(deleteBtn.dataset.id);
+            this.openDeleteModal('question', deleteBtn.dataset.id);
           }
         });
+
+        // Glossary tab events
+        document.getElementById('add-term-btn').addEventListener('click', () => this.openGlossaryForm());
+        document.getElementById('glossary-search').addEventListener('input', (e) => {
+          this.renderGlossary(e.target.value);
+        });
+
+        // Glossary form
+        document.getElementById('glossary-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          this.saveGlossaryTerm();
+        });
+        document.getElementById('glossary-cancel-btn').addEventListener('click', () => {
+          document.getElementById('glossary-modal').classList.remove('show');
+        });
+
+        // Glossary list delegation
+        document.getElementById('glossary-list').addEventListener('click', (e) => {
+          const editBtn = e.target.closest('.edit-btn');
+          const deleteBtn = e.target.closest('.delete-btn');
+          if (editBtn) {
+            this.openGlossaryForm(editBtn.dataset.key);
+          } else if (deleteBtn) {
+            this.openDeleteModal('term', deleteBtn.dataset.key);
+          }
+        });
+
+        // Settings form
+        document.getElementById('settings-form').addEventListener('submit', (e) => {
+          e.preventDefault();
+          this.saveSettings();
+        });
+
+        // Delete modal
+        document.getElementById('cancel-delete').addEventListener('click', () => {
+          document.getElementById('delete-modal').classList.remove('show');
+        });
+        document.getElementById('confirm-delete').addEventListener('click', () => this.confirmDelete());
       },
+
+      switchTab(tabId) {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelector(`.tab-btn[data-tab="${tabId}"]`).classList.add('active');
+        document.getElementById(`tab-${tabId}`).classList.add('active');
+      },
+
+      // ============ Questions ============
 
       renderQuestions(filter = '') {
         const list = document.getElementById('question-list');
         const filterLower = filter.toLowerCase();
+        const questions = this.currentExam.questions || [];
 
-        const filtered = this.questions.filter(q =>
+        const filtered = questions.filter(q =>
           !filter ||
           q.question.toLowerCase().includes(filterLower) ||
           q.id.toLowerCase().includes(filterLower)
         );
 
-        document.getElementById('question-count').textContent = this.questions.length;
+        document.getElementById('question-count').textContent = questions.length;
 
         if (filtered.length === 0) {
           list.innerHTML = '<p class="text-muted">No questions found.</p>';
@@ -398,12 +656,12 @@
         }
 
         list.innerHTML = filtered.map(q => `
-          <div class="question-item">
-            <div class="question-item-content">
-              <div class="question-item-id">${q.id}</div>
-              <div class="question-item-text">${q.question}</div>
+          <div class="item-row">
+            <div class="item-content">
+              <div class="item-id">${q.id}</div>
+              <div class="item-title">${q.question}</div>
             </div>
-            <div class="question-item-actions">
+            <div class="item-actions">
               <button class="btn btn-sm btn-secondary edit-btn" data-id="${q.id}">Edit</button>
               <button class="btn btn-sm btn-danger delete-btn" data-id="${q.id}">Delete</button>
             </div>
@@ -411,51 +669,47 @@
         `).join('');
       },
 
-      openForm(id = null) {
-        this.editingId = id;
+      openQuestionForm(id = null) {
+        this.editingQuestionId = id;
         const form = document.getElementById('question-form');
         form.reset();
 
         if (id) {
-          document.getElementById('form-title').textContent = 'Edit Question';
-          const q = this.questions.find(q => q.id === id);
+          document.getElementById('question-form-title').textContent = 'Edit Question';
+          const q = this.currentExam.questions.find(q => q.id === id);
           if (q) {
-            document.getElementById('form-id').value = q.id;
-            document.getElementById('form-question').value = q.question;
+            document.getElementById('question-form-id').value = q.id;
+            document.getElementById('question-form-text').value = q.question;
             q.options.forEach((opt, i) => {
               document.getElementById(`option-${i}`).value = opt;
             });
             document.querySelector(`input[name="correct"][value="${q.correct}"]`).checked = true;
-            document.getElementById('form-explanation').value = q.explanation;
-            document.getElementById('form-source-name').value = q.source?.name || '';
-            document.getElementById('form-source-url').value = q.source?.url || '';
+            document.getElementById('question-form-explanation').value = q.explanation;
+            document.getElementById('question-form-source-name').value = q.source?.name || '';
+            document.getElementById('question-form-source-url').value = q.source?.url || '';
           }
         } else {
-          document.getElementById('form-title').textContent = 'Add Question';
-          document.getElementById('form-id').value = this.generateId();
+          document.getElementById('question-form-title').textContent = 'Add Question';
+          document.getElementById('question-form-id').value = this.generateQuestionId();
         }
 
-        document.getElementById('form-modal').classList.add('show');
+        document.getElementById('question-modal').classList.add('show');
       },
 
-      closeForm() {
-        document.getElementById('form-modal').classList.remove('show');
-        this.editingId = null;
-      },
-
-      generateId() {
-        const nums = this.questions
-          .map(q => parseInt(q.id.replace('je-', ''), 10))
+      generateQuestionId() {
+        const prefix = this.currentExam.id.substring(0, 2);
+        const nums = this.currentExam.questions
+          .map(q => parseInt(q.id.replace(/[^0-9]/g, ''), 10))
           .filter(n => !isNaN(n));
         const next = nums.length > 0 ? Math.max(...nums) + 1 : 1;
-        return `je-${String(next).padStart(3, '0')}`;
+        return `${prefix}-${String(next).padStart(3, '0')}`;
       },
 
       saveQuestion() {
-        const id = document.getElementById('form-id').value;
+        const id = document.getElementById('question-form-id').value;
         const question = {
           id,
-          question: document.getElementById('form-question').value.trim(),
+          question: document.getElementById('question-form-text').value.trim(),
           options: [
             document.getElementById('option-0').value.trim(),
             document.getElementById('option-1').value.trim(),
@@ -463,75 +717,216 @@
             document.getElementById('option-3').value.trim()
           ],
           correct: parseInt(document.querySelector('input[name="correct"]:checked').value, 10),
-          explanation: document.getElementById('form-explanation').value.trim(),
+          explanation: document.getElementById('question-form-explanation').value.trim(),
           source: {
-            name: document.getElementById('form-source-name').value.trim(),
-            url: document.getElementById('form-source-url').value.trim()
+            name: document.getElementById('question-form-source-name').value.trim(),
+            url: document.getElementById('question-form-source-url').value.trim()
           }
         };
 
-        if (this.editingId) {
-          const index = this.questions.findIndex(q => q.id === this.editingId);
+        if (this.editingQuestionId) {
+          const index = this.currentExam.questions.findIndex(q => q.id === this.editingQuestionId);
           if (index !== -1) {
-            this.questions[index] = question;
+            this.currentExam.questions[index] = question;
           }
-          this.showAlert('Question updated successfully', 'success');
+          this.showAlert('Question updated', 'success');
         } else {
-          this.questions.push(question);
-          this.showAlert('Question added successfully', 'success');
+          this.currentExam.questions.push(question);
+          this.showAlert('Question added', 'success');
         }
 
-        this.saveQuestions();
-        this.renderQuestions(document.getElementById('search-input').value);
-        this.closeForm();
+        this.saveCurrentExam();
+        this.renderQuestions(document.getElementById('question-search').value);
+        this.updateExamInfo();
+        document.getElementById('question-modal').classList.remove('show');
       },
 
-      openDeleteModal(id) {
+      // ============ Glossary ============
+
+      renderGlossary(filter = '') {
+        const list = document.getElementById('glossary-list');
+        const filterLower = filter.toLowerCase();
+        const glossary = this.currentExam.glossary || {};
+        const terms = Object.entries(glossary);
+
+        const filtered = terms.filter(([key, term]) =>
+          !filter ||
+          term.term.toLowerCase().includes(filterLower) ||
+          term.definition.toLowerCase().includes(filterLower)
+        );
+
+        document.getElementById('glossary-count').textContent = terms.length;
+
+        if (filtered.length === 0) {
+          list.innerHTML = '<p class="text-muted">No glossary terms found.</p>';
+          return;
+        }
+
+        filtered.sort((a, b) => a[1].term.localeCompare(b[1].term));
+
+        list.innerHTML = filtered.map(([key, term]) => `
+          <div class="item-row">
+            <div class="item-content">
+              <div class="item-title">${term.term}</div>
+              <div class="item-subtitle">${term.definition.substring(0, 100)}${term.definition.length > 100 ? '...' : ''}</div>
+            </div>
+            <div class="item-actions">
+              <button class="btn btn-sm btn-secondary edit-btn" data-key="${key}">Edit</button>
+              <button class="btn btn-sm btn-danger delete-btn" data-key="${key}">Delete</button>
+            </div>
+          </div>
+        `).join('');
+      },
+
+      openGlossaryForm(key = null) {
+        this.editingTermKey = key;
+        const form = document.getElementById('glossary-form');
+        form.reset();
+
+        if (key) {
+          document.getElementById('glossary-form-title').textContent = 'Edit Term';
+          const term = this.currentExam.glossary[key];
+          if (term) {
+            document.getElementById('glossary-form-key').value = key;
+            document.getElementById('glossary-form-term').value = term.term;
+            document.getElementById('glossary-form-definition').value = term.definition;
+            document.getElementById('glossary-form-reference').value = term.reference || '';
+            document.getElementById('glossary-form-url').value = term.url || '';
+          }
+        } else {
+          document.getElementById('glossary-form-title').textContent = 'Add Term';
+          document.getElementById('glossary-form-key').value = '';
+        }
+
+        document.getElementById('glossary-modal').classList.add('show');
+      },
+
+      saveGlossaryTerm() {
+        const termName = document.getElementById('glossary-form-term').value.trim();
+        const newKey = termName.toLowerCase();
+
+        const term = {
+          term: termName,
+          definition: document.getElementById('glossary-form-definition').value.trim(),
+          reference: document.getElementById('glossary-form-reference').value.trim(),
+          url: document.getElementById('glossary-form-url').value.trim()
+        };
+
+        if (!this.currentExam.glossary) {
+          this.currentExam.glossary = {};
+        }
+
+        // If editing and key changed, remove old key
+        if (this.editingTermKey && this.editingTermKey !== newKey) {
+          delete this.currentExam.glossary[this.editingTermKey];
+        }
+
+        this.currentExam.glossary[newKey] = term;
+
+        this.saveCurrentExam();
+        this.renderGlossary(document.getElementById('glossary-search').value);
+        this.updateExamInfo();
+        document.getElementById('glossary-modal').classList.remove('show');
+        this.showAlert(this.editingTermKey ? 'Term updated' : 'Term added', 'success');
+      },
+
+      // ============ Settings ============
+
+      loadSettings() {
+        document.getElementById('settings-name').value = this.currentExam.name;
+        document.getElementById('settings-description').value = this.currentExam.description || '';
+        document.getElementById('settings-passing').value = this.currentExam.passingScore || 70;
+        document.getElementById('settings-time').value = this.currentExam.timeLimit || 3600;
+      },
+
+      saveSettings() {
+        this.currentExam.name = document.getElementById('settings-name').value.trim();
+        this.currentExam.description = document.getElementById('settings-description').value.trim();
+        this.currentExam.passingScore = parseInt(document.getElementById('settings-passing').value, 10);
+        this.currentExam.timeLimit = parseInt(document.getElementById('settings-time').value, 10);
+
+        this.saveCurrentExam();
+        this.loadExamList();
+        this.showAlert('Settings saved', 'success');
+      },
+
+      // ============ Exam Management ============
+
+      createExam() {
+        const name = document.getElementById('new-exam-name').value.trim();
+        const description = document.getElementById('new-exam-description').value.trim();
+
+        const exam = ExamManager.create(name, description);
+        document.getElementById('new-exam-modal').classList.remove('show');
+        this.loadExamList();
+
+        // Switch to new exam
+        document.getElementById('exam-select').value = exam.id;
+        this.loadCurrentExam();
+        this.showAlert(`Exam "${name}" created`, 'success');
+      },
+
+      openDeleteModal(type, id) {
+        this.deleteType = type;
         this.deleteId = id;
+
+        if (type === 'question') {
+          const q = this.currentExam.questions.find(q => q.id === id);
+          document.getElementById('delete-modal-title').textContent = 'Delete Question?';
+          document.getElementById('delete-modal-text').textContent = 'This action cannot be undone.';
+        } else if (type === 'term') {
+          const term = this.currentExam.glossary[id];
+          document.getElementById('delete-modal-title').textContent = 'Delete Term?';
+          document.getElementById('delete-modal-text').textContent = `Delete "${term?.term}"? This action cannot be undone.`;
+        }
+
         document.getElementById('delete-modal').classList.add('show');
       },
 
-      closeDeleteModal() {
+      confirmDelete() {
+        if (this.deleteType === 'question') {
+          this.currentExam.questions = this.currentExam.questions.filter(q => q.id !== this.deleteId);
+          this.saveCurrentExam();
+          this.renderQuestions(document.getElementById('question-search').value);
+          this.showAlert('Question deleted', 'success');
+        } else if (this.deleteType === 'term') {
+          delete this.currentExam.glossary[this.deleteId];
+          this.saveCurrentExam();
+          this.renderGlossary(document.getElementById('glossary-search').value);
+          this.showAlert('Term deleted', 'success');
+        } else if (this.deleteType === 'exam') {
+          const exams = ExamManager.list();
+          if (exams.length <= 1) {
+            this.showAlert('Cannot delete the only exam', 'error');
+          } else {
+            ExamManager.delete(this.deleteId);
+            this.loadExamList();
+            this.showAlert('Exam deleted', 'success');
+          }
+        }
+
+        this.updateExamInfo();
         document.getElementById('delete-modal').classList.remove('show');
-        this.deleteId = null;
       },
 
-      deleteQuestion() {
-        this.questions = this.questions.filter(q => q.id !== this.deleteId);
-        this.saveQuestions();
-        this.renderQuestions(document.getElementById('search-input').value);
-        this.closeDeleteModal();
-        this.showAlert('Question deleted', 'success');
+      updateExamInfo() {
+        const info = document.getElementById('exam-info');
+        info.textContent = `${this.currentExam.questions.length} questions, ${Object.keys(this.currentExam.glossary || {}).length} terms`;
       },
 
-      exportJson() {
-        const data = {
-          exam: "Journeyman Electrician",
-          version: "1.0",
-          passingScore: 70,
-          timeLimit: 3600,
-          questions: this.questions
-        };
+      // ============ Import/Export ============
 
-        const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+      exportExam() {
+        const json = ExamManager.export(this.currentExam.id);
+        const blob = new Blob([json], { type: 'application/json' });
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'journeyman-electrical.json';
+        a.download = `${this.currentExam.id}.json`;
         a.click();
         URL.revokeObjectURL(url);
 
-        this.showAlert('JSON exported - replace js/app.js EXAM_DATA to make permanent', 'success');
-      },
-
-      resetToDefault() {
-        if (confirm('Reset all questions to the original set? Your changes will be lost.')) {
-          localStorage.removeItem(STORAGE_KEY);
-          this.questions = [...EXAM_DATA['journeyman-electrical'].questions];
-          this.saveQuestions();
-          this.renderQuestions();
-          this.showAlert('Questions reset to default', 'success');
-        }
+        this.showAlert('Exam package exported', 'success');
       },
 
       handleFileSelect(e) {
@@ -542,24 +937,17 @@
         reader.onload = (event) => {
           try {
             const data = JSON.parse(event.target.result);
-            const questions = data.questions || data;
 
-            if (!Array.isArray(questions)) {
-              throw new Error('Invalid format: expected questions array');
+            // Validate basic structure
+            if (!data.name && !data.questions) {
+              throw new Error('Invalid format: missing name or questions');
             }
 
-            // Validate structure
-            const valid = questions.every(q =>
-              q.question && Array.isArray(q.options) && typeof q.correct === 'number'
-            );
-
-            if (!valid) {
-              throw new Error('Invalid question format');
-            }
-
-            this.importData = questions;
+            this.importData = data;
+            const qCount = data.questions?.length || 0;
+            const gCount = Object.keys(data.glossary || {}).length;
             document.getElementById('import-preview').textContent =
-              `Found ${questions.length} questions ready to import.`;
+              `Found: ${data.name || 'Unnamed'} - ${qCount} questions, ${gCount} glossary terms`;
             document.getElementById('confirm-import').disabled = false;
             document.getElementById('import-modal').classList.add('show');
           } catch (err) {
@@ -567,8 +955,6 @@
           }
         };
         reader.readAsText(file);
-
-        // Reset file input so same file can be selected again
         e.target.value = '';
       },
 
@@ -578,48 +964,82 @@
         document.getElementById('confirm-import').disabled = true;
       },
 
-      importQuestions() {
+      importExam() {
         if (!this.importData) return;
 
         const mode = document.querySelector('input[name="import-mode"]:checked').value;
 
-        if (mode === 'replace') {
-          this.questions = this.importData.map((q, i) => ({
-            ...q,
-            id: q.id || `je-${String(i + 1).padStart(3, '0')}`
-          }));
-          this.showAlert(`Replaced with ${this.questions.length} questions`, 'success');
-        } else {
-          // Merge mode - add new, skip duplicates
-          const existingIds = new Set(this.questions.map(q => q.id));
-          let added = 0;
-          let skipped = 0;
+        if (mode === 'new') {
+          // Import as new exam
+          const exam = ExamManager.import(this.importData);
+          this.loadExamList();
+          document.getElementById('exam-select').value = exam.id;
+          this.loadCurrentExam();
+          this.showAlert(`Imported "${exam.name}" as new exam`, 'success');
+        } else if (mode === 'merge') {
+          // Merge into current exam
+          const existingIds = new Set(this.currentExam.questions.map(q => q.id));
+          let addedQ = 0, skippedQ = 0;
 
-          this.importData.forEach((q, i) => {
-            const id = q.id || this.generateId();
-            if (existingIds.has(id)) {
-              skipped++;
+          (this.importData.questions || []).forEach(q => {
+            if (existingIds.has(q.id)) {
+              skippedQ++;
             } else {
-              this.questions.push({ ...q, id });
-              existingIds.add(id);
-              added++;
+              this.currentExam.questions.push(q);
+              addedQ++;
             }
           });
 
-          this.showAlert(`Added ${added} questions, skipped ${skipped} duplicates`, 'success');
+          // Merge glossary (add new terms only)
+          let addedT = 0;
+          const importGlossary = this.importData.glossary || {};
+          if (!this.currentExam.glossary) this.currentExam.glossary = {};
+
+          Object.entries(importGlossary).forEach(([key, term]) => {
+            if (!this.currentExam.glossary[key]) {
+              this.currentExam.glossary[key] = term;
+              addedT++;
+            }
+          });
+
+          this.saveCurrentExam();
+          this.renderQuestions();
+          this.renderGlossary();
+          this.updateExamInfo();
+          this.showAlert(`Merged: +${addedQ} questions (${skippedQ} skipped), +${addedT} terms`, 'success');
+        } else if (mode === 'replace') {
+          // Replace current exam
+          this.currentExam.questions = this.importData.questions || [];
+          this.currentExam.glossary = this.importData.glossary || {};
+          if (this.importData.name) this.currentExam.name = this.importData.name;
+          if (this.importData.description) this.currentExam.description = this.importData.description;
+          if (this.importData.passingScore) this.currentExam.passingScore = this.importData.passingScore;
+          if (this.importData.timeLimit) this.currentExam.timeLimit = this.importData.timeLimit;
+
+          this.saveCurrentExam();
+          this.loadExamList();
+          this.loadCurrentExam();
+          this.showAlert('Exam replaced with imported data', 'success');
         }
 
-        this.saveQuestions();
-        this.renderQuestions();
         this.closeImportModal();
+      },
+
+      resetExam() {
+        if (confirm(`Reset "${this.currentExam.name}" to default? This will restore original questions and glossary.`)) {
+          if (ExamManager.reset(this.currentExam.id)) {
+            this.loadCurrentExam();
+            this.showAlert('Reset to default', 'success');
+          } else {
+            this.showAlert('No default available for this exam', 'error');
+          }
+        }
       },
 
       showAlert(message, type) {
         const container = document.getElementById('alert-container');
         container.innerHTML = `<div class="alert alert-${type}">${message}</div>`;
-        setTimeout(() => {
-          container.innerHTML = '';
-        }, 3000);
+        setTimeout(() => { container.innerHTML = ''; }, 3000);
       }
     };
 

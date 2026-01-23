@@ -23,6 +23,9 @@ const Practice = {
     this.answered = 0;
     this.hasAnswered = false;
 
+    // Show exam name
+    document.getElementById('current-exam-name').textContent = examData.name;
+
     this.render();
     this.bindEvents();
   },
@@ -45,6 +48,9 @@ const Practice = {
   bindEvents() {
     // Option click handlers
     document.getElementById('question-container').addEventListener('click', (e) => {
+      // Ignore clicks on vocab terms
+      if (e.target.closest('.vocab-term')) return;
+
       const option = e.target.closest('.option');
       if (!option || this.hasAnswered) return;
 

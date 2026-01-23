@@ -13,6 +13,12 @@ const Exam = {
   startTime: null,
 
   async init() {
+    // Show current exam name
+    const examData = ExamManager.getCurrent();
+    if (examData) {
+      document.getElementById('current-exam-name').textContent = examData.name;
+    }
+
     document.getElementById('start-btn').addEventListener('click', () => this.start());
   },
 
@@ -107,6 +113,9 @@ const Exam = {
   bindEvents() {
     // Option selection
     document.getElementById('question-container').addEventListener('click', (e) => {
+      // Ignore clicks on vocab terms
+      if (e.target.closest('.vocab-term')) return;
+
       const option = e.target.closest('.option');
       if (!option) return;
 

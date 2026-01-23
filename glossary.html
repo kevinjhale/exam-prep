@@ -25,8 +25,8 @@
   <main id="main">
     <div class="container">
       <div class="card">
-        <h1 class="mb-2">Electrical Terms Glossary</h1>
-        <p class="text-muted mb-3">Key vocabulary terms for the journeyman electrician exam. Click any term for details.</p>
+        <h1 class="mb-2">Glossary</h1>
+        <p class="text-muted mb-3" id="glossary-subtitle">Key vocabulary terms. Click any term for details.</p>
 
         <div class="glossary-search">
           <input type="text" id="search-input" placeholder="Search terms..." aria-label="Search glossary">
@@ -45,9 +45,19 @@
       const list = document.getElementById('glossary-list');
       const searchInput = document.getElementById('search-input');
       const countEl = document.getElementById('term-count');
+      const subtitle = document.getElementById('glossary-subtitle');
+
+      // Get current exam's glossary
+      const exam = ExamManager.getCurrent();
+      const glossary = exam?.glossary || {};
+
+      // Update subtitle with exam name
+      subtitle.textContent = exam
+        ? `Key vocabulary terms for ${exam.name}. Click any term for details.`
+        : 'No exam selected.';
 
       // Sort terms alphabetically
-      const sortedTerms = Object.entries(GLOSSARY)
+      const sortedTerms = Object.entries(glossary)
         .sort((a, b) => a[1].term.localeCompare(b[1].term));
 
       function renderGlossary(filter = '') {
@@ -61,17 +71,25 @@
         countEl.textContent = filtered.length;
 
         if (filtered.length === 0) {
-          list.innerHTML = '<p class="text-muted">No terms found.</p>';
+          list.innerHTML = sortedTerms.length === 0
+            ? '<p class="text-muted">No glossary terms for this exam. <a href="admin.html">Add terms in Admin</a></p>'
+            : '<p class="text-muted">No terms match your search.</p>';
           return;
         }
 
-        list.innerHTML = filtered.map(([key, data]) => `
-          <div class="glossary-item" data-term="${key}" tabindex="0">
-            <div class="glossary-item-term">${data.term}</div>
-            <div class="glossary-item-definition">${data.definition}</div>
-            <div class="glossary-item-reference">Reference: ${data.reference}</div>
-          </div>
-        `).join('');
+        list.innerHTML = filtered.map(([key, data]) => {
+          const refLink = data.url
+            ? `<a href="${data.url}" target="_blank" rel="noopener">${data.reference}</a>`
+            : data.reference || 'General';
+
+          return `
+            <div class="glossary-item" data-term="${key}" tabindex="0">
+              <div class="glossary-item-term">${data.term}</div>
+              <div class="glossary-item-definition">${data.definition}</div>
+              <div class="glossary-item-reference">Reference: ${refLink}</div>
+            </div>
+          `;
+        }).join('');
       }
 
       renderGlossary();
