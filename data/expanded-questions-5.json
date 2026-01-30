@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "je-401",
+      "question": "Liquidtight flexible metal conduit (LFMC) is permitted to be used as an equipment grounding conductor when what length or less?",
+      "options": ["3 feet", "4 feet", "6 feet", "8 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 350.60", "url": ""},
+      "explanation": "Per NEC 350.60, LFMC is permitted as an equipment grounding conductor when 6 feet (1.8 m) or less and the circuit conductors are protected by overcurrent devices rated 60 amperes or less."
+    },
+    {
+      "id": "je-402",
+      "question": "PVC conduit (Schedule 40) is permitted in what locations?",
+      "options": ["Exposed in hazardous locations only", "Concealed and exposed locations, subject to physical damage restrictions", "Underground only", "Wet locations only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 352.10", "url": ""},
+      "explanation": "Per NEC 352.10, PVC conduit is permitted in concealed and exposed locations with certain restrictions on physical damage and support requirements."
+    },
+    {
+      "id": "je-403",
+      "question": "PVC conduit exposed to sunlight must be identified as what?",
+      "options": ["Schedule 80", "Sunlight resistant or protected from sunlight", "Gray color only", "UV stabilized"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 352.10(G)", "url": ""},
+      "explanation": "Per NEC 352.10(G), PVC conduit exposed to sunlight shall be listed as sunlight resistant or be protected from sunlight by design of the raceway or mounting."
+    },
+    {
+      "id": "je-404",
+      "question": "What is the expansion rate consideration for PVC conduit runs exceeding 25 feet?",
+      "options": ["No consideration needed", "Must use expansion fittings where temperature change exceeds 30°F", "Must be underground only", "Must use Schedule 80"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 352.44", "url": ""},
+      "explanation": "Per NEC 352.44, expansion fittings shall be provided to compensate for thermal expansion and contraction where the length change is expected to exceed 6 mm (¼ inch)."
+    },
+    {
+      "id": "je-405",
+      "question": "Type MC cable must be secured within what distance of each box or termination?",
+      "options": ["6 inches", "12 inches", "18 inches", "24 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 330.30(B)", "url": ""},
+      "explanation": "Per NEC 330.30(B), Type MC cable shall be secured within 12 inches (300 mm) of every box, cabinet, fitting, or other cable termination."
+    },
+    {
+      "id": "je-406",
+      "question": "Type MC cable shall be supported at intervals not exceeding what distance?",
+      "options": ["4 feet", "4.5 feet", "6 feet", "8 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 330.30(C)", "url": ""},
+      "explanation": "Per NEC 330.30(C), Type MC cable shall be supported at intervals not exceeding 6 feet (1.8 m)."
+    },
+    {
+      "id": "je-407",
+      "question": "Type AC cable (BX) must be secured within what distance of each box or termination?",
+      "options": ["6 inches", "8 inches", "12 inches", "18 inches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 320.30(B)", "url": ""},
+      "explanation": "Per NEC 320.30(B), Type AC cable shall be secured within 12 inches (300 mm) of every outlet box, junction box, cabinet, or fitting."
+    },
+    {
+      "id": "je-408",
+      "question": "Type AC cable (BX) requires what additional component inside the armor at terminations?",
+      "options": ["Grounding bushing", "Anti-short bushing (red head)", "Cable clamp only", "Bonding jumper"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 320.40", "url": ""},
+      "explanation": "Per NEC 320.40, an insulating bushing or equivalent protection (anti-short bushing) shall be provided between conductors and armor at terminations."
+    },
+    {
+      "id": "je-409",
+      "question": "A junction box cover must be accessible. What does accessible mean in this context?",
+      "options": ["Visible", "Capable of being removed without damaging the building structure", "Within 6 feet of floor", "In a readily accessible location"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 314.29", "url": ""},
+      "explanation": "Per NEC 314.29, junction boxes shall be installed so that the wiring can be rendered accessible without removing any part of the building or exposing the conductors."
+    },
+    {
+      "id": "je-410",
+      "question": "What is the maximum box fill volume for a 4-inch square metal box with a 1-1/2 inch depth?",
+      "options": ["18 cu. in.", "21 cu. in.", "30.3 cu. in.", "42 cu. in."],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 314.16(A)", "url": ""},
+      "explanation": "Per NEC Table 314.16(A), a 4-inch square metal box with a 1-1/2 inch depth has a volume of 21.0 cubic inches."
+    },
+    {
+      "id": "je-411",
+      "question": "What is the volume allowance for a #14 AWG conductor in box fill calculations?",
+      "options": ["1.75 cu. in.", "2.00 cu. in.", "2.25 cu. in.", "2.50 cu. in."],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 314.16(B)", "url": ""},
+      "explanation": "Per NEC Table 314.16(B), each #14 AWG conductor requires 2.00 cubic inches of box volume."
+    },
+    {
+      "id": "je-412",
+      "question": "When counting conductors for box fill, how many conductor volumes does a device (switch or receptacle) require?",
+      "options": ["1 conductor volume", "2 conductor volumes based on largest conductor connected to device", "3 conductor volumes", "No additional volume needed"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 314.16(B)(4)", "url": ""},
+      "explanation": "Per NEC 314.16(B)(4), a single volume allowance based on the largest conductor connected to a device shall be made for each yoke or strap containing one or more devices."
+    },
+    {
+      "id": "je-413",
+      "question": "All equipment grounding conductors in a box count as how many conductors for box fill?",
+      "options": ["Zero", "One conductor volume based on largest EGC", "The actual number of EGCs", "Two conductor volumes"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 314.16(B)(5)", "url": ""},
+      "explanation": "Per NEC 314.16(B)(5), a single volume allowance based on the largest equipment grounding conductor entering the box shall be made for all equipment grounding conductors."
+    },
+    {
+      "id": "je-414",
+      "question": "Cable clamps in a box count as how many conductor volumes?",
+      "options": ["Zero - no allowance needed", "One or more conductor volumes based on largest conductor", "One conductor volume total for all clamps", "Two conductor volumes per clamp"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 314.16(B)(2)", "url": ""},
+      "explanation": "Per NEC 314.16(B)(2), a single volume allowance based on the largest conductor in the box shall be made for one or more cable clamps."
+    },
+    {
+      "id": "je-415",
+      "question": "What is the minimum length of free conductor required at each box or device?",
+      "options": ["3 inches", "6 inches", "8 inches", "12 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 300.14", "url": ""},
+      "explanation": "Per NEC 300.14, at least 6 inches (150 mm) of free conductor, measured from the point where it emerges from its raceway or cable sheath, shall be left at each outlet and switch point."
+    },
+    {
+      "id": "je-416",
+      "question": "What is the minimum length of free conductor required to extend outside the box opening for splices or device terminations?",
+      "options": ["2 inches", "3 inches", "4 inches", "6 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 300.14", "url": ""},
+      "explanation": "Per NEC 300.14, conductors shall extend at least 3 inches (75 mm) outside the box opening for splices and terminations."
+    },
+    {
+      "id": "je-417",
+      "question": "Conductors in vertical raceways shall be supported at intervals not exceeding what, based on conductor size?",
+      "options": ["25 feet for #1/0 and smaller", "As specified in Table 300.19(A)", "100 feet", "Every floor level"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 300.19(A)", "url": ""},
+      "explanation": "Per NEC 300.19(A) and Table 300.19(A), conductors in vertical raceways shall be supported at intervals not greater than those specified in the table based on conductor size."
+    },
+    {
+      "id": "je-418",
+      "question": "Underground service conductors that are not encased in concrete must be buried at least how deep under a driveway?",
+      "options": ["12 inches", "18 inches", "24 inches", "30 inches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 300.5", "url": ""},
+      "explanation": "Per NEC Table 300.5, direct burial cables or conductors not in rigid conduit under driveways require a minimum burial depth of 24 inches."
+    },
+    {
+      "id": "je-419",
+      "question": "Underground conductors in rigid metal conduit (RMC) must be buried at least how deep?",
+      "options": ["0 inches", "6 inches", "12 inches", "18 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 300.5", "url": ""},
+      "explanation": "Per NEC Table 300.5, circuits in rigid metal conduit (RMC) require a minimum burial depth of 6 inches."
+    },
+    {
+      "id": "je-420",
+      "question": "Underground conductors in PVC conduit must be buried at least how deep under a lawn?",
+      "options": ["6 inches", "12 inches", "18 inches", "24 inches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 300.5", "url": ""},
+      "explanation": "Per NEC Table 300.5, circuits in rigid PVC conduit require a minimum burial depth of 18 inches."
+    },
+    {
+      "id": "je-421",
+      "question": "When conductors emerge from the ground, protection must extend to at least what height above finished grade?",
+      "options": ["6 inches", "8 inches", "12 inches", "18 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 300.5(D)", "url": ""},
+      "explanation": "Per NEC 300.5(D), direct-buried conductors or cables emerging from the ground shall be protected by enclosures or raceways extending from the minimum cover depth to a point at least 8 feet above finished grade."
+    },
+    {
+      "id": "je-422",
+      "question": "What is the minimum clearance for service drop conductors over a residential driveway?",
+      "options": ["10 feet", "12 feet", "15 feet", "18 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 230.24(B)", "url": ""},
+      "explanation": "Per NEC 230.24(B)(1), service drop conductors shall have a minimum clearance of 12 feet over residential property and driveways."
+    },
+    {
+      "id": "je-423",
+      "question": "What is the minimum clearance for service drop conductors over a public street?",
+      "options": ["12 feet", "15 feet", "18 feet", "20 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 230.24(B)", "url": ""},
+      "explanation": "Per NEC 230.24(B)(4), service drop conductors shall have a minimum clearance of 18 feet over public streets, alleys, roads, and driveways subject to truck traffic."
+    },
+    {
+      "id": "je-424",
+      "question": "Service entrance conductors must be installed above the point of attachment. What is the minimum clearance above the roof?",
+      "options": ["2 feet", "3 feet", "4 feet", "8 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 230.24(A)", "url": ""},
+      "explanation": "Per NEC 230.24(A), overhead service conductors shall have a vertical clearance of not less than 3 feet (900 mm) above the roof surface, with exceptions for low-slope roofs and other conditions."
+    },
+    {
+      "id": "je-425",
+      "question": "Service entrance cables must be supported within what distance of the service head?",
+      "options": ["6 inches", "12 inches", "18 inches", "24 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 230.51(A)", "url": ""},
+      "explanation": "Per NEC 230.51(A), service cables shall be supported within 12 inches (300 mm) of the service head and at intervals not exceeding 30 inches (750 mm)."
+    },
+    {
+      "id": "je-426",
+      "question": "A service point is defined as what?",
+      "options": ["The meter base location", "The point of connection between utility facilities and the premises wiring", "The main disconnect", "The transformer location"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, the service point is the point of connection between the facilities of the serving utility and the premises wiring."
+    },
+    {
+      "id": "je-427",
+      "question": "The service disconnecting means must be located where?",
+      "options": ["Inside the building only", "At the nearest accessible location to the point of entrance of service conductors", "At the meter", "On the utility pole"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 230.70(A)(1)", "url": ""},
+      "explanation": "Per NEC 230.70(A)(1), the service disconnecting means shall be installed at a readily accessible location either outside the building or inside nearest the point of entrance of the service conductors."
+    },
+    {
+      "id": "je-428",
+      "question": "A dwelling unit's disconnecting means is required to be installed in a location that is what?",
+      "options": ["In the garage", "On the exterior or inside at nearest point of entrance", "In the basement", "At the service panel only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 230.85", "url": ""},
+      "explanation": "Per NEC 230.85, for dwelling units, an emergency disconnect shall be installed in a readily accessible outdoor location."
+    },
+    {
+      "id": "je-429",
+      "question": "What marking is required on an emergency disconnect for a dwelling unit?",
+      "options": ["'Main Disconnect'", "'Service Disconnect'", "'Emergency Disconnect'", "'Emergency Disconnect, Service Disconnect, or a similar marking'"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 230.85(E)", "url": ""},
+      "explanation": "Per NEC 230.85(E), the emergency disconnect shall be marked as 'EMERGENCY DISCONNECT', 'SERVICE DISCONNECT', or a similar approved marking."
+    },
+    {
+      "id": "je-430",
+      "question": "What is the minimum rating for a single service disconnect for a dwelling?",
+      "options": ["60 amps", "100 amps", "150 amps", "200 amps"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 230.79(C)", "url": ""},
+      "explanation": "Per NEC 230.79(C), a single service disconnect for a one-family dwelling shall have a rating of not less than 100 amperes, 3-wire."
+    },
+    {
+      "id": "je-431",
+      "question": "AFCI protection is required for branch circuits supplying outlets in what areas of dwelling units?",
+      "options": ["Bathrooms and garages", "Kitchens, family rooms, dining rooms, living rooms, parlors, libraries, dens, bedrooms, sunrooms, recreation rooms, closets, hallways, laundry areas, or similar rooms or areas", "Outdoor areas only", "All areas including bathrooms"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.12(A)", "url": ""},
+      "explanation": "Per NEC 210.12(A), AFCI protection is required for 120-volt branch circuits supplying outlets and devices in the listed areas, which covers most living spaces except bathrooms and garages."
+    },
+    {
+      "id": "je-432",
+      "question": "AFCI and GFCI protection are not required for what type of device per NEC exceptions?",
+      "options": ["Kitchen receptacles", "Fire alarm systems not readily accessible", "Outdoor receptacles", "Bedroom receptacles"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.12, 210.8 Exceptions", "url": ""},
+      "explanation": "Per NEC exceptions, certain fire alarm circuits, security systems, and equipment that are not readily accessible or require continuous power have AFCI and GFCI protection exceptions."
+    },
+    {
+      "id": "je-433",
+      "question": "Tamper-resistant receptacles are required in what locations?",
+      "options": ["Commercial buildings only", "All dwelling unit receptacles, child care facilities, pediatric areas in hospitals, and other specific locations", "Outdoor areas only", "Bathrooms only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 406.12", "url": ""},
+      "explanation": "Per NEC 406.12, tamper-resistant receptacles shall be installed in dwelling units, guest rooms, child care facilities, pediatric areas in hospitals, and other locations where children may be present."
+    },
+    {
+      "id": "je-434",
+      "question": "Weather-resistant receptacles are required in what locations?",
+      "options": ["All outdoor locations", "Damp locations and wet locations", "Underground vaults", "Covered porches only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 406.9", "url": ""},
+      "explanation": "Per NEC 406.9, receptacles installed in damp locations and wet locations shall be a listed weather-resistant type."
+    },
+    {
+      "id": "je-435",
+      "question": "Receptacle outlet covers in wet locations must provide what type of protection?",
+      "options": ["Protection from rain when unattended", "Protection when the attachment plug is inserted or removed", "Listed extra-duty in-use cover providing protection with plug inserted", "Standard weatherproof cover"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 406.9(B)(1)", "url": ""},
+      "explanation": "Per NEC 406.9(B)(1), receptacles in wet locations shall have an enclosure that is weatherproof whether or not the attachment plug cap is inserted, requiring an 'in-use' or 'while-in-use' cover."
+    },
+    {
+      "id": "je-436",
+      "question": "Outdoor receptacles must be located not more than how many feet from the grade-level entrance to a dwelling?",
+      "options": ["3 feet", "6.5 feet", "10 feet", "One outlet at front and back is required"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 210.52(E)(1)", "url": ""},
+      "explanation": "Per NEC 210.52(E)(1), at least one receptacle outlet readily accessible from grade shall be installed at the front and back of each dwelling unit with direct access to grade."
+    },
+    {
+      "id": "je-437",
+      "question": "A dedicated 20-ampere circuit is required for what appliance in a dwelling?",
+      "options": ["Refrigerator", "Microwave", "Laundry room receptacle", "Garbage disposal"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.11(C)(2)", "url": ""},
+      "explanation": "Per NEC 210.11(C)(2), in addition to the number of branch circuits required, at least one 20-ampere branch circuit shall be provided for the laundry receptacle outlet."
+    },
+    {
+      "id": "je-438",
+      "question": "How many 20-amp small appliance circuits are required in a dwelling kitchen?",
+      "options": ["1", "2", "3", "4"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.52(B)(1)", "url": ""},
+      "explanation": "Per NEC 210.52(B)(1), a minimum of two 20-ampere small-appliance branch circuits shall serve the receptacle outlets in the kitchen, pantry, breakfast room, dining room, or similar area."
+    },
+    {
+      "id": "je-439",
+      "question": "Countertop receptacles in kitchens must be spaced so that no point along the wall line is more than how far from a receptacle?",
+      "options": ["12 inches", "24 inches", "36 inches", "48 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.52(C)(1)", "url": ""},
+      "explanation": "Per NEC 210.52(C)(1), receptacle outlets shall be installed so that no point along the wall line is more than 24 inches (600 mm) measured horizontally from a receptacle outlet."
+    },
+    {
+      "id": "je-440",
+      "question": "A receptacle outlet is required for any countertop space that is how wide or wider?",
+      "options": ["6 inches", "9 inches", "12 inches", "18 inches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.52(C)(1)", "url": ""},
+      "explanation": "Per NEC 210.52(C)(1), countertop receptacle outlets shall be installed for each wall counter space 12 inches (300 mm) or wider."
+    },
+    {
+      "id": "je-441",
+      "question": "Island countertops require a receptacle if the counter is how large?",
+      "options": ["12 x 12 inches", "12 x 24 inches", "24 x 12 inches minimum with no dimension less than 12 inches", "Any size requires a receptacle"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.52(C)(2)", "url": ""},
+      "explanation": "Per NEC 210.52(C)(2), at least one receptacle outlet shall be installed for each island countertop space with a long dimension of 24 inches (600 mm) or greater and a short dimension of 12 inches (300 mm) or greater."
+    },
+    {
+      "id": "je-442",
+      "question": "Peninsula countertops require a receptacle if they have a long dimension of at least how many inches?",
+      "options": ["12 inches", "18 inches", "24 inches", "36 inches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.52(C)(3)", "url": ""},
+      "explanation": "Per NEC 210.52(C)(3), at least one receptacle outlet shall be installed for each peninsular countertop space with a long dimension of 24 inches (600 mm) or greater and a short dimension of 12 inches (300 mm) or greater."
+    },
+    {
+      "id": "je-443",
+      "question": "Bathroom receptacles must be supplied by a circuit that serves what?",
+      "options": ["Any room in the dwelling", "Only bathrooms (one or more)", "Only the bathroom where the receptacle is located", "Bathrooms and adjacent hallways"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.11(C)(3)", "url": ""},
+      "explanation": "Per NEC 210.11(C)(3), the 20-ampere bathroom branch circuit shall be permitted to supply a single bathroom or multiple bathrooms."
+    },
+    {
+      "id": "je-444",
+      "question": "At least one bathroom receptacle must be located within what distance of the outside edge of each basin?",
+      "options": ["12 inches", "24 inches", "3 feet", "6 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.52(D)", "url": ""},
+      "explanation": "Per NEC 210.52(D), at least one wall receptacle outlet shall be installed within 3 feet (900 mm) of the outside edge of each basin."
+    },
+    {
+      "id": "je-445",
+      "question": "Hallways 10 feet or longer require how many receptacle outlets?",
+      "options": ["None", "At least one", "At least two", "One every 6 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.52(H)", "url": ""},
+      "explanation": "Per NEC 210.52(H), in dwelling units, hallways of 10 feet (3.0 m) or more in length shall have at least one receptacle outlet."
+    },
+    {
+      "id": "je-446",
+      "question": "A garage receptacle outlet is required for each vehicle space. True or False?",
+      "options": ["True - one GFCI outlet for each car space", "False - at least one receptacle per attached garage is required", "True - one outlet per 200 sq ft", "False - no garage receptacles required"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.52(G)(1)", "url": ""},
+      "explanation": "Per NEC 210.52(G)(1), at least one receptacle outlet shall be installed in each attached garage and each detached garage with electric power."
+    },
+    {
+      "id": "je-447",
+      "question": "What is the maximum height for a receptacle outlet serving a washing machine?",
+      "options": ["No height restriction", "4 feet", "5 feet", "6 feet"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 210.52", "url": ""},
+      "explanation": "The NEC does not specify a maximum height for laundry receptacles, but they are typically installed at accessible heights. Local codes may have specific requirements."
+    },
+    {
+      "id": "je-448",
+      "question": "A dwelling unit with 2000 square feet of living space requires how much general lighting load for calculation purposes?",
+      "options": ["2000 VA", "4000 VA", "6000 VA", "8000 VA"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 220.12", "url": ""},
+      "explanation": "Per NEC Table 220.12, dwelling units require 3 VA per square foot for general lighting load calculations. 2000 sq ft × 3 VA = 6000 VA."
+    },
+    {
+      "id": "je-449",
+      "question": "How many VA must be included for each small appliance circuit in dwelling load calculations?",
+      "options": ["1000 VA", "1500 VA", "2000 VA", "3000 VA"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 220.52(A)", "url": ""},
+      "explanation": "Per NEC 220.52(A), a load of not less than 1500 VA shall be included for each 2-wire small-appliance branch circuit."
+    },
+    {
+      "id": "je-450",
+      "question": "How many VA must be included for the laundry circuit in dwelling load calculations?",
+      "options": ["1000 VA", "1500 VA", "2000 VA", "2500 VA"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 220.52(B)", "url": ""},
+      "explanation": "Per NEC 220.52(B), a load of not less than 1500 VA shall be included for the laundry branch circuit."
+    }
+  ]
+}

@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "je-351",
+      "question": "Wind electric systems are covered by what NEC article?",
+      "options": ["Article 690", "Article 692", "Article 694", "Article 700"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 694", "url": ""},
+      "explanation": "NEC Article 694 covers small wind electric systems, including the wind turbine, tower, and the electric equipment."
+    },
+    {
+      "id": "je-352",
+      "question": "Fuel cell systems are covered by what NEC article?",
+      "options": ["Article 690", "Article 692", "Article 700", "Article 705"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 692", "url": ""},
+      "explanation": "NEC Article 692 covers fuel cell systems, including fuel cells and the means of connecting them to the electrical system."
+    },
+    {
+      "id": "je-353",
+      "question": "Critical operations power systems (COPS) are covered by what NEC article?",
+      "options": ["Article 700", "Article 701", "Article 705", "Article 708"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 708", "url": ""},
+      "explanation": "NEC Article 708 covers the installation, operation, and maintenance of critical operations power systems (COPS) for designated critical operations areas."
+    },
+    {
+      "id": "je-354",
+      "question": "What is the purpose of a Critical Operations Power System (COPS)?",
+      "options": ["Emergency egress lighting", "Powering public safety and government facilities that require continuous operation for national security, public safety, or business continuity", "Hospital emergency power", "Fire pump operation"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 708.1", "url": ""},
+      "explanation": "Per NEC 708.1, COPS are designated critical operations areas or facilities that require continuous operation for reasons of public safety, emergency management, national security, or business continuity."
+    },
+    {
+      "id": "je-355",
+      "question": "COPS wiring must be designed to remain functional for what period during a fire?",
+      "options": ["30 minutes", "1 hour", "2 hours", "As determined by risk assessment"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 708.10", "url": ""},
+      "explanation": "Per NEC 708.10, COPS wiring shall be designed to maintain critical operation during fire conditions based on the hazard risk assessment."
+    },
+    {
+      "id": "je-356",
+      "question": "What is the maximum voltage drop permitted for branch circuits per NEC recommendations?",
+      "options": ["2%", "3%", "5%", "8%"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.19(A) Informational Note 4", "url": ""},
+      "explanation": "Per NEC 210.19(A) Informational Note No. 4, conductors should be sized to prevent voltage drop exceeding 3% at the farthest outlet for branch circuits."
+    },
+    {
+      "id": "je-357",
+      "question": "What is the maximum total voltage drop permitted for feeders plus branch circuits combined?",
+      "options": ["3%", "4%", "5%", "8%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.19(A) Informational Note 4, 215.2(A) Informational Note 2", "url": ""},
+      "explanation": "Per NEC informational notes, the maximum combined voltage drop for both feeders and branch circuits should not exceed 5%."
+    },
+    {
+      "id": "je-358",
+      "question": "The resistance of copper conductors increases with temperature. True or False?",
+      "options": ["True - resistance increases as temperature increases", "False - resistance decreases as temperature increases", "True - but only above 100°C", "False - temperature has no effect on resistance"],
+      "correct": 0,
+      "source": {"name": "Electrical Theory", "url": ""},
+      "explanation": "The resistance of copper conductors has a positive temperature coefficient, meaning resistance increases as temperature increases."
+    },
+    {
+      "id": "je-359",
+      "question": "What is the formula for calculating power in a DC circuit?",
+      "options": ["P = V × I", "P = V / I", "P = I / V", "P = V² / I"],
+      "correct": 0,
+      "source": {"name": "Ohm's Law / Power Formula", "url": ""},
+      "explanation": "Power in a DC circuit is calculated using P = V × I (Power = Voltage × Current), or equivalently P = I²R or P = V²/R."
+    },
+    {
+      "id": "je-360",
+      "question": "In a 3-phase balanced system, the line voltage is how many times the phase voltage in a wye configuration?",
+      "options": ["Equal", "√3 (1.732) times", "2 times", "3 times"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Three Phase", "url": ""},
+      "explanation": "In a wye (Y) connected 3-phase system, the line voltage equals √3 (approximately 1.732) times the phase voltage."
+    },
+    {
+      "id": "je-361",
+      "question": "In a 3-phase balanced system, the line current equals the phase current in what configuration?",
+      "options": ["Delta", "Wye", "Both", "Neither"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Three Phase", "url": ""},
+      "explanation": "In a wye (Y) connected 3-phase system, the line current equals the phase current. In a delta system, line current equals √3 times phase current."
+    },
+    {
+      "id": "je-362",
+      "question": "What is the formula for calculating three-phase power?",
+      "options": ["P = V × I", "P = √3 × V × I × PF", "P = 3 × V × I", "P = V × I × PF"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Three Phase Power", "url": ""},
+      "explanation": "Three-phase power is calculated using P = √3 × VL × IL × PF, where VL is line voltage, IL is line current, and PF is power factor."
+    },
+    {
+      "id": "je-363",
+      "question": "What is the voltage between any two phases (line-to-line) in a 120/208V, 3-phase, 4-wire system?",
+      "options": ["120 volts", "208 volts", "240 volts", "277 volts"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Three Phase", "url": ""},
+      "explanation": "In a 120/208V, 3-phase, 4-wire wye system, the line-to-line voltage is 208 volts (120V × √3 = 208V)."
+    },
+    {
+      "id": "je-364",
+      "question": "What is the voltage between phase and neutral in a 277/480V, 3-phase, 4-wire system?",
+      "options": ["208 volts", "240 volts", "277 volts", "480 volts"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - Three Phase", "url": ""},
+      "explanation": "In a 277/480V, 3-phase, 4-wire wye system, the line-to-neutral (phase) voltage is 277 volts."
+    },
+    {
+      "id": "je-365",
+      "question": "What is the line-to-line voltage in a 277/480V, 3-phase, 4-wire system?",
+      "options": ["277 volts", "400 volts", "480 volts", "600 volts"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - Three Phase", "url": ""},
+      "explanation": "In a 277/480V, 3-phase, 4-wire wye system, the line-to-line voltage is 480 volts (277V × √3 ≈ 480V)."
+    },
+    {
+      "id": "je-366",
+      "question": "A capacitor in an AC circuit causes the current to do what relative to voltage?",
+      "options": ["Lag voltage", "Lead voltage", "Be in phase with voltage", "Be 180° out of phase"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - AC Circuits", "url": ""},
+      "explanation": "In a capacitive circuit, current leads voltage. Remember: ELI the ICE man - In a capacitor (C), current (I) leads voltage (E)."
+    },
+    {
+      "id": "je-367",
+      "question": "An inductor in an AC circuit causes the current to do what relative to voltage?",
+      "options": ["Lag voltage", "Lead voltage", "Be in phase with voltage", "Be 180° out of phase"],
+      "correct": 0,
+      "source": {"name": "Electrical Theory - AC Circuits", "url": ""},
+      "explanation": "In an inductive circuit, current lags voltage. Remember: ELI the ICE man - In an inductor (L), voltage (E) leads current (I)."
+    },
+    {
+      "id": "je-368",
+      "question": "What is the unit of measurement for capacitance?",
+      "options": ["Henrys", "Farads", "Ohms", "Watts"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory", "url": ""},
+      "explanation": "Capacitance is measured in farads (F). Common values are in microfarads (μF) or picofarads (pF)."
+    },
+    {
+      "id": "je-369",
+      "question": "What is the unit of measurement for inductance?",
+      "options": ["Henrys", "Farads", "Ohms", "Watts"],
+      "correct": 0,
+      "source": {"name": "Electrical Theory", "url": ""},
+      "explanation": "Inductance is measured in henrys (H). Common values are in millihenrys (mH) or microhenrys (μH)."
+    },
+    {
+      "id": "je-370",
+      "question": "What is the formula for inductive reactance?",
+      "options": ["XL = 2πfC", "XL = 2πfL", "XL = 1/(2πfL)", "XL = 1/(2πfC)"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - AC Circuits", "url": ""},
+      "explanation": "Inductive reactance XL = 2πfL, where f is frequency in Hz and L is inductance in henrys."
+    },
+    {
+      "id": "je-371",
+      "question": "What is the formula for capacitive reactance?",
+      "options": ["XC = 2πfC", "XC = 2πfL", "XC = 1/(2πfC)", "XC = 1/(2πfL)"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - AC Circuits", "url": ""},
+      "explanation": "Capacitive reactance XC = 1/(2πfC), where f is frequency in Hz and C is capacitance in farads."
+    },
+    {
+      "id": "je-372",
+      "question": "What is the formula for impedance in a series RL circuit?",
+      "options": ["Z = R + XL", "Z = √(R² + XL²)", "Z = R × XL", "Z = R - XL"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - AC Circuits", "url": ""},
+      "explanation": "In a series RL circuit, impedance Z = √(R² + XL²), where R is resistance and XL is inductive reactance."
+    },
+    {
+      "id": "je-373",
+      "question": "What is power factor?",
+      "options": ["The ratio of apparent power to real power", "The ratio of real power to apparent power", "The sum of real and reactive power", "The phase angle between voltage and current"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Power Factor", "url": ""},
+      "explanation": "Power factor is the ratio of real power (watts) to apparent power (volt-amperes): PF = W/VA = cos θ, where θ is the phase angle."
+    },
+    {
+      "id": "je-374",
+      "question": "A power factor of 0.85 lagging indicates what type of load?",
+      "options": ["Resistive", "Capacitive", "Inductive", "No load"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - Power Factor", "url": ""},
+      "explanation": "A lagging power factor indicates an inductive load, where current lags voltage. Motors are a common cause of lagging power factor."
+    },
+    {
+      "id": "je-375",
+      "question": "Capacitor banks are often installed to do what to power factor?",
+      "options": ["Decrease it", "Correct (improve) it toward unity", "Make it lead", "Have no effect"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Power Factor Correction", "url": ""},
+      "explanation": "Capacitor banks are installed to correct (improve) lagging power factor by adding leading reactive power to counteract the lagging reactive power of inductive loads."
+    },
+    {
+      "id": "je-376",
+      "question": "What happens to the current in a circuit when power factor improves from 0.7 to 1.0 with constant real power?",
+      "options": ["Current increases", "Current decreases", "Current stays the same", "Current becomes zero"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Power Factor", "url": ""},
+      "explanation": "When power factor improves (increases toward 1.0), current decreases for the same real power delivery because P = V × I × PF, so I = P/(V × PF)."
+    },
+    {
+      "id": "je-377",
+      "question": "What is the apparent power when real power is 10 kW and power factor is 0.8?",
+      "options": ["8 kVA", "10 kVA", "12.5 kVA", "80 kVA"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - Power", "url": ""},
+      "explanation": "Apparent Power (kVA) = Real Power (kW) / Power Factor = 10 kW / 0.8 = 12.5 kVA."
+    },
+    {
+      "id": "je-378",
+      "question": "What is true power also called?",
+      "options": ["Reactive power", "Apparent power", "Real power or watts", "VA power"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - Power", "url": ""},
+      "explanation": "True power, also called real power, is the actual power consumed by the load and is measured in watts (W)."
+    },
+    {
+      "id": "je-379",
+      "question": "What is reactive power measured in?",
+      "options": ["Watts", "Volt-amperes (VA)", "Volt-amperes reactive (VAR)", "Kilowatt-hours"],
+      "correct": 2,
+      "source": {"name": "Electrical Theory - Power", "url": ""},
+      "explanation": "Reactive power is measured in volt-amperes reactive (VAR or kVAR). It represents power that oscillates between source and load without doing useful work."
+    },
+    {
+      "id": "je-380",
+      "question": "What is the relationship between kW, kVA, and kVAR in the power triangle?",
+      "options": ["kVA = kW + kVAR", "kVA² = kW² + kVAR²", "kW = kVA × kVAR", "kVAR = kVA / kW"],
+      "correct": 1,
+      "source": {"name": "Electrical Theory - Power Triangle", "url": ""},
+      "explanation": "In the power triangle, kVA² = kW² + kVAR², similar to the Pythagorean theorem. kVA is the hypotenuse, kW is adjacent, and kVAR is opposite."
+    },
+    {
+      "id": "je-381",
+      "question": "The ampacity of conductors must be reduced when more than how many current-carrying conductors are in the same raceway?",
+      "options": ["2", "3", "4", "6"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 310.15(C)(1)", "url": ""},
+      "explanation": "Per NEC Table 310.15(C)(1), ampacity adjustment factors must be applied when more than 3 current-carrying conductors are installed in the same raceway or cable."
+    },
+    {
+      "id": "je-382",
+      "question": "For 4-6 current-carrying conductors in a raceway, the ampacity adjustment factor is what?",
+      "options": ["70%", "80%", "85%", "90%"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 310.15(C)(1)", "url": ""},
+      "explanation": "Per NEC Table 310.15(C)(1), for 4-6 current-carrying conductors, the ampacity must be adjusted to 80% of the values in Table 310.16."
+    },
+    {
+      "id": "je-383",
+      "question": "For 7-9 current-carrying conductors in a raceway, the ampacity adjustment factor is what?",
+      "options": ["60%", "70%", "80%", "85%"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 310.15(C)(1)", "url": ""},
+      "explanation": "Per NEC Table 310.15(C)(1), for 7-9 current-carrying conductors, the ampacity must be adjusted to 70% of the values in Table 310.16."
+    },
+    {
+      "id": "je-384",
+      "question": "Equipment grounding conductors are counted as current-carrying conductors for ampacity adjustment. True or False?",
+      "options": ["True", "False - EGCs are not counted", "True, only if insulated", "False, only if bare"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 310.15(E)", "url": ""},
+      "explanation": "Per NEC 310.15(E), equipment grounding conductors are not counted when applying ampacity adjustment factors."
+    },
+    {
+      "id": "je-385",
+      "question": "A neutral conductor that carries only unbalanced current in a 3-phase, 4-wire wye system is counted as a current-carrying conductor. True or False?",
+      "options": ["True", "False - not counted when carrying only unbalanced current", "Always counted", "Only counted if over 10% unbalanced"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 310.15(E)", "url": ""},
+      "explanation": "Per NEC 310.15(E), a neutral conductor that carries only the unbalanced current from other conductors of the same circuit is not counted."
+    },
+    {
+      "id": "je-386",
+      "question": "When is a neutral conductor counted as a current-carrying conductor?",
+      "options": ["Never", "When supplying nonlinear loads that produce harmonic currents exceeding 50%", "Always in commercial buildings", "Only for 200A and larger services"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 310.15(E)", "url": ""},
+      "explanation": "Per NEC 310.15(E), a neutral conductor is counted when more than 50% of the neutral current is determined to consist of harmonic currents, as with nonlinear loads."
+    },
+    {
+      "id": "je-387",
+      "question": "Ambient temperature correction factors apply when the ambient temperature exceeds what value for conductors rated 90°C?",
+      "options": ["20°C (68°F)", "30°C (86°F)", "35°C (95°F)", "40°C (104°F)"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 310.15(B)(1)", "url": ""},
+      "explanation": "Per NEC Table 310.15(B)(1), ampacity correction factors apply when ambient temperature exceeds 30°C (86°F) for conductors rated 60°C through 90°C."
+    },
+    {
+      "id": "je-388",
+      "question": "Conductors in attic spaces above thermal insulation without maintained clearance must have their ampacity calculated at what ambient temperature?",
+      "options": ["30°C", "40°C", "50°C", "60°C"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 310.15(B)(4)(a)", "url": ""},
+      "explanation": "Per NEC 310.15(B)(4)(a), conductors in attic spaces without maintained clearance above thermal insulation shall have their ampacity determined based on a 60°C ambient."
+    },
+    {
+      "id": "je-389",
+      "question": "What is the maximum fill percentage for a raceway containing 3 or more conductors?",
+      "options": ["31%", "40%", "53%", "60%"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Chapter 9, Table 1", "url": ""},
+      "explanation": "Per NEC Chapter 9, Table 1, the maximum fill for 3 or more conductors in a raceway is 40% of the raceway's cross-sectional area."
+    },
+    {
+      "id": "je-390",
+      "question": "What is the maximum fill percentage for a raceway containing 2 conductors?",
+      "options": ["31%", "40%", "53%", "60%"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Chapter 9, Table 1", "url": ""},
+      "explanation": "Per NEC Chapter 9, Table 1, the maximum fill for 2 conductors in a raceway is 31% of the raceway's cross-sectional area."
+    },
+    {
+      "id": "je-391",
+      "question": "What is the maximum fill percentage for a raceway containing 1 conductor?",
+      "options": ["31%", "40%", "53%", "60%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Chapter 9, Table 1", "url": ""},
+      "explanation": "Per NEC Chapter 9, Table 1, the maximum fill for 1 conductor in a raceway is 53% of the raceway's cross-sectional area."
+    },
+    {
+      "id": "je-392",
+      "question": "What is the maximum length of EMT permitted in any trade size?",
+      "options": ["6 feet", "10 feet", "No maximum length specified", "25 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 358", "url": ""},
+      "explanation": "The NEC does not specify a maximum length for EMT runs. However, practical considerations and the total number of bends (360° maximum) limit run lengths."
+    },
+    {
+      "id": "je-393",
+      "question": "What is the maximum number of degrees of bends permitted between pull points in a raceway run?",
+      "options": ["180 degrees", "270 degrees", "360 degrees", "No limit"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 358.26", "url": ""},
+      "explanation": "Per NEC 358.26 (EMT) and similar articles for other raceways, there shall not be more than the equivalent of four quarter bends (360 degrees total) between pull points."
+    },
+    {
+      "id": "je-394",
+      "question": "EMT shall be securely fastened within what distance of each outlet box or termination?",
+      "options": ["3 feet", "4 feet", "5 feet", "6 feet"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 358.30(A)", "url": ""},
+      "explanation": "Per NEC 358.30(A), EMT shall be securely fastened within 3 feet (900 mm) of each outlet box, junction box, device box, cabinet, conduit body, or other tubing termination."
+    },
+    {
+      "id": "je-395",
+      "question": "EMT shall be supported at intervals not exceeding what distance?",
+      "options": ["4 feet", "6 feet", "8 feet", "10 feet"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 358.30(A)", "url": ""},
+      "explanation": "Per NEC 358.30(A), EMT shall be supported at intervals not exceeding 10 feet (3 m)."
+    },
+    {
+      "id": "je-396",
+      "question": "Rigid metal conduit (RMC) shall be secured within what distance of each outlet box or termination?",
+      "options": ["3 feet", "4 feet", "5 feet", "6 feet"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 344.30(A)", "url": ""},
+      "explanation": "Per NEC 344.30(A), RMC shall be securely fastened within 3 feet (900 mm) of each outlet box, junction box, device box, cabinet, conduit body, or other termination."
+    },
+    {
+      "id": "je-397",
+      "question": "Rigid metal conduit (RMC) shall be supported at intervals not exceeding what distance?",
+      "options": ["4 feet", "6 feet", "8 feet", "10 feet"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 344.30(A)", "url": ""},
+      "explanation": "Per NEC 344.30(A), RMC shall be supported at intervals not exceeding 10 feet (3 m)."
+    },
+    {
+      "id": "je-398",
+      "question": "What is the minimum bending radius for EMT when a one-shot bender is used?",
+      "options": ["4 times the trade size", "6 times the trade size", "Per Table 2 of Chapter 9", "10 times the trade size"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 358.24", "url": ""},
+      "explanation": "Per NEC 358.24, bends in EMT shall be made so that the tubing is not damaged and the internal diameter is not effectively reduced. Table 2 of Chapter 9 provides minimum bending radii."
+    },
+    {
+      "id": "je-399",
+      "question": "Flexible metal conduit (FMC) is required to be secured within what distance of termination points?",
+      "options": ["8 inches", "12 inches", "18 inches", "24 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 348.30(A)", "url": ""},
+      "explanation": "Per NEC 348.30(A), FMC shall be securely fastened within 12 inches (300 mm) of each outlet box, junction box, cabinet, or fitting."
+    },
+    {
+      "id": "je-400",
+      "question": "Flexible metal conduit (FMC) shall be supported at intervals not exceeding what distance?",
+      "options": ["3 feet", "4 feet", "4.5 feet", "6 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 348.30(A)", "url": ""},
+      "explanation": "Per NEC 348.30(A), FMC shall be supported at intervals not exceeding 4.5 feet (1.4 m)."
+    }
+  ]
+}

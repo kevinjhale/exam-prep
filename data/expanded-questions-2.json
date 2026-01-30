@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "je-251",
+      "question": "What is the maximum motor branch circuit short-circuit and ground-fault protection for a Design B motor using an inverse time breaker?",
+      "options": ["150% of motor FLC", "250% of motor FLC", "300% of motor FLC", "400% of motor FLC"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 430.52", "url": ""},
+      "explanation": "Per NEC Table 430.52, for single-phase and polyphase squirrel cage motors (Design B), the maximum rating for an inverse time breaker is 250% of motor full-load current."
+    },
+    {
+      "id": "je-252",
+      "question": "Motor overload protection is typically set at what percentage of the motor nameplate full-load current for motors with a service factor of 1.15 or greater?",
+      "options": ["100%", "115%", "125%", "140%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 430.32(A)(1)", "url": ""},
+      "explanation": "Per NEC 430.32(A)(1), for motors with a service factor of 1.15 or greater, overload protection shall not exceed 125% of the motor nameplate full-load current."
+    },
+    {
+      "id": "je-253",
+      "question": "What is the maximum distance a motor disconnecting means can be located from the motor?",
+      "options": ["25 feet", "50 feet if within sight", "100 feet", "No limit if lockable"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.102(B)", "url": ""},
+      "explanation": "Per NEC 430.102(B) and the definition of 'in sight from,' the disconnecting means shall be in sight from the motor location, which means visible and not more than 50 feet distant."
+    },
+    {
+      "id": "je-254",
+      "question": "Conductors supplying a single motor shall have an ampacity not less than what percentage of the motor full-load current?",
+      "options": ["100%", "115%", "125%", "150%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 430.22(A)", "url": ""},
+      "explanation": "Per NEC 430.22(A), conductors supplying a single motor shall have an ampacity not less than 125 percent of the motor full-load current."
+    },
+    {
+      "id": "je-255",
+      "question": "Conductors supplying multiple motors shall have ampacity not less than 125% of the largest motor FLC plus what?",
+      "options": ["100% of all other motor FLCs", "80% of all other motor FLCs", "Sum of all other motor FLCs", "50% of all other motor FLCs"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 430.24", "url": ""},
+      "explanation": "Per NEC 430.24, conductors supplying several motors shall have ampacity not less than the sum of 125% of the FLC of the highest rated motor plus the sum of the full-load currents of all other motors supplied."
+    },
+    {
+      "id": "je-256",
+      "question": "A motor controller must be able to start and stop the motor and must have a horsepower rating not less than what?",
+      "options": ["75% of motor horsepower", "Equal to motor horsepower", "125% of motor horsepower", "150% of motor horsepower"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.83", "url": ""},
+      "explanation": "Per NEC 430.83(A), the controller shall have a horsepower rating not lower than the horsepower rating of the motor."
+    },
+    {
+      "id": "je-257",
+      "question": "What is the minimum horsepower rating of a motor disconnecting means?",
+      "options": ["75% of motor HP", "Equal to or greater than motor HP", "115% of motor HP", "125% of motor HP"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.110", "url": ""},
+      "explanation": "Per NEC 430.110(A), the disconnecting means shall have a horsepower rating not less than that of the motor."
+    },
+    {
+      "id": "je-258",
+      "question": "For a torque motor, what current is used to size branch circuit conductors?",
+      "options": ["Full-load current", "Nameplate current", "Locked-rotor current", "Starting current"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 430.6(B)", "url": ""},
+      "explanation": "Per NEC 430.6(B), for torque motors, the rated current shall be the locked-rotor current, and this nameplate current shall be used to determine the ampacity of branch-circuit conductors."
+    },
+    {
+      "id": "je-259",
+      "question": "What type of motor has its output rating expressed in terms of locked-rotor torque instead of horsepower?",
+      "options": ["Induction motor", "Synchronous motor", "Torque motor", "Wound-rotor motor"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 430.7(C)", "url": ""},
+      "explanation": "Per NEC 430.7(C), torque motors are rated for operation at standstill and shall be marked with locked-rotor torque instead of horsepower."
+    },
+    {
+      "id": "je-260",
+      "question": "A motor with a service factor of 1.0 requires overload protection not exceeding what percentage of FLC?",
+      "options": ["100%", "105%", "115%", "125%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 430.32(A)(1)", "url": ""},
+      "explanation": "Per NEC 430.32(A)(1), for motors with a service factor of less than 1.15, the overload protective device shall not exceed 115% of the motor nameplate full-load current."
+    },
+    {
+      "id": "je-261",
+      "question": "Which NEC table provides full-load currents for 3-phase AC motors?",
+      "options": ["Table 430.247", "Table 430.248", "Table 430.250", "Table 310.16"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 430.250", "url": ""},
+      "explanation": "NEC Table 430.250 provides full-load current values for three-phase alternating-current motors."
+    },
+    {
+      "id": "je-262",
+      "question": "Which NEC table provides full-load currents for single-phase AC motors?",
+      "options": ["Table 430.247", "Table 430.248", "Table 430.250", "Table 310.16"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 430.248", "url": ""},
+      "explanation": "NEC Table 430.248 provides full-load current values for single-phase alternating-current motors."
+    },
+    {
+      "id": "je-263",
+      "question": "The ampacity of conductors between an adjustable speed drive and the motor shall be based on what current?",
+      "options": ["Motor nameplate FLC", "The maximum operating current marked on the motor or control", "150% of table FLC", "Drive nameplate rating"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.6(C)", "url": ""},
+      "explanation": "Per NEC 430.6(C), for ac adjustable voltage motors, conductor ampacity shall be based on the maximum operating current marked on the motor nameplate or the control nameplate, or both."
+    },
+    {
+      "id": "je-264",
+      "question": "What is the minimum conductor size for motor control circuit conductors?",
+      "options": ["18 AWG", "16 AWG", "14 AWG", "12 AWG"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 430.72(B)", "url": ""},
+      "explanation": "Per NEC 430.72(B), motor control circuit conductors shall be not smaller than 18 AWG for copper or 16 AWG for aluminum."
+    },
+    {
+      "id": "je-265",
+      "question": "When the motor controller also serves as the disconnecting means, it must open all what?",
+      "options": ["Phase conductors only", "All ungrounded supply conductors", "Hot and neutral conductors", "All conductors including ground"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.111", "url": ""},
+      "explanation": "Per NEC 430.111, where a motor controller also serves as the disconnecting means, it shall open all ungrounded supply conductors."
+    },
+    {
+      "id": "je-266",
+      "question": "What NEC article covers requirements for air-conditioning and refrigerating equipment?",
+      "options": ["Article 410", "Article 422", "Article 430", "Article 440"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 440", "url": ""},
+      "explanation": "Article 440 covers electric motor-driven air-conditioning and refrigerating equipment, including sealed motor-compressors."
+    },
+    {
+      "id": "je-267",
+      "question": "A hermetic refrigerant motor-compressor uses what current rating for sizing conductors?",
+      "options": ["Locked-rotor current", "Nameplate rated-load current or branch-circuit selection current, whichever is greater", "Full-load current only", "Starting current"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 440.6", "url": ""},
+      "explanation": "Per NEC 440.6, the ampacity of conductors shall be determined based on the rated-load current or branch-circuit selection current, whichever is greater."
+    },
+    {
+      "id": "je-268",
+      "question": "What size equipment grounding conductor is required for a circuit protected by a 100-amp overcurrent device?",
+      "options": ["#10 AWG", "#8 AWG", "#6 AWG", "#4 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 250.122", "url": ""},
+      "explanation": "Per NEC Table 250.122, a circuit protected by a 100-amp overcurrent device requires a minimum #8 AWG copper equipment grounding conductor."
+    },
+    {
+      "id": "je-269",
+      "question": "What size equipment grounding conductor is required for a circuit protected by a 200-amp overcurrent device?",
+      "options": ["#8 AWG", "#6 AWG", "#4 AWG", "#2 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 250.122", "url": ""},
+      "explanation": "Per NEC Table 250.122, a circuit protected by a 200-amp overcurrent device requires a minimum #6 AWG copper equipment grounding conductor."
+    },
+    {
+      "id": "je-270",
+      "question": "What is the minimum copper grounding electrode conductor size for a service with #2 AWG or smaller service entrance conductors?",
+      "options": ["#10 AWG", "#8 AWG", "#6 AWG", "#4 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 250.66", "url": ""},
+      "explanation": "Per NEC Table 250.66, for copper service entrance conductors #2 AWG or smaller, the minimum copper grounding electrode conductor is #8 AWG."
+    },
+    {
+      "id": "je-271",
+      "question": "The grounding electrode conductor shall be installed in one continuous length without what?",
+      "options": ["Bends", "Conduit", "Splices (unless certain listed methods used)", "Insulation"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.64(C)", "url": ""},
+      "explanation": "Per NEC 250.64(C), except for specified methods, the grounding electrode conductor shall be installed in one continuous length without a splice or joint."
+    },
+    {
+      "id": "je-272",
+      "question": "Grounding electrode conductors #6 AWG and smaller that are not subject to physical damage shall be protected by what?",
+      "options": ["Rigid metal conduit only", "PVC conduit only", "Running in a raceway, armor, or cable is not required", "EMT only"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.64(B)", "url": ""},
+      "explanation": "Per NEC 250.64(B), grounding electrode conductors #6 AWG and smaller that are not subject to physical damage are not required to be enclosed in a raceway."
+    },
+    {
+      "id": "je-273",
+      "question": "What types of electrodes are required to be part of the grounding electrode system if present at a building?",
+      "options": ["Only those installed", "Metal underground water pipe, metal frame of building, concrete-encased electrode if present", "Ground rods only", "Ufer ground only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.50", "url": ""},
+      "explanation": "Per NEC 250.50, all grounding electrodes that are present at a building shall be bonded together to form the grounding electrode system, including metal water pipes, building steel, and concrete-encased electrodes."
+    },
+    {
+      "id": "je-274",
+      "question": "A metal underground water pipe electrode must be supplemented by an additional electrode unless what?",
+      "options": ["It is copper", "The water pipe is in direct contact with earth for 10 feet or more", "Always requires supplemental electrode", "The pipe is 2 inches or larger"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.53(D)(2)", "url": ""},
+      "explanation": "Per NEC 250.53(D)(2), a metal underground water pipe electrode shall be supplemented by an additional electrode."
+    },
+    {
+      "id": "je-275",
+      "question": "A concrete-encased electrode (Ufer ground) must have at least how many feet of bare copper or steel reinforcing bars encased in concrete?",
+      "options": ["10 feet", "15 feet", "20 feet", "25 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.52(A)(3)", "url": ""},
+      "explanation": "Per NEC 250.52(A)(3), a concrete-encased electrode consists of at least 20 feet of bare copper conductor or steel reinforcing bars encased in concrete."
+    },
+    {
+      "id": "je-276",
+      "question": "Ground rods shall have a minimum length of how many feet?",
+      "options": ["6 feet", "8 feet", "10 feet", "12 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.52(A)(5)", "url": ""},
+      "explanation": "Per NEC 250.52(A)(5), rod electrodes shall be not less than 8 feet (2.44 m) in length."
+    },
+    {
+      "id": "je-277",
+      "question": "If a single ground rod has a resistance to ground exceeding 25 ohms, what is required?",
+      "options": ["Install larger rod", "Install supplemental electrode", "Deeper installation", "Add salt to soil"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.53(A)(2)", "url": ""},
+      "explanation": "Per NEC 250.53(A)(2), if a single rod electrode has a resistance to ground exceeding 25 ohms, it shall be supplemented by an additional electrode."
+    },
+    {
+      "id": "je-278",
+      "question": "Two ground rods used as a grounding electrode system must be spaced at least how far apart?",
+      "options": ["4 feet", "6 feet", "8 feet", "10 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.53(A)(3)", "url": ""},
+      "explanation": "Per NEC 250.53(A)(3), where multiple rod electrodes are installed, they shall be not less than 6 feet (1.8 m) apart."
+    },
+    {
+      "id": "je-279",
+      "question": "The minimum size copper bonding jumper for a 200-amp service is what?",
+      "options": ["#8 AWG", "#6 AWG", "#4 AWG", "#2 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.102(C), Table 250.102(C)(1)", "url": ""},
+      "explanation": "Per NEC Table 250.102(C)(1), for service entrance conductors 3/0 AWG through 350 kcmil (typical for 200A service), the minimum supply-side bonding jumper is #4 AWG copper."
+    },
+    {
+      "id": "je-280",
+      "question": "At what voltage level must service disconnects be capable of being locked in the open position?",
+      "options": ["All voltage levels", "Over 150 volts to ground", "Over 277 volts to ground", "Over 480 volts"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 230.82(3)", "url": ""},
+      "explanation": "Per NEC 230.82(3), service disconnecting means shall be capable of being locked in the open position for all voltage levels."
+    },
+    {
+      "id": "je-281",
+      "question": "What is the minimum wire bending space for a #2 AWG conductor at a terminal?",
+      "options": ["1.5 inches", "2 inches", "2.5 inches", "3 inches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 312.6(A)", "url": ""},
+      "explanation": "Per NEC Table 312.6(A), the minimum wire bending space for a #2 AWG conductor is 2.5 inches."
+    },
+    {
+      "id": "je-282",
+      "question": "The maximum number of overcurrent devices in a lighting and appliance branch-circuit panelboard is what?",
+      "options": ["30", "42", "No limit specified for modern panelboards", "84"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 408", "url": ""},
+      "explanation": "The NEC no longer limits the number of overcurrent devices in a panelboard. The 42-circuit limit for lighting and appliance panelboards was removed in the 2008 NEC."
+    },
+    {
+      "id": "je-283",
+      "question": "Panelboards installed in wet locations must be what type?",
+      "options": ["Weatherproof", "Listed for wet locations", "NEMA 3R minimum", "Stainless steel"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 408.40", "url": ""},
+      "explanation": "Per NEC 408.40, panelboards in wet locations shall be weatherproof and be installed to prevent moisture or water from entering and accumulating within the panelboard."
+    },
+    {
+      "id": "je-284",
+      "question": "What is the minimum clearance required between the top of a switchboard and a combustible ceiling?",
+      "options": ["3 feet", "2 feet", "900 mm (3 feet)", "No specific requirement"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 408.22", "url": ""},
+      "explanation": "Per NEC 408.22, a minimum clearance of 900 mm (3 feet) shall be provided between the top of a switchboard and a combustible ceiling, unless enclosed."
+    },
+    {
+      "id": "je-285",
+      "question": "Transformers rated over 600 volts installed indoors must be installed in a transformer vault unless what exception applies?",
+      "options": ["They are dry-type and meet specific requirements", "They are less than 50 kVA", "They are listed for indoor use", "They have fusible links"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 450.21", "url": ""},
+      "explanation": "Per NEC 450.21 and 450.22, dry-type transformers rated over 600V can be installed indoors without a vault under certain conditions including adequate separation and specific construction requirements."
+    },
+    {
+      "id": "je-286",
+      "question": "What is the maximum overcurrent protection for a transformer rated over 1000 volts with fuses?",
+      "options": ["125% of rated primary current", "150% of rated primary current", "250% of rated primary current", "300% of rated primary current"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 450.3(A)", "url": ""},
+      "explanation": "Per NEC Table 450.3(A), for transformers over 1000V with primary fuse protection, the maximum rating is 250% (or 300% for circuit breakers) of the rated primary current."
+    },
+    {
+      "id": "je-287",
+      "question": "Dry-type transformers rated 600 volts or less and not exceeding what kVA rating can be installed in hollow spaces of buildings if properly ventilated?",
+      "options": ["25 kVA", "50 kVA", "75 kVA", "112.5 kVA"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 450.21(A)", "url": ""},
+      "explanation": "Per NEC 450.21(A), dry-type transformers installed indoors and rated 600 volts, nominal, or less shall have a separation of at least 12 inches from combustible material unless not more than 50 kVA and rated less than 150°C rise."
+    },
+    {
+      "id": "je-288",
+      "question": "Generator terminals operating at over 50 volts must be guarded against what?",
+      "options": ["Moisture", "Dust", "Accidental contact", "All of the above"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 445.16", "url": ""},
+      "explanation": "Per NEC 445.16, live parts of generators operating at more than 50 volts to ground shall be guarded against accidental contact."
+    },
+    {
+      "id": "je-289",
+      "question": "Generators must be equipped with what type of disconnecting means?",
+      "options": ["Manual only", "A disconnect that can disconnect all sources of supply", "Automatic only", "No specific requirement"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 445.18", "url": ""},
+      "explanation": "Per NEC 445.18, generators shall be equipped with a disconnect by means of which the generator can be disconnected from all other sources of supply."
+    },
+    {
+      "id": "je-290",
+      "question": "Ampacity of generator conductors shall be based on what?",
+      "options": ["125% of nameplate current", "The nameplate current rating of the generator", "150% of nameplate current", "Calculated load"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 445.13", "url": ""},
+      "explanation": "Per NEC 445.13, the ampacity of the conductors from the generator terminals to the first distribution device shall not be less than 115% of the nameplate current rating of the generator."
+    },
+    {
+      "id": "je-291",
+      "question": "Stationary batteries in dwelling units must be installed in what manner?",
+      "options": ["In a garage only", "In accordance with Article 480", "In a dedicated battery room", "Not permitted in dwelling units"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 480", "url": ""},
+      "explanation": "Per NEC Article 480, stationary batteries in all locations, including dwelling units, must meet the requirements of Article 480."
+    },
+    {
+      "id": "je-292",
+      "question": "Battery systems over what voltage require a disconnecting means?",
+      "options": ["30 volts", "50 volts", "60 volts", "120 volts"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 480.6", "url": ""},
+      "explanation": "Per NEC 480.6, a disconnecting means shall be provided for battery systems operating at more than 50 volts."
+    },
+    {
+      "id": "je-293",
+      "question": "What protection is required for battery racks in locations exposed to physical damage?",
+      "options": ["No protection required", "Guards", "Concrete enclosure", "Chain link fence"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 480.10", "url": ""},
+      "explanation": "Per NEC 480.10, batteries shall be guarded against physical damage where subject to such damage."
+    },
+    {
+      "id": "je-294",
+      "question": "What is the maximum voltage for a battery system requiring only Class 2 wiring?",
+      "options": ["30 volts", "50 volts", "100 volt-amperes and 30 volts", "150 volts"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 720, 725", "url": ""},
+      "explanation": "Class 2 circuits are power-limited to 100 volt-amperes at up to 30 volts as defined in Chapter 9, Table 11(A)."
+    },
+    {
+      "id": "je-295",
+      "question": "What NEC article covers electric signs and outline lighting?",
+      "options": ["Article 600", "Article 604", "Article 610", "Article 620"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 600", "url": ""},
+      "explanation": "NEC Article 600 covers electric signs and outline lighting systems."
+    },
+    {
+      "id": "je-296",
+      "question": "Electric signs must be listed unless what exception applies?",
+      "options": ["They are indoor signs", "They are field-installed skeleton tubing", "They are less than 100 watts", "They are 12 volts or less"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 600.3", "url": ""},
+      "explanation": "Per NEC 600.3, electric signs and outline lighting shall be listed, except for field-installed skeleton tubing."
+    },
+    {
+      "id": "je-297",
+      "question": "Each commercial building with ground floor area must have at least how many sign outlets?",
+      "options": ["None required", "One per tenant space or occupancy", "One for the entire building", "Two per entrance"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 600.5(A)", "url": ""},
+      "explanation": "Per NEC 600.5(A), at least one sign outlet shall be supplied to each tenant space with an entrance at grade level."
+    },
+    {
+      "id": "je-298",
+      "question": "What NEC article covers elevators, dumbwaiters, escalators, and moving walks?",
+      "options": ["Article 610", "Article 620", "Article 625", "Article 630"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 620", "url": ""},
+      "explanation": "NEC Article 620 covers the installation of electrical equipment and wiring for elevators, dumbwaiters, escalators, moving walks, platform lifts, and stairway chairlifts."
+    },
+    {
+      "id": "je-299",
+      "question": "What type of receptacle is required in elevator machine rooms?",
+      "options": ["15-amp duplex", "20-amp single", "GFCI-protected 125V, 20-amp single receptacle", "Any 120V receptacle"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 620.23", "url": ""},
+      "explanation": "Per NEC 620.23, a GFCI-protected 125-volt, single, 20-ampere receptacle shall be provided in each machine room and control room."
+    },
+    {
+      "id": "je-300",
+      "question": "What NEC article covers electric vehicle power transfer systems?",
+      "options": ["Article 620", "Article 625", "Article 626", "Article 630"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 625", "url": ""},
+      "explanation": "NEC Article 625 covers the electrical conductors and equipment external to an electric vehicle that connect an electric vehicle to a supply of electricity and the installation of equipment and devices related to electric vehicle charging."
+    }
+  ]
+}

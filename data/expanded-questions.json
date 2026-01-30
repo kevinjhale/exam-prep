@@ -1,0 +1,1118 @@
+{
+  "questions": [
+    {
+      "id": "je-151",
+      "question": "According to the NEC, what does 'accessible (as applied to equipment)' mean?",
+      "options": ["Capable of being reached quickly without tools", "Capable of being reached for operation, renewal, and inspection", "Located within 6 feet of the floor", "Visible from the entrance"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, 'accessible (as applied to equipment)' means capable of being reached for operation, renewal, and inspection."
+    },
+    {
+      "id": "je-152",
+      "question": "What does 'readily accessible' mean per the NEC?",
+      "options": ["Within reach without tools or climbing", "Capable of being reached quickly without using tools (other than keys), climbing over obstacles, or using ladders", "Accessible with a key", "Located at eye level"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, 'readily accessible' means capable of being reached quickly for operation, renewal, or inspection without requiring tools (other than keys), climbing, or using ladders."
+    },
+    {
+      "id": "je-153",
+      "question": "What is the definition of 'ampacity' according to the NEC?",
+      "options": ["The maximum voltage a conductor can handle", "The maximum current a conductor can carry continuously under conditions of use without exceeding its temperature rating", "The resistance of a conductor", "The size of a conductor in AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, ampacity is the maximum current, in amperes, that a conductor can carry continuously under the conditions of use without exceeding its temperature rating."
+    },
+    {
+      "id": "je-154",
+      "question": "What is the NEC definition of 'approved'?",
+      "options": ["Listed by a testing laboratory", "Acceptable to the authority having jurisdiction", "Meets all code requirements", "Manufactured to NEMA standards"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, 'approved' means acceptable to the authority having jurisdiction (AHJ)."
+    },
+    {
+      "id": "je-155",
+      "question": "An arc-fault circuit interrupter (AFCI) is designed to provide protection from what?",
+      "options": ["Ground faults", "Overcurrent conditions", "Effects of arc faults by recognizing characteristics unique to arcing", "Short circuits only"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, an AFCI is a device intended to provide protection from the effects of arc faults by recognizing characteristics unique to arcing and functioning to de-energize the circuit when an arc fault is detected."
+    },
+    {
+      "id": "je-156",
+      "question": "What constitutes a 'bathroom' per the NEC definition?",
+      "options": ["Any room with a toilet", "An area including a sink with one or more of the following: toilet, urinal, tub, shower, bidet, or similar plumbing fixtures", "A room with running water", "Any area where personal hygiene occurs"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a bathroom is an area including a sink with one or more of the following: a toilet, a urinal, a tub, a shower, a bidet, or similar plumbing fixtures."
+    },
+    {
+      "id": "je-157",
+      "question": "What does 'bonded (bonding)' mean according to the NEC?",
+      "options": ["Welded together", "Connected to establish electrical continuity and conductivity", "Glued with an approved adhesive", "Mechanically fastened"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, 'bonded (bonding)' means connected to establish electrical continuity and conductivity."
+    },
+    {
+      "id": "je-158",
+      "question": "What is the purpose of a bonding conductor or bonding jumper?",
+      "options": ["To carry fault current to the utility", "To ensure the required electrical conductivity between metal parts required to be electrically connected", "To provide a path for neutral current", "To connect the grounding electrode to earth"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a bonding conductor (bonding jumper) is a conductor that ensures the required electrical conductivity between metal parts that are required to be electrically connected."
+    },
+    {
+      "id": "je-159",
+      "question": "Each multiwire branch circuit must have a means to do what to all ungrounded conductors?",
+      "options": ["Ground them", "Simultaneously disconnect them at the origin point", "Identify them", "Connect them to separate panels"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.4(B)", "url": ""},
+      "explanation": "Per NEC 210.4(B), each multiwire branch circuit shall be provided with a means that will simultaneously disconnect all ungrounded conductors at the point where the branch circuit originates."
+    },
+    {
+      "id": "je-160",
+      "question": "What loads can multiwire branch circuits supply according to 210.4(C)?",
+      "options": ["Any loads", "Line-to-neutral loads only, with limited exceptions", "Line-to-line loads only", "Single-phase loads only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.4(C)", "url": ""},
+      "explanation": "Per NEC 210.4(C), multiwire branch circuits shall supply only line-to-neutral loads, with exceptions for equipment with line-to-line loads when all ungrounded conductors are opened simultaneously."
+    },
+    {
+      "id": "je-161",
+      "question": "In dwelling units, what is the maximum voltage permitted between conductors supplying luminaires?",
+      "options": ["208 volts", "240 volts", "120 volts", "277 volts"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.6(A)", "url": ""},
+      "explanation": "Per NEC 210.6(A), in dwelling units and guest rooms, the voltage shall not exceed 120 volts, nominal, between conductors that supply the terminals of luminaires."
+    },
+    {
+      "id": "je-162",
+      "question": "Where is GFCI protection required in dwelling unit garages?",
+      "options": ["Only near water sources", "For all 125-250V receptacles supplied by single-phase branch circuits rated 150V or less to ground", "Only for receptacles below 6 feet", "Not required in garages"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.8(A)(2)", "url": ""},
+      "explanation": "Per NEC 210.8(A)(2), GFCI protection is required for all 125-250V receptacles in garages supplied by single-phase branch circuits rated 150 volts or less to ground."
+    },
+    {
+      "id": "je-163",
+      "question": "GFCI protection is required for receptacles in crawl spaces at or below grade level. What is the purpose?",
+      "options": ["To prevent fires", "To protect personnel from electric shock in potentially wet locations", "To prevent overcurrent", "To meet ADA requirements"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.8(A)(5)", "url": ""},
+      "explanation": "Per NEC 210.8(A), GFCI protection is required in crawl spaces at or below grade level to protect personnel from electric shock hazards in potentially damp environments."
+    },
+    {
+      "id": "je-164",
+      "question": "GFCI protection is required for receptacles within what distance from the top inside edge of a sink?",
+      "options": ["3 feet", "4 feet", "6 feet", "8 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.8(A)(9)", "url": ""},
+      "explanation": "Per NEC 210.8(A)(9), GFCI protection is required where receptacles are installed within 6 feet (1.8m) from the top inside edge of the bowl of the sink."
+    },
+    {
+      "id": "je-165",
+      "question": "GFCI protection is required for receptacles within what distance from a bathtub or shower stall?",
+      "options": ["3 feet", "4 feet", "6 feet", "10 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.8(A)(11)", "url": ""},
+      "explanation": "Per NEC 210.8(A)(11), GFCI protection is required where receptacles are installed within 6 feet (1.8m) of the outside edge of the bathtub or shower stall."
+    },
+    {
+      "id": "je-166",
+      "question": "GFCI protection is now required in which area of dwelling units according to NEC 2026?",
+      "options": ["Bedrooms", "Attics", "Laundry areas", "Closets"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.8(A)(12)", "url": ""},
+      "explanation": "Per NEC 210.8(A)(12), GFCI protection is required for receptacles in laundry areas of dwelling units."
+    },
+    {
+      "id": "je-167",
+      "question": "What is the primary purpose of system grounding per NEC 250.4(A)(1)?",
+      "options": ["To prevent fires", "To limit voltage from lightning, line surges, or unintentional contact with higher-voltage lines and stabilize voltage to earth", "To provide a return path for current", "To protect against theft"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.4(A)(1)", "url": ""},
+      "explanation": "Per NEC 250.4(A)(1), electrical systems that are grounded shall be connected to earth so that voltage imposed by lightning, line surges, or unintentional contact with higher-voltage lines is limited and voltage to earth is stabilized during normal operation."
+    },
+    {
+      "id": "je-168",
+      "question": "Can the earth be considered as an effective ground-fault current path?",
+      "options": ["Yes, if soil resistivity is low", "Yes, with proper grounding electrodes", "No, the earth shall not be considered an effective ground-fault current path", "Only for systems under 600V"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.4(A)(5)", "url": ""},
+      "explanation": "Per NEC 250.4(A)(5)(c), the earth shall not be considered as an effective ground-fault current path."
+    },
+    {
+      "id": "je-169",
+      "question": "What connection method is NOT permitted for grounding and bonding equipment per NEC 250.8(B)?",
+      "options": ["Listed pressure connectors", "Exothermic welding", "Connection devices depending solely on solder", "Thread-forming machine screws"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.8(B)", "url": ""},
+      "explanation": "Per NEC 250.8(B), connection devices or fittings that depend solely on solder shall not be used for grounding and bonding connections."
+    },
+    {
+      "id": "je-170",
+      "question": "Nonconductive coatings on equipment to be grounded must be removed from what areas?",
+      "options": ["The entire equipment", "Only the nameplate area", "Threads and other contact surfaces to ensure electrical continuity", "Only visible surfaces"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.12", "url": ""},
+      "explanation": "Per NEC 250.12, nonconductive coatings (such as paint, lacquer, and enamel) on equipment to be grounded shall be removed from threads and other contact surfaces to ensure electrical continuity."
+    },
+    {
+      "id": "je-171",
+      "question": "An AC system of less than 50 volts must be grounded if the transformer supply system exceeds what voltage to ground?",
+      "options": ["50 volts", "120 volts", "150 volts", "240 volts"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.20(A)(1)", "url": ""},
+      "explanation": "Per NEC 250.20(A)(1), AC systems of less than 50 volts shall be grounded if supplied by transformers and the transformer supply system exceeds 150 volts to ground."
+    },
+    {
+      "id": "je-172",
+      "question": "What is required for ungrounded AC systems operating at 120 volts or more and 1000 volts or less?",
+      "options": ["GFCI protection", "Ground detectors shall be installed", "Double insulation", "Arc-fault protection"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.21(B)", "url": ""},
+      "explanation": "Per NEC 250.21(B)(1), ungrounded AC systems operating at not less than 120 volts and at 1000 volts or less shall have ground detectors installed on the system."
+    },
+    {
+      "id": "je-173",
+      "question": "Ungrounded systems must be marked with what warning?",
+      "options": ["'High Voltage'", "'Caution: Ungrounded System Operating — ___ Volts Between Conductors'", "'Danger: Do Not Touch'", "'Warning: No Ground'"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.21(C)", "url": ""},
+      "explanation": "Per NEC 250.21(C), ungrounded systems shall be legibly marked 'Caution: Ungrounded System Operating — ___ Volts Between Conductors' at the source or first disconnecting means."
+    },
+    {
+      "id": "je-174",
+      "question": "Where must the grounding electrode conductor be connected for a service-supplied AC system?",
+      "options": ["At the meter base only", "At the service disconnecting means only", "At any accessible point from the load end of the service conductors to the service disconnecting means", "At the grounding electrode only"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 250.24(A)(1)", "url": ""},
+      "explanation": "Per NEC 250.24(A)(1), the grounding electrode conductor connection shall be made at any accessible point from the load end of the service conductors to the terminal or bus to which the grounded service conductor is connected at the service disconnecting means."
+    },
+    {
+      "id": "je-175",
+      "question": "Type NM cable is permitted for use in which type of building construction?",
+      "options": ["Type I and II only", "Types III, IV, and V", "Type I only", "All construction types without restriction"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.10", "url": ""},
+      "explanation": "Per NEC 334.10, Type NM and Type NMC cables are permitted in one- and two-family dwellings and multifamily dwellings of Types III, IV, and V construction."
+    },
+    {
+      "id": "je-176",
+      "question": "Type NM cable is NOT permitted to be used in which location?",
+      "options": ["Dry locations", "Dwelling unit attics", "Wet or damp locations", "Concealed in walls"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 334.12(A)(4)", "url": ""},
+      "explanation": "Per NEC 334.12(A)(4), Type NM cables shall not be used in wet or damp locations."
+    },
+    {
+      "id": "je-177",
+      "question": "Type NM cable passing through a floor must be enclosed in protection extending at least how high above the floor?",
+      "options": ["3 inches", "6 inches", "12 inches", "18 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.15(B)", "url": ""},
+      "explanation": "Per NEC 334.15(B), where passing through a floor, Type NM cable shall be enclosed in protection extending at least 6 inches (150mm) above the floor."
+    },
+    {
+      "id": "je-178",
+      "question": "What is the minimum bending radius for Type NM cable?",
+      "options": ["3 times the cable diameter", "5 times the cable diameter", "7 times the cable diameter", "10 times the cable diameter"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.24", "url": ""},
+      "explanation": "Per NEC 334.24, the radius of the curve of the inner edge of any bend during or after installation shall not be less than five times the diameter of the cable."
+    },
+    {
+      "id": "je-179",
+      "question": "Type NM cable must be secured within what distance of every cable entry into an enclosure?",
+      "options": ["6 inches", "12 inches", "18 inches", "24 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.30", "url": ""},
+      "explanation": "Per NEC 334.30, nonmetallic-sheathed cable shall be secured within 300mm (12 inches) of every cable entry into enclosures such as outlet boxes, junction boxes, cabinets, or fittings."
+    },
+    {
+      "id": "je-180",
+      "question": "Type NM cable must be supported at intervals not exceeding what distance?",
+      "options": ["3 feet", "4 feet", "4-1/2 feet", "6 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 334.30", "url": ""},
+      "explanation": "Per NEC 334.30, nonmetallic-sheathed cable shall be supported at intervals not exceeding 1.4m (4-1/2 feet)."
+    },
+    {
+      "id": "je-181",
+      "question": "The 90°C rating of Type NM cable conductors can be used for what purpose?",
+      "options": ["Determining the ampacity directly", "Ampacity adjustment and correction calculations only, with final ampacity not exceeding 60°C rating", "Sizing overcurrent protection", "All calculations"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.80", "url": ""},
+      "explanation": "Per NEC 334.80, the 90°C (194°F) rating of NM cable conductors may be used for ampacity adjustment and correction calculations, provided the final calculated ampacity does not exceed that of a 60°C rated conductor."
+    },
+    {
+      "id": "je-182",
+      "question": "For general motor applications, what values are used to determine conductor ampacity?",
+      "options": ["Motor nameplate values only", "Values from NEC Tables 430.247-430.250 instead of nameplate values", "Calculated values", "Manufacturer specifications only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.6(A)(1)", "url": ""},
+      "explanation": "Per NEC 430.6(A)(1), values given in Tables 430.247-430.250 shall be used instead of the actual current rating marked on the motor nameplate to determine conductor ampacity, switch ratings, and branch-circuit protection."
+    },
+    {
+      "id": "je-183",
+      "question": "What motor nameplate information is used to determine separate motor overload protection?",
+      "options": ["Table values from NEC Chapter 9", "The motor nameplate current ratings", "Calculated locked-rotor current", "Manufacturer recommendations only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.6(A)(2)", "url": ""},
+      "explanation": "Per NEC 430.6(A)(2), the motor nameplate current ratings shall be used to determine the values for separate motor overload protection."
+    },
+    {
+      "id": "je-184",
+      "question": "Code letters on motor nameplates indicate what characteristic?",
+      "options": ["Motor efficiency rating", "Motor input with locked rotor (kVA per horsepower)", "Motor service factor", "Motor temperature rating"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.7(B)", "url": ""},
+      "explanation": "Per NEC 430.7(B), code letters marked on motor nameplates show motor input with locked rotor in kilovolt-amperes per horsepower."
+    },
+    {
+      "id": "je-185",
+      "question": "A motor controller must be marked with the manufacturer's name, voltage, current or horsepower rating, and what else?",
+      "options": ["Color code", "Short-circuit current rating", "Installation date", "Warranty information"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.8", "url": ""},
+      "explanation": "Per NEC 430.8, a motor controller shall be marked with the manufacturer's name or identification, the voltage, the current or horsepower rating, the short-circuit current rating, and other necessary data."
+    },
+    {
+      "id": "je-186",
+      "question": "Article 517 applies to electrical installations in what type of facilities?",
+      "options": ["Industrial plants", "Health care facilities that provide services to human beings", "Agricultural buildings", "Commercial offices"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.1", "url": ""},
+      "explanation": "Per NEC 517.1, Article 517 applies to electrical construction and installation criteria in health care facilities that provide services to human beings."
+    },
+    {
+      "id": "je-187",
+      "question": "In health care patient care spaces, what type of wiring method provides an effective ground-fault current path?",
+      "options": ["Type NM cable", "Metal raceway system, or cable with metallic armor or sheath that qualifies as an equipment grounding conductor", "Flexible cord only", "Any wiring method"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.13(A)", "url": ""},
+      "explanation": "Per NEC 517.13(A), branch circuits serving patient care spaces shall be provided with an effective ground-fault current path by installation in a metal raceway system or a cable having a metallic armor or sheath assembly that qualifies as an equipment grounding conductor."
+    },
+    {
+      "id": "je-188",
+      "question": "In patient care spaces, what size insulated copper conductor is required to connect equipment grounding terminal buses of normal and essential branch-circuit panelboards?",
+      "options": ["12 AWG", "10 AWG", "8 AWG", "6 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.14", "url": ""},
+      "explanation": "Per NEC 517.14, the equipment grounding terminal buses of normal and essential branch-circuit panelboards serving the same individual patient care vicinity shall be connected together with an insulated continuous copper conductor not smaller than 10 AWG."
+    },
+    {
+      "id": "je-189",
+      "question": "Are isolated ground receptacles permitted within the patient care vicinity?",
+      "options": ["Yes, with special listing", "Yes, if hospital grade", "No, isolated ground receptacles shall not be installed within a patient care vicinity", "Only in critical care areas"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 517.16(A)", "url": ""},
+      "explanation": "Per NEC 517.16(A), an isolated ground receptacle shall not be installed within a patient care vicinity."
+    },
+    {
+      "id": "je-190",
+      "question": "When is a second level of ground-fault protection of equipment (GFPE) required in health care facilities?",
+      "options": ["Always", "When GFPE is applied at the service supplying the facility", "Only for emergency circuits", "Never in health care facilities"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.17", "url": ""},
+      "explanation": "Per NEC 517.17, if ground-fault protection of equipment (GFPE) is applied to the service supplying a health care facility with Category 1 spaces, an additional level of ground-fault protection is required downstream."
+    },
+    {
+      "id": "je-191",
+      "question": "What is the minimum overhead conductor clearance from the water level of a swimming pool for 0-15kV conductors?",
+      "options": ["10 feet", "14.5 feet", "22.5 feet", "25 feet"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 680.9(A), Table 680.9(A)", "url": ""},
+      "explanation": "Per NEC Table 680.9(A), for conductors 0 through 15kV, the minimum clearance in any direction to the water level or edge of water surface is 25 feet (7.5m)."
+    },
+    {
+      "id": "je-192",
+      "question": "What is the horizontal limit of clearance from the inside wall of a pool for overhead conductors?",
+      "options": ["5 feet", "10 feet minimum, extending to outer edge of diving structures", "15 feet", "20 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.9(A), Table 680.9(A)", "url": ""},
+      "explanation": "Per NEC Table 680.9(A), the horizontal limit of clearance measured from inside wall of the pool shall extend to the outer edge of structures but not less than 10 feet (3m)."
+    },
+    {
+      "id": "je-193",
+      "question": "Underground wiring within what horizontal distance from the inside wall of a pool is permitted?",
+      "options": ["Not permitted", "5 feet", "10 feet", "15 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.11(A)", "url": ""},
+      "explanation": "Per NEC 680.11(A), underground wiring within 5 feet (1.5m) horizontally from the inside wall of the pool is permitted using approved wiring methods."
+    },
+    {
+      "id": "je-194",
+      "question": "Pool maintenance disconnecting means must be located not less than what distance horizontally from the inside walls of a pool?",
+      "options": ["3 feet", "5 feet", "6 feet", "10 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.13", "url": ""},
+      "explanation": "Per NEC 680.13, the maintenance disconnecting means shall be located not less than 5 feet (1.5m) horizontally from the inside walls of a pool, spa, fountain, or hot tub unless separated by a permanent barrier."
+    },
+    {
+      "id": "je-195",
+      "question": "What wiring method is NOT considered suitable for corrosive pool environments?",
+      "options": ["Rigid PVC conduit", "Liquidtight flexible nonmetallic conduit", "Aluminum conduit", "Rigid metal conduit"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.14(A)", "url": ""},
+      "explanation": "Per NEC 680.14(A), aluminum conduit and tubing wiring methods shall not be permitted in corrosive pool environments."
+    },
+    {
+      "id": "je-196",
+      "question": "For a permanently installed pool, the maximum length for a flexible cord connecting fixed equipment is what?",
+      "options": ["18 inches", "3 feet", "6 feet", "10 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.8(A)", "url": ""},
+      "explanation": "Per NEC 680.8(A), for other than storable pools, the flexible cord connecting fixed or stationary equipment shall not exceed 3 feet (900mm) in length."
+    },
+    {
+      "id": "je-197",
+      "question": "Feeders and branch circuits in a corrosive pool environment must contain an EGC that is what?",
+      "options": ["Any grounding conductor", "Bare copper", "Insulated copper conductor not smaller than 12 AWG", "Aluminum minimum 10 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.7(A)", "url": ""},
+      "explanation": "Per NEC 680.7(A), feeders and branch circuits installed in a corrosive environment or wet location shall contain an EGC that is an insulated copper conductor sized per Table 250.122, but not smaller than 12 AWG."
+    },
+    {
+      "id": "je-198",
+      "question": "Article 700 applies to what type of electrical systems?",
+      "options": ["Optional standby systems", "Legally required standby systems", "Emergency systems for illumination, power, or both when the normal supply is interrupted", "All backup power systems"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 700.1", "url": ""},
+      "explanation": "Per NEC 700.1, Article 700 applies to the electrical safety of emergency systems consisting of circuits and equipment intended to supply, distribute, and control electricity for illumination, power, or both when the normal electrical supply is interrupted."
+    },
+    {
+      "id": "je-199",
+      "question": "Reconditioned transfer switches are permitted to be installed in emergency systems. True or False?",
+      "options": ["True, if inspected", "True, if listed", "False, reconditioned transfer switches shall not be installed", "True, with AHJ approval"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 700.3", "url": ""},
+      "explanation": "Per NEC 700.3, reconditioned transfer switches shall not be installed in emergency systems."
+    },
+    {
+      "id": "je-200",
+      "question": "Emergency system equipment must be maintained in accordance with what?",
+      "options": ["Local codes only", "Manufacturer instructions and industry standards", "Utility company requirements", "Insurance requirements only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.4(C)", "url": ""},
+      "explanation": "Per NEC 700.4(C), emergency system equipment shall be maintained in accordance with manufacturer instructions and industry standards."
+    },
+    {
+      "id": "je-201",
+      "question": "If an emergency system relies on a single alternate source, what must be provided for maintenance of that source?",
+      "options": ["Battery backup", "Permanent switching means to connect a portable or temporary alternate source", "Manual bypass only", "No special provisions required"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.4(F)", "url": ""},
+      "explanation": "Per NEC 700.4(F), if the emergency system relies on a single alternate source of power that will be disabled for maintenance, the system shall include permanent switching means to connect a portable or temporary alternate source."
+    },
+    {
+      "id": "je-202",
+      "question": "Emergency system load management must prioritize what type of circuits first?",
+      "options": ["Optional standby circuits", "Legally required standby circuits", "Emergency circuits", "HVAC circuits"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 700.5(C)", "url": ""},
+      "explanation": "Per NEC 700.5(C), selective load management shall ensure adequate power to circuits in this order of priority: (1) Emergency circuits, (2) Legally required standby circuits, (3) Optional standby circuits."
+    },
+    {
+      "id": "je-203",
+      "question": "Automatic transfer switches for emergency systems must be what?",
+      "options": ["Manually operated", "Electrically operated and mechanically held", "Spring-loaded", "Gravity operated"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.6(B)", "url": ""},
+      "explanation": "Per NEC 700.6(B), automatic transfer switches shall be electrically operated and mechanically held."
+    },
+    {
+      "id": "je-204",
+      "question": "Transfer equipment for emergency systems can supply what type of loads?",
+      "options": ["Any loads", "Emergency loads only", "Emergency and legally required standby loads", "All critical loads"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.6(D)", "url": ""},
+      "explanation": "Per NEC 700.6(D), transfer equipment shall supply only emergency loads."
+    },
+    {
+      "id": "je-205",
+      "question": "What must be field marked on the exterior of emergency system transfer equipment?",
+      "options": ["Installation date", "The short-circuit current rating based on the specific OCPD protecting it", "Serial number", "Installer name"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.6(E)", "url": ""},
+      "explanation": "Per NEC 700.6(E), the short-circuit current rating of the transfer equipment, based on the specific overcurrent protective device type and settings protecting the transfer equipment, shall be field marked on the exterior."
+    },
+    {
+      "id": "je-206",
+      "question": "According to NEC Article 100, what does 'automatic' mean?",
+      "options": ["Computer controlled", "Performing a function without the necessity of human intervention", "Battery powered", "Self-testing"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, 'automatic' means performing a function without the necessity of human intervention."
+    },
+    {
+      "id": "je-207",
+      "question": "What is the NEC definition of an 'appliance'?",
+      "options": ["Any electrical device", "Utilization equipment, generally other than industrial, that is fastened in place or portable and built in standardized sizes to perform one or more functions", "Equipment over 600 volts", "Any cord-connected device"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, an appliance is utilization equipment, generally other than industrial, that is fastened in place, stationary, or portable; is normally built in a standardized size or type; and is installed or connected as a unit to perform one or more functions."
+    },
+    {
+      "id": "je-208",
+      "question": "What is the definition of 'authority having jurisdiction (AHJ)'?",
+      "options": ["The electrical contractor", "An organization, office, or individual responsible for enforcing code requirements or approving equipment", "The utility company", "The building owner"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, the authority having jurisdiction (AHJ) is an organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure."
+    },
+    {
+      "id": "je-209",
+      "question": "What is the NEC definition of a 'battery'?",
+      "options": ["A device that stores chemical energy", "A single cell or a group of cells connected together electrically in series, parallel, or both", "A backup power source only", "A rechargeable energy storage device only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a battery is a single cell or a group of cells connected together electrically in series, in parallel, or a combination of both."
+    },
+    {
+      "id": "je-210",
+      "question": "What is a 'grounding electrode bonding conductor'?",
+      "options": ["The conductor connecting equipment to the grounding electrode", "A conductor, other than the grounding electrode conductor, used to interconnect two or more grounding electrodes to form the grounding electrode system", "The main bonding jumper", "A conductor connecting the neutral to ground"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a grounding electrode bonding conductor is a conductor, other than the grounding electrode conductor, used to interconnect two or more grounding electrodes to form the grounding electrode system."
+    },
+    {
+      "id": "je-211",
+      "question": "What is the purpose of a 'main bonding jumper'?",
+      "options": ["To connect building steel to the grounding electrode", "To provide the connection between the grounded circuit conductor and the equipment grounding conductor at the service", "To bond water pipes to the electrical system", "To connect multiple grounding electrodes"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a main bonding jumper is a component of the effective ground-fault current path that is the connection between the grounded circuit conductor and the equipment grounding conductor, or the supply-side bonding conductor, or both, at the service equipment."
+    },
+    {
+      "id": "je-212",
+      "question": "What is a 'supply-side bonding jumper'?",
+      "options": ["A jumper on the utility side of the meter", "A conductor installed on the supply side of a service or within service equipment that ensures electrical conductivity between metal parts", "A bonding jumper at the transformer", "A conductor connecting two services"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a supply-side bonding jumper is a component of the effective ground-fault current path installed on the supply side of a service or within a service equipment enclosure(s) that ensures the required electrical conductivity between metal parts."
+    },
+    {
+      "id": "je-213",
+      "question": "Per NEC 210.8, how is the distance from receptacles measured for GFCI requirements?",
+      "options": ["Straight line distance", "As the shortest path the power supply cord would follow without piercing a floor, wall, ceiling, or fixed barrier", "Along the floor only", "Through walls and floors"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.8", "url": ""},
+      "explanation": "Per NEC 210.8, for GFCI requirements, the distance from receptacles shall be measured as the shortest path the power supply cord connected to the receptacle would follow without piercing a floor, wall, ceiling, or fixed barrier."
+    },
+    {
+      "id": "je-214",
+      "question": "GFCI-protected receptacles must be installed in what location?",
+      "options": ["In any accessible location", "In a readily accessible location", "Only at eye level", "Only at floor level"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.8", "url": ""},
+      "explanation": "Per NEC 210.8, the GFCI shall be installed in a readily accessible location."
+    },
+    {
+      "id": "je-215",
+      "question": "GFCI protection is NOT required for receptacles supplying only what type of system?",
+      "options": ["HVAC equipment", "Permanently installed premises security system", "Garage door openers", "Pool pumps"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.8(A) Exception 2", "url": ""},
+      "explanation": "Per NEC 210.8(A) Exception 2, GFCI protection shall not be required for a receptacle supplying only a permanently installed premises security system."
+    },
+    {
+      "id": "je-216",
+      "question": "In a 3-phase, 4-wire, delta-connected system with a midpoint grounded, what color must identify the high-leg conductor?",
+      "options": ["Red", "Black", "Orange", "Blue"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 110.15", "url": ""},
+      "explanation": "Per NEC 110.15, the phase conductor with the higher voltage to ground must be permanently marked with an outer finish that is orange or marked orange with another effective marking."
+    },
+    {
+      "id": "je-217",
+      "question": "The high leg in a delta-connected system must be located in what phase position in panelboards?",
+      "options": ["A phase", "B phase", "C phase", "Any phase"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 408.10(E)(1)", "url": ""},
+      "explanation": "Per NEC 408.10(E)(1), the high leg in delta-connected systems shall be on the B phase."
+    },
+    {
+      "id": "je-218",
+      "question": "What is the purpose of performing alterations to stop objectionable current per NEC 250.6(B)?",
+      "options": ["To increase ground-fault current", "To prevent circulating currents on grounding conductors while maintaining the effective ground-fault current path", "To eliminate all bonding connections", "To isolate electronic equipment from ground"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.6(B)", "url": ""},
+      "explanation": "Per NEC 250.6(B), alterations may be made to stop objectionable current while still meeting the requirements for effective ground-fault current path. Alterations include changing locations or discontinuing (but not all) grounding connections."
+    },
+    {
+      "id": "je-219",
+      "question": "Currents that introduce electromagnetic interference or data errors in electronic equipment are considered objectionable currents per NEC 250.6. True or False?",
+      "options": ["True", "False - these are not considered objectionable currents for purposes of 250.6", "True, only if over 5mA", "True, only in industrial settings"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.6(D)", "url": ""},
+      "explanation": "Per NEC 250.6(D), currents that introduce electromagnetic interference or data errors in electronic equipment shall not be considered the objectionable currents addressed in 250.6."
+    },
+    {
+      "id": "je-220",
+      "question": "Type NMC cable can be used in what type of locations that Type NM cannot?",
+      "options": ["Hazardous locations", "Wet, damp, or corrosive locations", "Plenum spaces", "Service entrance applications"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.10(B)", "url": ""},
+      "explanation": "Per NEC 334.10(B), Type NMC cable is permitted for both exposed and concealed work in dry, wet, damp, or corrosive locations."
+    },
+    {
+      "id": "je-221",
+      "question": "Type NM and NMC cables shall NOT be installed exposed in dropped or suspended ceiling cavities in what occupancies?",
+      "options": ["Dwelling units", "Other than one-, two-family and multifamily dwellings", "All occupancies", "Commercial buildings only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.12(2)", "url": ""},
+      "explanation": "Per NEC 334.12(2), Types NM and NMC cables shall not be exposed within a dropped or suspended ceiling cavity in other than one-, two-family and multifamily dwellings."
+    },
+    {
+      "id": "je-222",
+      "question": "Two-conductor Type NM cable shall not be stapled in what orientation?",
+      "options": ["Parallel to framing", "Perpendicular to framing", "On edge", "Flat"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 334.30", "url": ""},
+      "explanation": "Per NEC 334.30, flat cables shall not be stapled on edge."
+    },
+    {
+      "id": "je-223",
+      "question": "The sheath of nonmetallic-sheathed cable must extend how far into an enclosure beyond any cable clamp?",
+      "options": ["Flush with clamp", "1/4 inch minimum", "1/2 inch minimum", "1 inch minimum"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 334.19", "url": ""},
+      "explanation": "Per NEC 334.19, the sheath on nonmetallic-sheathed cable shall extend not less than 6mm (1/4 inch) beyond any cable clamp or cable entry inside the enclosure."
+    },
+    {
+      "id": "je-224",
+      "question": "When using 3-phase, 4-wire, wye-connected systems to supply nonlinear loads, what special consideration must be given?",
+      "options": ["Neutral conductor may carry high harmonic currents", "All phases must be the same color", "Ground conductors must be oversized", "AFCI protection is required"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 210.4(A) Informational Note 1", "url": ""},
+      "explanation": "Per NEC 210.4(A) Informational Note No. 1, a 3-phase, 4-wire, wye-connected power system used to supply power to nonlinear loads might necessitate that the power system design allow for the possibility of high harmonic currents on the neutral conductor."
+    },
+    {
+      "id": "je-225",
+      "question": "What reconditioned equipment is NOT permitted in branch circuits per NEC 210.3?",
+      "options": ["Motors", "Transformers", "Equipment providing GFCI or AFCI protection", "Switches"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.3", "url": ""},
+      "explanation": "Per NEC 210.3, equipment that provides ground-fault circuit-interrupter protection for personnel and equipment that provides arc-fault circuit-interrupter protection shall not be reconditioned."
+    },
+    {
+      "id": "je-226",
+      "question": "For dc systems over 60 volts, what color identifies positive polarity conductors 6 AWG or smaller?",
+      "options": ["Black", "White", "Red", "Blue"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.5(C)(3)(a)", "url": ""},
+      "explanation": "Per NEC 210.5(C)(3)(a), positive polarity dc conductors 6 AWG or smaller shall be identified by a continuous red outer finish or red stripe, among other options."
+    },
+    {
+      "id": "je-227",
+      "question": "For dc systems over 60 volts, what color identifies negative polarity conductors 6 AWG or smaller?",
+      "options": ["Red", "White", "Black", "Orange"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.5(C)(3)(b)", "url": ""},
+      "explanation": "Per NEC 210.5(C)(3)(b), negative polarity dc conductors 6 AWG or smaller shall be identified by a continuous black outer finish or black stripe, among other options."
+    },
+    {
+      "id": "je-228",
+      "question": "Luminaires without lampholders are now covered under what voltage limitation section?",
+      "options": ["210.6(A)", "210.6(B)", "210.6(C)", "210.6(D)"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.6(C)(6)", "url": ""},
+      "explanation": "Per NEC 210.6(C)(6), circuits not exceeding 277 volts to ground are permitted to supply luminaires without lampholders, such as luminaires with nonserviceable LEDs."
+    },
+    {
+      "id": "je-229",
+      "question": "GFCI protection is required in indoor damp and wet locations in dwelling units. True or False?",
+      "options": ["True", "False", "Only wet locations", "Only damp locations"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 210.8(A)(13-14)", "url": ""},
+      "explanation": "Per NEC 210.8(A)(13) and (14), GFCI protection is required for receptacles in indoor damp locations and indoor wet locations in dwelling units."
+    },
+    {
+      "id": "je-230",
+      "question": "What is the term for a conductor used to connect the system grounded conductor to a grounding electrode?",
+      "options": ["Equipment grounding conductor", "Bonding jumper", "Grounding electrode conductor", "Supply-side bonding jumper"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a grounding electrode conductor (GEC) is a conductor used to connect the system grounded conductor or the equipment to a grounding electrode."
+    },
+    {
+      "id": "je-231",
+      "question": "What is the maximum current a Class A GFCI will allow before tripping?",
+      "options": ["4-6 milliamps", "15 milliamps", "20 milliamps", "30 milliamps"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 210.8 Commentary", "url": ""},
+      "explanation": "Type-A (Class A) GFCIs operate on fault currents ranging from 4 to 6 milliamperes or more."
+    },
+    {
+      "id": "je-232",
+      "question": "For voltages above 150 volts to ground but not exceeding 480 volts at pools, what type of GFCI protection is required?",
+      "options": ["Class A GFCI", "SPGFCI not to exceed 20mA ground-fault trip current", "30mA GFCI", "No GFCI required"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.5(C)", "url": ""},
+      "explanation": "Per NEC 680.5(C), ground-fault protection of receptacles and outlets on branch circuits operating at voltages above 150 volts to ground shall be provided with SPGFCI protection not to exceed 20-mA ground-fault trip current."
+    },
+    {
+      "id": "je-233",
+      "question": "Terminals used for bonding and equipment grounding at pools shall be identified for use in what environment?",
+      "options": ["Dry locations", "Wet locations", "Indoor use only", "High temperature"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.7(C)", "url": ""},
+      "explanation": "Per NEC 680.7(C), terminals used for bonding and equipment grounding shall be identified for use in wet locations."
+    },
+    {
+      "id": "je-234",
+      "question": "Electric pool water heaters with resistive elements shall have heating elements subdivided into loads not exceeding what amperage?",
+      "options": ["30 amps", "40 amps", "48 amps", "60 amps"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.10(A)(1)", "url": ""},
+      "explanation": "Per NEC 680.10(A)(1), all electric pool water heaters incorporating resistive heating elements shall have the heating elements subdivided into loads not exceeding 48 amperes and protected at not over 60 amperes."
+    },
+    {
+      "id": "je-235",
+      "question": "At least one GFCI-protected receptacle is required in what pool-related location?",
+      "options": ["Pool deck", "Equipment room", "Fence area", "Diving platform"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.12(B)", "url": ""},
+      "explanation": "Per NEC 680.12(B)(1), at least one GFCI-protected 125-volt, 15- or 20-ampere receptacle shall be located within an equipment room."
+    },
+    {
+      "id": "je-236",
+      "question": "What is the minimum communication cable clearance above the maximum water level of a swimming pool?",
+      "options": ["6 feet", "8 feet", "10 feet", "14.5 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.9(B)", "url": ""},
+      "explanation": "Per NEC 680.9(B), communications, radio, and television coaxial cables shall be permitted at a height of not less than 10 feet (3.0m) above the maximum water level."
+    },
+    {
+      "id": "je-237",
+      "question": "Underground wiring shall not be permitted under the pool unless what condition is met?",
+      "options": ["It is in rigid conduit", "It is in PVC conduit", "It is necessary to supply pool equipment permitted by Article 680", "It is at least 3 feet below the pool bottom"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.11(B)", "url": ""},
+      "explanation": "Per NEC 680.11(B), underground wiring shall not be permitted under the pool unless this wiring is necessary to supply pool equipment permitted by Article 680."
+    },
+    {
+      "id": "je-238",
+      "question": "Electrical equipment shall not be installed in pool rooms without what feature?",
+      "options": ["Windows", "Emergency lighting", "Drainage that prevents water accumulation", "Fire suppression"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.12(A)", "url": ""},
+      "explanation": "Per NEC 680.12(A), electrical equipment shall not be installed in rooms, vaults, or pits that do not have drainage that prevents water accumulation during normal operation or maintenance."
+    },
+    {
+      "id": "je-239",
+      "question": "For permanently installed pools, what wiring methods are permitted for flexible connections to motors?",
+      "options": ["Flexible cord only", "Liquidtight flexible metal, liquidtight flexible nonmetallic conduit, or MC cable suitable for the use", "Type NM cable", "Any flexible wiring method"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.21(A)(1)", "url": ""},
+      "explanation": "Per NEC 680.21(A)(1), where necessary to employ flexible connections at or adjacent to the motor, liquidtight flexible metal, liquidtight flexible nonmetallic conduit, or MC cable suitable for the use shall be permitted."
+    },
+    {
+      "id": "je-240",
+      "question": "Emergency systems must have adequate capacity per Article 120 (or approved method) and be capable of what?",
+      "options": ["Running indefinitely", "Supplying rapid load changes and transient power requirements", "Supplying all building loads", "Operating at 100% capacity continuously"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.5(B)", "url": ""},
+      "explanation": "Per NEC 700.5(B), the emergency system capacity shall be sufficient for the rapid load changes and transient power and energy requirements associated with any expected loads."
+    },
+    {
+      "id": "je-241",
+      "question": "Emergency source(s) shall be permitted to operate in parallel with the normal source under what condition?",
+      "options": ["Only during testing", "When the capacity required to supply the emergency load is maintained at all times", "Never", "Only with utility approval"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.5(D)(1)", "url": ""},
+      "explanation": "Per NEC 700.5(D)(1), the emergency source shall be permitted to operate in parallel with the normal source where the capacity required to supply the emergency load is maintained at all times."
+    },
+    {
+      "id": "je-242",
+      "question": "Transfer equipment for emergency systems must be designed to prevent what?",
+      "options": ["Parallel operation", "Inadvertent interconnection of normal and emergency sources", "Automatic operation", "Manual operation"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.6(A)", "url": ""},
+      "explanation": "Per NEC 700.6(A), transfer equipment shall be designed and installed to prevent the inadvertent interconnection of normal and emergency sources of supply in any operation of the transfer equipment."
+    },
+    {
+      "id": "je-243",
+      "question": "Meter-mounted transfer switches are permitted for emergency system use. True or False?",
+      "options": ["True", "False - meter-mounted transfer switches shall not be permitted for emergency system use", "True, with AHJ approval", "True, for residential only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.6(A)", "url": ""},
+      "explanation": "Per NEC 700.6(A), meter-mounted transfer switches shall not be permitted for emergency system use."
+    },
+    {
+      "id": "je-244",
+      "question": "What test is required for emergency systems upon installation?",
+      "options": ["Load bank test only", "Commissioning witness test conducted or witnessed by the AHJ", "Utility company verification", "Insurance inspection only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.4(A)", "url": ""},
+      "explanation": "Per NEC 700.4(A), the authority having jurisdiction shall conduct or witness the commissioning of the completed system upon installation."
+    },
+    {
+      "id": "je-245",
+      "question": "Emergency system tests and maintenance records must be made available to whom?",
+      "options": ["Building owners only", "Those authorized to design, install, inspect, maintain, and operate the system", "The utility company", "Insurance companies only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.4(D)", "url": ""},
+      "explanation": "Per NEC 700.4(D), a written or digital record shall be kept of tests and maintenance and made available to those authorized to design, install, inspect, maintain, and operate the system."
+    },
+    {
+      "id": "je-246",
+      "question": "What is the definition of 'patient care vicinity' in health care facilities?",
+      "options": ["The entire patient room", "An area 6 feet horizontally in all directions from the bed and 7.5 feet above the floor", "Only the area around medical equipment", "The bed itself"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517 Commentary", "url": ""},
+      "explanation": "The patient care vicinity consists of an area 6 feet horizontally in all directions from the bed and vertically to 7.5 feet above the floor."
+    },
+    {
+      "id": "je-247",
+      "question": "What exception allows luminaires in patient care spaces without requiring a separate insulated EGC?",
+      "options": ["All luminaires are exempt", "Luminaires more than 7.5 feet above the floor", "Listed luminaires only", "Emergency luminaires"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.13 Exception", "url": ""},
+      "explanation": "Per NEC 517.13 Exception, luminaires more than 2.3m (7.5 feet) above the floor and switches located outside of the patient care vicinity may be connected without a separate insulated EGC."
+    },
+    {
+      "id": "je-248",
+      "question": "Branch circuits serving life safety lighting and power circuits shall not be part of what type of circuit?",
+      "options": ["Dedicated circuit", "Multiwire branch circuit", "Shared circuit", "Home run circuit"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.15", "url": ""},
+      "explanation": "Per NEC 517.15, the branch circuit serving life safety lighting and power circuits shall not be part of a multiwire branch circuit."
+    },
+    {
+      "id": "je-249",
+      "question": "What electrical equipment is covered under Article 517 patient care-related equipment reconditioning exceptions?",
+      "options": ["Circuit breakers", "Wiring devices", "Patient care-related equipment like MRI, CT, X-ray units", "All hospital equipment"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 517.3", "url": ""},
+      "explanation": "Per NEC 517.3, the reconditioning requirements of the Code do not apply to patient care-related electrical equipment such as MRI, fluoroscopy, CT, and X-ray units, which are regulated under federal requirements."
+    },
+    {
+      "id": "je-250",
+      "question": "What sources are permitted to supplement the electrical service to a health care facility?",
+      "options": ["Generators only", "Power production source, fuel cell systems, energy storage systems, health care microgrids", "Utility power only", "Solar panels only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 517.4(A)", "url": ""},
+      "explanation": "Per NEC 517.4(A), power production source, fuel cell systems, energy storage systems, and health care microgrids are permitted to supplement the service to supply the entire electrical load based on reliability."
+    }
+  ],
+  "glossary": {
+    "accessible equipment": {
+      "term": "Accessible (as applied to equipment)",
+      "definition": "Capable of being reached for operation, renewal, and inspection.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "accessible wiring methods": {
+      "term": "Accessible (as applied to wiring methods)",
+      "definition": "Capable of being removed or exposed without damaging the building structure or finish or not permanently closed in by the structure.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "readily accessible": {
+      "term": "Readily Accessible",
+      "definition": "Capable of being reached quickly for operation, renewal, or inspections without requiring those to whom ready access is requisite to use tools (other than keys), to climb over or under obstacles, or to resort to portable ladders.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "authority having jurisdiction": {
+      "term": "Authority Having Jurisdiction (AHJ)",
+      "definition": "An organization, office, or individual responsible for enforcing the requirements of a code or standard, or for approving equipment, materials, an installation, or a procedure.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "approved": {
+      "term": "Approved",
+      "definition": "Acceptable to the authority having jurisdiction.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "askarel": {
+      "term": "Askarel",
+      "definition": "A generic term for a group of nonflammable synthetic chlorinated hydrocarbons used as electrical insulating media.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "attachment plug": {
+      "term": "Attachment Plug (Plug)",
+      "definition": "A device that, by insertion in a receptacle, establishes a connection between the conductors of the attached flexible cord and the conductors connected permanently to the receptacle.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "automatic": {
+      "term": "Automatic",
+      "definition": "Performing a function without the necessity of human intervention.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "bipolar circuit": {
+      "term": "Bipolar Circuit",
+      "definition": "A dc circuit comprised of two monopole circuits, each having an opposite polarity connected to a common reference point.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "bonding conductor": {
+      "term": "Bonding Conductor (Bonding Jumper)",
+      "definition": "A conductor that ensures the required electrical conductivity between metal parts that are required to be electrically connected.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "grounding electrode bonding conductor": {
+      "term": "Grounding Electrode Bonding Conductor",
+      "definition": "A conductor, other than the grounding electrode conductor, used to interconnect two or more grounding electrodes to form the grounding electrode system.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "equipment bonding jumper": {
+      "term": "Equipment Bonding Jumper",
+      "definition": "A component of the effective ground-fault current path that is the connection between two or more portions of the equipment grounding conductor.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "main bonding jumper": {
+      "term": "Main Bonding Jumper",
+      "definition": "A component of the effective ground-fault current path that is the connection between the grounded circuit conductor and the equipment grounding conductor at the service equipment.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "supply-side bonding jumper": {
+      "term": "Supply-Side Bonding Jumper",
+      "definition": "A component of the effective ground-fault current path installed on the supply side of a service or within a service equipment enclosure(s) that ensures the required electrical conductivity between metal parts.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "circuit breaker": {
+      "term": "Circuit Breaker",
+      "definition": "A device designed to open and close a circuit by nonautomatic means and to open the circuit automatically on a predetermined overcurrent without damage to itself.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "concentric knockout": {
+      "term": "Concentric Knockout",
+      "definition": "A series of partially cut circular portions of a box wall arranged with a common center point, allowing different size knockouts to be removed.",
+      "reference": "NEC Installation Practice",
+      "url": ""
+    },
+    "controller": {
+      "term": "Controller",
+      "definition": "A device or group of devices that serves to govern the electric power delivered to equipment.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "current-carrying conductor": {
+      "term": "Current-Carrying Conductor",
+      "definition": "A conductor intended to carry current under normal operation, including phase conductors and the neutral under certain conditions.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "effective ground-fault current path": {
+      "term": "Effective Ground-Fault Current Path",
+      "definition": "An intentionally constructed, low-impedance electrically conductive path designed to carry fault current from the point of a ground fault to the electrical supply source to facilitate operation of the OCPD.",
+      "reference": "NEC Article 100, 250.4",
+      "url": ""
+    },
+    "emergency system": {
+      "term": "Emergency System",
+      "definition": "Those systems legally required and classed as emergency by municipal, state, federal, or other codes, intended to automatically supply illumination, power, or both to designated areas and equipment when the normal supply is interrupted.",
+      "reference": "NEC Article 700",
+      "url": ""
+    },
+    "energized": {
+      "term": "Energized",
+      "definition": "Electrically connected to, or is, a source of voltage.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "exposed wiring": {
+      "term": "Exposed (as applied to wiring methods)",
+      "definition": "On or attached to the surface or behind panels designed to allow access.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "ground detector": {
+      "term": "Ground Detector",
+      "definition": "A device or system that provides a visual indication, audible signal, or both to alert of a ground-fault condition in an electrical system.",
+      "reference": "NEC Article 250.21",
+      "url": ""
+    },
+    "ground fault": {
+      "term": "Ground Fault",
+      "definition": "An unintentional, electrically conducting connection between an ungrounded conductor of an electrical circuit and the normally non-current-carrying conductors, metallic enclosures, metallic raceways, metallic equipment, or earth.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "grounded": {
+      "term": "Grounded (Grounding)",
+      "definition": "Connected (connecting) to ground or to a conductive body that extends the ground connection.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "health care facility": {
+      "term": "Health Care Facility",
+      "definition": "Buildings or portions of buildings in which medical, dental, psychiatric, nursing, obstetrical, or surgical care are provided.",
+      "reference": "NEC Article 517",
+      "url": ""
+    },
+    "high leg": {
+      "term": "High Leg (Delta)",
+      "definition": "The phase conductor in a 4-wire, 3-phase, delta system with a higher voltage to ground due to the grounded midpoint of one winding. Must be identified orange and located on B phase.",
+      "reference": "NEC Article 110.15, 408.10(E)",
+      "url": ""
+    },
+    "impedance grounded system": {
+      "term": "Impedance Grounded System",
+      "definition": "A system in which the grounding connection has a resistance or reactance deliberately inserted to limit fault current.",
+      "reference": "NEC Article 250.36",
+      "url": ""
+    },
+    "in sight from": {
+      "term": "In Sight From (Within Sight From, Within Sight)",
+      "definition": "Visible and not more than 50 feet (15m) distant from the equipment.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "labeled": {
+      "term": "Labeled",
+      "definition": "Equipment or materials to which has been attached a label, symbol, or other identifying mark of an organization acceptable to the AHJ.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "listed": {
+      "term": "Listed",
+      "definition": "Equipment, materials, or services included in a list published by an organization acceptable to the AHJ that maintains periodic inspection of production and states that the equipment meets appropriate designated standards.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "lockout/tagout": {
+      "term": "Lockout/Tagout",
+      "definition": "Safety procedure used to ensure that dangerous machines are properly shut off and not started up again prior to the completion of maintenance or servicing work.",
+      "reference": "OSHA 29 CFR 1910.147",
+      "url": ""
+    },
+    "motor control center": {
+      "term": "Motor Control Center (MCC)",
+      "definition": "An assembly of one or more enclosed sections having a common power bus and principally containing motor control units.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "multiwire branch circuit": {
+      "term": "Multiwire Branch Circuit",
+      "definition": "A branch circuit that consists of two or more ungrounded conductors that have a voltage between them and a grounded conductor that has equal voltage between it and each ungrounded conductor.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "neutral conductor": {
+      "term": "Neutral Conductor",
+      "definition": "The conductor connected to the neutral point of a system that is intended to carry current under normal conditions.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "noncurrent-carrying": {
+      "term": "Non-Current-Carrying Conductive Materials",
+      "definition": "Metal parts such as enclosures, raceways, and frames that do not carry current under normal operation but may become energized under fault conditions.",
+      "reference": "NEC Article 250.4",
+      "url": ""
+    },
+    "objectionable current": {
+      "term": "Objectionable Current",
+      "definition": "Unwanted current flowing on grounding conductors or bonding paths, typically caused by multiple grounding connections. Does not include currents from normal operation or ground faults.",
+      "reference": "NEC Article 250.6",
+      "url": ""
+    },
+    "outlet": {
+      "term": "Outlet",
+      "definition": "A point on the wiring system at which current is taken to supply utilization equipment.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "overcurrent": {
+      "term": "Overcurrent",
+      "definition": "Any current in excess of the rated current of equipment or the ampacity of a conductor, caused by overload, short circuit, or ground fault.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "patient care space": {
+      "term": "Patient Care Space",
+      "definition": "Any space of a health care facility wherein patients are intended to be examined or treated.",
+      "reference": "NEC Article 517",
+      "url": ""
+    },
+    "patient care vicinity": {
+      "term": "Patient Care Vicinity",
+      "definition": "The space with surfaces likely to be contacted by the patient or an attendant touching the patient. Typically defined as 6 feet horizontally and 7.5 feet above the floor from the bed.",
+      "reference": "NEC Article 517",
+      "url": ""
+    },
+    "permanently installed pool": {
+      "term": "Permanently Installed Pool",
+      "definition": "A pool that is constructed in the ground or partially in the ground, and all pools installed inside a building regardless of construction method.",
+      "reference": "NEC Article 680",
+      "url": ""
+    },
+    "qualified person": {
+      "term": "Qualified Person",
+      "definition": "One who has skills and knowledge related to the construction and operation of the electrical equipment and installations and has received safety training to recognize and avoid the hazards involved.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "separately derived system": {
+      "term": "Separately Derived System",
+      "definition": "An electrical source, other than a service, having no direct connection(s) to circuit conductors of any other electrical source other than those established by grounding and bonding connections.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "short circuit": {
+      "term": "Short Circuit",
+      "definition": "An abnormal connection of relatively low impedance, whether made accidentally or intentionally, between two points of different potential.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "spgfci": {
+      "term": "SPGFCI (Special Purpose Ground-Fault Circuit Interrupter)",
+      "definition": "A ground-fault protection device for voltages above 150 volts to ground, typically with trip currents up to 20mA, used for pool and similar equipment.",
+      "reference": "NEC Article 680.5(C)",
+      "url": ""
+    },
+    "storable pool": {
+      "term": "Storable Pool",
+      "definition": "A pool that is constructed on or above the surface of the ground and is capable of holding water to a maximum depth of 1 meter (42 inches) or a pool with nonmetallic, molded polymeric walls regardless of dimension.",
+      "reference": "NEC Article 680.2",
+      "url": ""
+    },
+    "transfer switch": {
+      "term": "Transfer Switch",
+      "definition": "An automatic or nonautomatic device for transferring one or more load conductor connections from one power source to another.",
+      "reference": "NEC Article 700",
+      "url": ""
+    },
+    "ungrounded conductor": {
+      "term": "Ungrounded Conductor",
+      "definition": "A conductor that is not grounded or bonded to ground. In a typical branch circuit, the phase or 'hot' conductors are ungrounded.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "utilization equipment": {
+      "term": "Utilization Equipment",
+      "definition": "Equipment that utilizes electric energy for electronic, electromechanical, chemical, heating, lighting, or similar purposes.",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "voltage nominal": {
+      "term": "Voltage, Nominal",
+      "definition": "A nominal value assigned to a circuit or system for the purpose of conveniently designating its voltage class (e.g., 120/240 volts, 480Y/277 volts).",
+      "reference": "NEC Article 100",
+      "url": ""
+    },
+    "wet location": {
+      "term": "Wet Location",
+      "definition": "Installations underground or in concrete slabs or masonry in direct contact with the earth; in locations subject to saturation with water or other liquids; in unprotected locations exposed to weather.",
+      "reference": "NEC Article 100",
+      "url": ""
+    }
+  }
+}

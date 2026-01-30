@@ -1,0 +1,804 @@
+{
+  "questions": [
+    {
+      "id": "je-451",
+      "question": "After applying demand factors, what is the first 10 kW of combined general lighting, small appliance, and laundry loads calculated at?",
+      "options": ["50%", "70%", "100%", "125%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 220.42", "url": ""},
+      "explanation": "Per NEC Table 220.42, the first 10,000 VA of general lighting, small appliance, and laundry load is calculated at 100%."
+    },
+    {
+      "id": "je-452",
+      "question": "What demand factor applies to the portion of general lighting load exceeding 10 kW in dwelling units?",
+      "options": ["35%", "50%", "70%", "100%"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Table 220.42", "url": ""},
+      "explanation": "Per NEC Table 220.42, the portion of general lighting, small appliance, and laundry load over 10,000 VA is calculated at 35%."
+    },
+    {
+      "id": "je-453",
+      "question": "What is the demand load for one household electric range rated up to 12 kW?",
+      "options": ["6 kW", "8 kW", "10 kW", "12 kW"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 220.55", "url": ""},
+      "explanation": "Per NEC Table 220.55, Column C, the maximum demand for one electric range not over 12 kW is 8 kW."
+    },
+    {
+      "id": "je-454",
+      "question": "Four or more electric dryers in a dwelling have a demand factor of what percent?",
+      "options": ["70%", "75%", "80%", "100%"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 220.54", "url": ""},
+      "explanation": "Per NEC Table 220.54, four or more household clothes dryers have a demand factor of 75%."
+    },
+    {
+      "id": "je-455",
+      "question": "What is the standard demand load used for a household electric clothes dryer?",
+      "options": ["3000 watts or nameplate, whichever is larger", "4000 watts or nameplate, whichever is larger", "5000 watts or nameplate, whichever is larger", "Nameplate rating only"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 220.54", "url": ""},
+      "explanation": "Per NEC 220.54, the load for household electric clothes dryers shall be either 5000 watts or the nameplate rating, whichever is larger."
+    },
+    {
+      "id": "je-456",
+      "question": "What demand factor applies to the first 10 kW of electric space heating equipment in a dwelling unit?",
+      "options": ["65%", "75%", "100%", "No demand factor permitted"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 220.51", "url": ""},
+      "explanation": "Per NEC 220.51, fixed electric space heating loads are calculated at 100% of the connected load."
+    },
+    {
+      "id": "je-457",
+      "question": "What size circuit is required for a 9.6 kW household electric range?",
+      "options": ["30-amp", "40-amp", "50-amp", "60-amp"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.19(A)(3)", "url": ""},
+      "explanation": "Per NEC 210.19(A)(3), the branch circuit rating for household ranges 8.75 kW or more shall be 40 amperes."
+    },
+    {
+      "id": "je-458",
+      "question": "Air conditioning and heating loads can be calculated using what method when they are not operated simultaneously?",
+      "options": ["Add both loads at 100%", "Use the larger load only", "Use 75% of combined loads", "Use 50% of each load"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 220.60", "url": ""},
+      "explanation": "Per NEC 220.60, when air conditioning and heating equipment are unlikely to operate simultaneously, only the larger load needs to be used in the calculation."
+    },
+    {
+      "id": "je-459",
+      "question": "The neutral conductor for a 3-wire service can be sized at what percentage of the ungrounded conductors when over 200A?",
+      "options": ["70%", "75%", "80%", "100%"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 220.61(B)", "url": ""},
+      "explanation": "Per NEC 220.61(B), the neutral load over 200A can be calculated at 70% due to demand factor for balanced loads."
+    },
+    {
+      "id": "je-460",
+      "question": "A 200-amp service using 3/0 copper THW conductors requires what minimum size copper grounding electrode conductor?",
+      "options": ["#8 AWG", "#6 AWG", "#4 AWG", "#2 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 250.66", "url": ""},
+      "explanation": "Per NEC Table 250.66, for copper service entrance conductors from 1/0 through 3/0, the minimum copper grounding electrode conductor size is #4 AWG."
+    },
+    {
+      "id": "je-461",
+      "question": "Wire connectors (wire nuts) must be suitable for what when used with aluminum conductors?",
+      "options": ["High temperature", "Outdoor use", "Use with aluminum conductors specifically", "Underground use"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 110.14(B)", "url": ""},
+      "explanation": "Per NEC 110.14(B), connectors and terminals for use with aluminum conductors shall be suitable for the specific use."
+    },
+    {
+      "id": "je-462",
+      "question": "What is the temperature rating that shall be used for conductor ampacity when connected to equipment with 60°C terminals?",
+      "options": ["60°C", "75°C", "90°C", "Highest conductor rating"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 110.14(C)", "url": ""},
+      "explanation": "Per NEC 110.14(C), the ampacity of conductors shall be limited to the lowest temperature rating of any connected termination, so 60°C terminals require using the 60°C ampacity column."
+    },
+    {
+      "id": "je-463",
+      "question": "For circuits rated 100 amperes or less, equipment terminal temperature ratings are presumed to be what unless marked otherwise?",
+      "options": ["60°C", "75°C", "90°C", "60°C or 75°C"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 110.14(C)(1)(a)", "url": ""},
+      "explanation": "Per NEC 110.14(C)(1)(a), equipment terminations for circuits rated 100 amperes or less are designed for use on conductors with 60°C or 75°C ampacities unless marked otherwise."
+    },
+    {
+      "id": "je-464",
+      "question": "For circuits rated over 100 amperes, equipment terminal temperature ratings are presumed to be what unless marked otherwise?",
+      "options": ["60°C", "75°C", "90°C", "60°C or 75°C"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.14(C)(1)(b)", "url": ""},
+      "explanation": "Per NEC 110.14(C)(1)(b), equipment terminations for circuits over 100 amperes are designed for use with conductors with 75°C ampacities unless marked otherwise."
+    },
+    {
+      "id": "je-465",
+      "question": "Splices and taps in conductors shall be made with devices that are what?",
+      "options": ["UL listed only", "Listed or identified for the use", "Approved by the utility", "Copper or aluminum rated"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.14(B)", "url": ""},
+      "explanation": "Per NEC 110.14(B), splices and taps shall be made with devices identified for the use or by splicing methods identified for the use."
+    },
+    {
+      "id": "je-466",
+      "question": "Torque values for electrical connections shall be established by what?",
+      "options": ["The installer", "Manufacturer's installation instructions", "Local codes only", "OSHA standards"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.14(D)", "url": ""},
+      "explanation": "Per NEC 110.14(D), tightening torque values shall be as indicated on equipment or installation instructions provided by the manufacturer."
+    },
+    {
+      "id": "je-467",
+      "question": "What is the minimum illumination level required at service equipment, switchboards, and motor control centers?",
+      "options": ["No illumination required", "Adequate illumination", "50 foot-candles", "100 foot-candles"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.26(D)", "url": ""},
+      "explanation": "Per NEC 110.26(D), illumination shall be provided for all working spaces about service equipment, switchboards, switchgear, panelboards, and motor control centers installed indoors."
+    },
+    {
+      "id": "je-468",
+      "question": "Equipment rated 1200 amperes or more and over 6 feet wide requires what for working space?",
+      "options": ["A single entrance", "An entrance at each end of the working space", "A guardrail", "An emergency exit"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.26(C)(2)", "url": ""},
+      "explanation": "Per NEC 110.26(C)(2), switchboards, switchgear, panelboards, and motor control centers rated 1200A or more and over 6 feet wide shall have an entrance at each end of the working space."
+    },
+    {
+      "id": "je-469",
+      "question": "What is the minimum width of working space in front of electrical equipment?",
+      "options": ["24 inches", "30 inches or width of equipment, whichever is greater", "36 inches", "48 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.26(A)(2)", "url": ""},
+      "explanation": "Per NEC 110.26(A)(2), the width of the working space shall be the width of the equipment or 30 inches (750 mm), whichever is greater."
+    },
+    {
+      "id": "je-470",
+      "question": "Dedicated equipment space above panelboards must extend to what height?",
+      "options": ["6 feet", "6 feet 7 inches", "The structural ceiling or 6 feet, whichever is lower", "The structural ceiling or 25 feet above the equipment, whichever is lower"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 110.26(E)(1)(b)", "url": ""},
+      "explanation": "Per NEC 110.26(E)(1)(b), the dedicated space shall extend from the floor to the structural ceiling or 25 feet (7.6 m) above the equipment, whichever is lower."
+    },
+    {
+      "id": "je-471",
+      "question": "What piping or equipment is permitted in the dedicated space above electrical equipment?",
+      "options": ["No piping or equipment", "Fire sprinklers", "Plumbing pipes", "HVAC ducts"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.26(E)(1)(c)", "url": ""},
+      "explanation": "Per NEC 110.26(E)(1)(c), foreign systems (piping, ducts, or other equipment) shall not be installed in the dedicated equipment space, but sprinkler protection is permitted."
+    },
+    {
+      "id": "je-472",
+      "question": "Electrical equipment used in wet locations must be designed so that what cannot enter or accumulate?",
+      "options": ["Dust", "Moisture or water", "Insects", "Debris"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.11", "url": ""},
+      "explanation": "Per NEC 110.11, electrical equipment in wet locations shall be designed so moisture or water cannot enter or accumulate within the equipment."
+    },
+    {
+      "id": "je-473",
+      "question": "Listed equipment shall be installed and used in accordance with what?",
+      "options": ["Local building codes", "Any manufacturer's instructions", "Instructions included in the listing or labeling", "Installer's judgment"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 110.3(B)", "url": ""},
+      "explanation": "Per NEC 110.3(B), listed or labeled equipment shall be installed and used in accordance with any instructions included in the listing or labeling."
+    },
+    {
+      "id": "je-474",
+      "question": "Arc energy reduction is required for what rating of circuit breakers in service equipment?",
+      "options": ["Any rating", "200 amperes or more", "400 amperes or more", "1200 amperes or more"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 240.87", "url": ""},
+      "explanation": "Per NEC 240.87, service equipment and panelboards with circuit breakers rated 1200 amperes or more require one of several arc energy reduction methods."
+    },
+    {
+      "id": "je-475",
+      "question": "A Series-rated system permits the use of what type of protective devices?",
+      "options": ["Only identical devices", "Upstream devices that can protect downstream devices with lower interrupting ratings", "Only fuses", "Only circuit breakers"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.86", "url": ""},
+      "explanation": "Per NEC 240.86, series-rated systems permit the use of overcurrent devices with interrupting ratings less than the available fault current when protected by an upstream device."
+    },
+    {
+      "id": "je-476",
+      "question": "Overcurrent devices must be capable of interrupting fault currents at what level?",
+      "options": ["Minimum of 5000 amps", "The available fault current at their line terminals", "10,000 amps minimum", "Based on conductor size"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.9", "url": ""},
+      "explanation": "Per NEC 110.9, equipment intended to interrupt current at fault levels shall have an interrupting rating not less than the nominal circuit voltage and the current that is available at the line terminals."
+    },
+    {
+      "id": "je-477",
+      "question": "Short-circuit current ratings (SCCR) must be field marked on what type of equipment?",
+      "options": ["All equipment", "Industrial control panels, motor control centers, panelboards, and industrial machinery", "Service equipment only", "Generator installations only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.24", "url": ""},
+      "explanation": "Per NEC 110.24, service equipment, industrial control panels, motor control centers, and certain other equipment shall be marked with the maximum available fault current."
+    },
+    {
+      "id": "je-478",
+      "question": "The available fault current must be documented and updated when what occurs?",
+      "options": ["Every year", "Every 5 years", "When modifications affecting the available fault current occur", "At every inspection"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 110.24(B)", "url": ""},
+      "explanation": "Per NEC 110.24(B), when modifications that could affect the available fault current occur, the available fault current shall be recalculated and the marking updated."
+    },
+    {
+      "id": "je-479",
+      "question": "What is required when selecting overcurrent devices to ensure proper coordination?",
+      "options": ["Same manufacturer", "Selective coordination to prevent unintended devices from tripping", "Identical trip curves", "Equal interrupting ratings"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Articles 700.32, 701.32, 708.54", "url": ""},
+      "explanation": "Per NEC 700.32, 701.32, and 708.54, overcurrent protective devices shall be selectively coordinated so that a fault condition will not take more devices offline than necessary."
+    },
+    {
+      "id": "je-480",
+      "question": "Fuses shall be plainly marked with their what?",
+      "options": ["Manufacturer name only", "Ampere rating, voltage rating, and interrupting rating if over 10,000A", "Manufacturing date", "Serial number"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.60(C)", "url": ""},
+      "explanation": "Per NEC 240.60(C), cartridge fuses shall be plainly marked with the ampere rating, voltage rating, and interrupting rating if other than 10,000 amperes."
+    },
+    {
+      "id": "je-481",
+      "question": "The ampere rating of fuses in motor circuits can exceed the conductor ampacity under what conditions?",
+      "options": ["Never", "When sized for motor starting per Article 430.52", "When oversized for voltage drop", "When doubled for intermittent loads"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.4(G)", "url": ""},
+      "explanation": "Per NEC 240.4(G), overcurrent protection for motor circuits is permitted to exceed conductor ampacity as specified in Article 430 to allow for motor starting current."
+    },
+    {
+      "id": "je-482",
+      "question": "A supplementary overcurrent protective device is permitted as the sole protection for what?",
+      "options": ["Branch circuits", "Feeders", "Appliances, luminaires, and other equipment, not as branch circuit protection", "Motor circuits"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 240.10", "url": ""},
+      "explanation": "Per NEC 240.10, supplementary overcurrent devices shall not be used as a substitute for required branch-circuit overcurrent devices or as a substitute for the required protection of branch circuits."
+    },
+    {
+      "id": "je-483",
+      "question": "Overcurrent devices shall not be located in what type of spaces?",
+      "options": ["Closets", "Bathrooms, clothes closets, or over steps of stairs", "Garages", "Utility rooms"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.24(D)(E)(F)", "url": ""},
+      "explanation": "Per NEC 240.24, overcurrent devices shall not be located in bathrooms, nor in the vicinity of easily ignitable material (clothes closets), nor over steps of a stairway."
+    },
+    {
+      "id": "je-484",
+      "question": "Type S fuses or adapters are required for plug fuse installations to prevent what?",
+      "options": ["Overvoltage conditions", "Overfusing (installing fuses with higher ratings than circuit allows)", "Ground faults", "Short circuits"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.54", "url": ""},
+      "explanation": "Per NEC 240.54, Type S fuses are designed to prevent overfusing by ensuring the fuse size matches the amperage of the circuit."
+    },
+    {
+      "id": "je-485",
+      "question": "What does selective coordination mean for overcurrent protective devices?",
+      "options": ["All devices trip at the same time", "Only the device immediately upstream of the fault operates", "Only the device nearest the fault operates, leaving upstream devices unaffected", "All devices must be from the same manufacturer"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, selective coordination means localization of an overcurrent condition to restrict outages to equipment affected, accomplished by the choice of overcurrent devices and their ratings or settings."
+    },
+    {
+      "id": "je-486",
+      "question": "Which conductor in a multiwire branch circuit can be used as a neutral?",
+      "options": ["Any conductor", "The grounded conductor that carries only unbalanced current", "The equipment grounding conductor", "The largest conductor"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 100, 200.4", "url": ""},
+      "explanation": "Per NEC definitions and 200.4, the grounded conductor (neutral) carries only the unbalanced current from the other conductors in a multiwire branch circuit."
+    },
+    {
+      "id": "je-487",
+      "question": "A kitchen range cord must have a minimum length of what?",
+      "options": ["18 inches", "3 feet", "4 feet", "6 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 422.16(B)(2)(3)", "url": ""},
+      "explanation": "Per NEC 422.16(B)(2)(3), power supply cords for ranges and dryers shall be 3 to 4 feet in length."
+    },
+    {
+      "id": "je-488",
+      "question": "Electric range receptacles must be rated at what minimum amperage?",
+      "options": ["30 amps", "40 amps", "50 amps", "60 amps"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.19(A)(3)", "url": ""},
+      "explanation": "Per NEC 210.19(A)(3), the branch circuit for a household range rated 8.75 kW or more requires a minimum 40-amp circuit, typically with a 50-amp receptacle for larger ranges."
+    },
+    {
+      "id": "je-489",
+      "question": "A dryer receptacle must be what type in new installations?",
+      "options": ["3-wire", "4-wire with separate equipment grounding conductor", "Either 3-wire or 4-wire", "2-wire"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.140", "url": ""},
+      "explanation": "Per NEC 250.140, new installations require a 4-wire connection with a separate equipment grounding conductor for electric dryers."
+    },
+    {
+      "id": "je-490",
+      "question": "What type of receptacle configuration is required for a 30-amp, 125/250V dryer circuit?",
+      "options": ["NEMA 10-30R", "NEMA 14-30R", "NEMA 6-30R", "NEMA 5-30R"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 250.140, NEMA Standards", "url": ""},
+      "explanation": "Per NEC 250.140 and NEMA standards, the NEMA 14-30R is the 4-wire, 30-amp, 125/250V receptacle configuration required for new dryer installations."
+    },
+    {
+      "id": "je-491",
+      "question": "A ground-mounted air conditioning unit requires an equipment disconnecting means within what distance?",
+      "options": ["25 feet", "50 feet", "Within sight from the unit", "No specific requirement"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 440.14", "url": ""},
+      "explanation": "Per NEC 440.14, the disconnecting means for air-conditioning equipment shall be installed within sight from and readily accessible from the equipment."
+    },
+    {
+      "id": "je-492",
+      "question": "The disconnecting means for an air conditioner must be capable of being locked in what position?",
+      "options": ["Closed only", "Open only", "Either position", "No locking required"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 440.14", "url": ""},
+      "explanation": "Per NEC 440.14, the disconnecting means shall be capable of being locked in the open position."
+    },
+    {
+      "id": "je-493",
+      "question": "A smoke detector circuit typically requires what type of protection?",
+      "options": ["GFCI only", "AFCI only", "Both AFCI and dedicated circuit", "No special protection"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.12, NFPA 72", "url": ""},
+      "explanation": "Smoke detectors in dwelling units are typically on AFCI-protected circuits per NEC 210.12, but may have exceptions for certain fire alarm equipment."
+    },
+    {
+      "id": "je-494",
+      "question": "What size conductor is required for a 30-amp circuit?",
+      "options": ["#14 AWG", "#12 AWG", "#10 AWG", "#8 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 310.16, 240.4(D)", "url": ""},
+      "explanation": "Per NEC Table 310.16 and 240.4(D), a 30-amp circuit requires minimum #10 AWG copper conductors."
+    },
+    {
+      "id": "je-495",
+      "question": "What size conductor is required for a 40-amp circuit?",
+      "options": ["#10 AWG", "#8 AWG", "#6 AWG", "#4 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 310.16", "url": ""},
+      "explanation": "Per NEC Table 310.16, a 40-amp circuit requires minimum #8 AWG copper conductors with 60°C insulation."
+    },
+    {
+      "id": "je-496",
+      "question": "What size conductor is required for a 50-amp circuit?",
+      "options": ["#8 AWG", "#6 AWG", "#4 AWG", "#3 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 310.16", "url": ""},
+      "explanation": "Per NEC Table 310.16, a 50-amp circuit requires minimum #6 AWG copper conductors with 60°C insulation (or #8 AWG with 75°C insulation)."
+    },
+    {
+      "id": "je-497",
+      "question": "What size conductor is typically required for a 100-amp feeder?",
+      "options": ["#6 AWG", "#4 AWG", "#3 AWG", "#1 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 310.16", "url": ""},
+      "explanation": "Per NEC Table 310.16, a 100-amp circuit typically requires #3 AWG copper conductors with 60°C insulation or #4 AWG with 75°C insulation."
+    },
+    {
+      "id": "je-498",
+      "question": "The minimum size copper equipment grounding conductor for a 20-amp circuit is what?",
+      "options": ["#14 AWG", "#12 AWG", "#10 AWG", "#8 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 250.122", "url": ""},
+      "explanation": "Per NEC Table 250.122, a circuit protected by a 20-amp overcurrent device requires a minimum #12 AWG copper equipment grounding conductor."
+    },
+    {
+      "id": "je-499",
+      "question": "The minimum size copper equipment grounding conductor for a 30-amp circuit is what?",
+      "options": ["#14 AWG", "#12 AWG", "#10 AWG", "#8 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 250.122", "url": ""},
+      "explanation": "Per NEC Table 250.122, a circuit protected by a 30-amp overcurrent device requires a minimum #10 AWG copper equipment grounding conductor."
+    },
+    {
+      "id": "je-500",
+      "question": "What is the minimum size copper equipment grounding conductor for a 50-amp circuit?",
+      "options": ["#12 AWG", "#10 AWG", "#8 AWG", "#6 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 250.122", "url": ""},
+      "explanation": "Per NEC Table 250.122, a circuit protected by a 50-amp overcurrent device requires a minimum #10 AWG copper equipment grounding conductor."
+    },
+    {
+      "id": "je-501",
+      "question": "What is the purpose of the NEC?",
+      "options": ["To provide design specifications", "The practical safeguarding of persons and property from hazards arising from the use of electricity", "To ensure minimum installation cost", "To establish electrical efficiency standards"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.1(A)", "url": ""},
+      "explanation": "Per NEC 90.1(A), the purpose of the NEC is the practical safeguarding of persons and property from hazards arising from the use of electricity."
+    },
+    {
+      "id": "je-502",
+      "question": "The NEC is not intended as a design specification or instruction manual for untrained persons. True or False?",
+      "options": ["True - it is a minimum safety standard", "False - it is a complete design guide", "True - only for commercial work", "False - it covers all installation details"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 90.1(A)(C)", "url": ""},
+      "explanation": "Per NEC 90.1(A) and (C), the NEC contains provisions considered necessary for safety and is not intended as a design specification or instruction manual for untrained persons."
+    },
+    {
+      "id": "je-503",
+      "question": "Compliance with the NEC results in what?",
+      "options": ["An efficient installation", "A convenient installation", "An essentially safe installation", "The most economical installation"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 90.1(B)", "url": ""},
+      "explanation": "Per NEC 90.1(B), compliance with the provisions of the Code will result in an installation that is essentially free from hazard but not necessarily efficient, convenient, or adequate for good service."
+    },
+    {
+      "id": "je-504",
+      "question": "Chapters 1 through 4 of the NEC apply to what?",
+      "options": ["Only residential installations", "Only commercial installations", "All electrical installations generally", "Only hazardous locations"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 90.3", "url": ""},
+      "explanation": "Per NEC 90.3, Chapters 1 through 4 apply generally to all electrical installations."
+    },
+    {
+      "id": "je-505",
+      "question": "Chapters 5, 6, and 7 of the NEC supplement or modify the general rules in Chapters 1-4. True or False?",
+      "options": ["True", "False", "Only Chapter 5 modifies", "Only Chapter 7 modifies"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 90.3", "url": ""},
+      "explanation": "Per NEC 90.3, Chapters 5, 6, and 7 supplement or modify the general rules in Chapters 1 through 4."
+    },
+    {
+      "id": "je-506",
+      "question": "Chapter 8 of the NEC covers what?",
+      "options": ["Hazardous locations", "Special equipment", "Communications systems", "Emergency systems"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 90.3", "url": ""},
+      "explanation": "Per NEC 90.3, Chapter 8 covers communications systems and is not subject to the requirements of Chapters 1 through 7 except where the requirements are specifically referenced."
+    },
+    {
+      "id": "je-507",
+      "question": "The authority having jurisdiction (AHJ) can modify NEC requirements based on what?",
+      "options": ["Personal preference", "Special permission for specific installations where alternative methods provide equivalent safety", "Contractor request", "Cost savings"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.4", "url": ""},
+      "explanation": "Per NEC 90.4, the AHJ has the responsibility to interpret and approve equipment, materials, and installations based on equivalent safety."
+    },
+    {
+      "id": "je-508",
+      "question": "What does the term 'shall' mean in the NEC?",
+      "options": ["Recommended", "Mandatory requirement", "Optional", "Permitted"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.5(A)", "url": ""},
+      "explanation": "Per NEC 90.5(A), 'shall' indicates a mandatory requirement."
+    },
+    {
+      "id": "je-509",
+      "question": "What does the term 'shall not' mean in the NEC?",
+      "options": ["Not recommended", "Prohibited", "Optional restriction", "Advisory"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.5(B)", "url": ""},
+      "explanation": "Per NEC 90.5(B), 'shall not' indicates a prohibition."
+    },
+    {
+      "id": "je-510",
+      "question": "What does the term 'shall be permitted' mean in the NEC?",
+      "options": ["Mandatory", "The indicated action is allowed but not required", "Prohibited", "Recommended"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.5(C)", "url": ""},
+      "explanation": "Per NEC 90.5(C), 'shall be permitted' indicates the described action is allowed but not required."
+    },
+    {
+      "id": "je-511",
+      "question": "Informational notes in the NEC are what?",
+      "options": ["Mandatory requirements", "Explanatory material that is not enforceable", "Optional requirements", "Design specifications"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.5(D)", "url": ""},
+      "explanation": "Per NEC 90.5(D), informational notes are explanatory material and are not enforceable requirements of the NEC."
+    },
+    {
+      "id": "je-512",
+      "question": "The NEC addresses what type of electrical installations?",
+      "options": ["Only utility installations", "Premises wiring and certain other equipment outside buildings", "Only industrial facilities", "Only new construction"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.2(A)", "url": ""},
+      "explanation": "Per NEC 90.2(A), the NEC covers the installation of electrical conductors, equipment, and raceways for premises wiring and certain equipment outside buildings."
+    },
+    {
+      "id": "je-513",
+      "question": "The NEC does NOT cover what type of installation?",
+      "options": ["Residential wiring", "Installations by electric utility for generation, transmission, and distribution", "Commercial buildings", "Industrial plants"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 90.2(B)", "url": ""},
+      "explanation": "Per NEC 90.2(B), the NEC does not cover installations of communications utility equipment, electric utility installations for generation/transmission/distribution, and certain other specific installations."
+    },
+    {
+      "id": "je-514",
+      "question": "Reconditioned equipment must meet what requirement?",
+      "options": ["Approval by the manufacturer only", "Listed or field evaluated as reconditioned", "Any approval", "No specific requirements"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.21(A)(2)", "url": ""},
+      "explanation": "Per NEC 110.21(A)(2), reconditioned equipment shall be marked as reconditioned and meet applicable listing or field evaluation requirements."
+    },
+    {
+      "id": "je-515",
+      "question": "What information must be marked on reconditioned equipment?",
+      "options": ["Original manufacturer only", "Date of reconditioning and name of reconditioning entity", "Serial number only", "No marking required"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.21(A)(2)", "url": ""},
+      "explanation": "Per NEC 110.21(A)(2), reconditioned equipment shall be marked with the name, trademark, or other descriptive marking by which the entity that performed the reconditioning can be identified, along with the date of reconditioning."
+    },
+    {
+      "id": "je-516",
+      "question": "Unused openings in boxes and enclosures must be what?",
+      "options": ["Left open for ventilation", "Effectively closed", "Labeled as unused", "Covered with tape"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.12(A)", "url": ""},
+      "explanation": "Per NEC 110.12(A), unused cable or raceway openings in boxes, raceways, auxiliary gutters, and enclosures shall be effectively closed."
+    },
+    {
+      "id": "je-517",
+      "question": "Internal parts of electrical equipment, including busbars and wiring terminals, shall not be damaged or what?",
+      "options": ["Modified", "Contaminated by foreign materials such as paint, plaster, cleaners, or other substances", "Accessed", "Tested"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.12(B)", "url": ""},
+      "explanation": "Per NEC 110.12(B), internal parts of electrical equipment shall not be damaged or contaminated by foreign materials such as paint, plaster, cleaners, abrasives, or corrosive residues."
+    },
+    {
+      "id": "je-518",
+      "question": "Electrical equipment shall be installed and used in accordance with what?",
+      "options": ["Common practice", "Any available instructions", "Manufacturer's instructions", "Installer's preference"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 110.3(B)", "url": ""},
+      "explanation": "Per NEC 110.3(B), listed or labeled equipment shall be installed and used in accordance with any instructions included in the listing or labeling."
+    },
+    {
+      "id": "je-519",
+      "question": "Equipment for general use that is used for specific purposes must comply with what in addition to Article 110?",
+      "options": ["Only Article 110", "The relevant article covering that specific equipment or occupancy", "Local codes only", "OSHA regulations"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.1", "url": ""},
+      "explanation": "Per NEC 110.1, equipment covered by Article 110 is required to comply with applicable requirements in other articles that modify or supplement the general requirements."
+    },
+    {
+      "id": "je-520",
+      "question": "What is the voltage rating of systems where the maximum voltage between any two conductors does not exceed 1000V AC or 1500V DC?",
+      "options": ["Low voltage", "Medium voltage", "1000 volts, nominal, or less", "Extra-low voltage"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 110.4", "url": ""},
+      "explanation": "Per NEC 110.4, the voltage rating of conductors and equipment shall be determined based on the nominal voltage of the circuit. Systems at or below 1000V AC/1500V DC nominal are covered by most of the general NEC requirements."
+    },
+    {
+      "id": "je-521",
+      "question": "What NEC table is used to determine the maximum number of THHN conductors permitted in EMT?",
+      "options": ["Table 310.16", "Table 400.5", "Chapter 9 Table C1", "Table 220.55"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Chapter 9 Table C1", "url": ""},
+      "explanation": "NEC Chapter 9 Table C1 provides the maximum number of conductors and fixture wires in electrical metallic tubing (EMT)."
+    },
+    {
+      "id": "je-522",
+      "question": "When sizing a feeder to supply a motor and other loads, the motor load is calculated at what?",
+      "options": ["100% of motor FLC", "125% of motor FLC for the largest motor plus sum of all other loads", "150% of all motor loads", "80% of all loads combined"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 430.24", "url": ""},
+      "explanation": "Per NEC 430.24, feeders supplying motor loads shall have capacity not less than 125% of the FLC of the highest rated motor plus the sum of all other loads."
+    },
+    {
+      "id": "je-523",
+      "question": "A circuit supplying a continuous load must have conductor ampacity at least what percentage of the load?",
+      "options": ["80%", "100%", "125%", "150%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 210.20(A)", "url": ""},
+      "explanation": "Per NEC 210.20(A), where a branch circuit supplies continuous loads, the rating of the overcurrent device shall be not less than 125% of the continuous load."
+    },
+    {
+      "id": "je-524",
+      "question": "A continuous load is defined as one that operates for how long or longer?",
+      "options": ["1 hour", "2 hours", "3 hours", "4 hours"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a continuous load is a load where the maximum current is expected to continue for 3 hours or more."
+    },
+    {
+      "id": "je-525",
+      "question": "What is the maximum number of conductors permitted in a single raceway?",
+      "options": ["3", "6", "Based on conduit fill calculations", "Unlimited"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Chapter 9 Table 1", "url": ""},
+      "explanation": "Per NEC Chapter 9 Table 1, the maximum number of conductors is determined by the cross-sectional area fill limits (40% for 3 or more conductors)."
+    },
+    {
+      "id": "je-526",
+      "question": "A dwelling unit with 100-amp service is required to have what minimum size copper service entrance conductors?",
+      "options": ["#6 AWG", "#4 AWG", "#3 AWG", "#2 AWG"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 310.16", "url": ""},
+      "explanation": "Per NEC Table 310.16, for a 100-amp service, #3 AWG copper (60°C) or #4 AWG copper (75°C) conductors are typically used."
+    },
+    {
+      "id": "je-527",
+      "question": "What is the maximum overcurrent protection for #12 AWG copper conductors?",
+      "options": ["15 amps", "20 amps", "25 amps", "30 amps"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Table 240.4(D)", "url": ""},
+      "explanation": "Per NEC 240.4(D), #12 AWG copper conductors shall be protected at not more than 20 amperes."
+    },
+    {
+      "id": "je-528",
+      "question": "What is the maximum overcurrent protection for #10 AWG copper conductors?",
+      "options": ["20 amps", "25 amps", "30 amps", "40 amps"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Table 240.4(D)", "url": ""},
+      "explanation": "Per NEC 240.4(D), #10 AWG copper conductors shall be protected at not more than 30 amperes."
+    },
+    {
+      "id": "je-529",
+      "question": "When an OCPD is not available in the standard size per 240.6(A), the next higher standard size is permitted up to what ampacity?",
+      "options": ["400 amps", "600 amps", "800 amps", "No limit"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 240.4(B)", "url": ""},
+      "explanation": "Per NEC 240.4(B), the next higher standard overcurrent device rating is permitted only where the ampacity of the conductors does not correspond to a standard ampere rating and where the rating is 800 amperes or less."
+    },
+    {
+      "id": "je-530",
+      "question": "Electrical work must be performed by what type of person according to the intent of the NEC?",
+      "options": ["Any homeowner", "Qualified persons only", "Any adult", "Licensed electricians only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 110.6, 100", "url": ""},
+      "explanation": "Per NEC Article 100 and general code intent, a qualified person is one who has skills and knowledge related to the construction and operation of electrical equipment and has received safety training to recognize and avoid hazards."
+    },
+    {
+      "id": "je-531",
+      "question": "What is the term for a person who has skills and knowledge related to electrical equipment construction and has received safety training?",
+      "options": ["Licensed electrician", "Master electrician", "Qualified person", "Competent person"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 100", "url": ""},
+      "explanation": "Per NEC Article 100, a qualified person is one who has skills and knowledge related to the construction and operation of the electrical equipment and installations and has received safety training to recognize and avoid the hazards involved."
+    },
+    {
+      "id": "je-532",
+      "question": "The total VA calculation for receptacle loads in commercial buildings uses what method per 220.14(I)?",
+      "options": ["Actual connected load", "180 VA per receptacle outlet", "500 VA per circuit", "1500 VA per circuit"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 220.14(I)", "url": ""},
+      "explanation": "Per NEC 220.14(I), each receptacle outlet in other than dwelling units shall be calculated at not less than 180 VA."
+    },
+    {
+      "id": "je-533",
+      "question": "In commercial occupancies, what load is assigned to each general-use receptacle outlet?",
+      "options": ["150 VA", "180 VA", "200 VA", "300 VA"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 220.14(I)", "url": ""},
+      "explanation": "Per NEC 220.14(I), for receptacle outlets in non-dwelling occupancies, each single or multiple receptacle on one yoke shall be calculated at not less than 180 VA."
+    },
+    {
+      "id": "je-534",
+      "question": "Lighting outlets, other than dwelling units, are calculated at what load per outlet?",
+      "options": ["100 VA", "180 VA", "The actual lamp rating", "300 VA"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 220.14(D)", "url": ""},
+      "explanation": "Per NEC 220.14(D), for other than dwelling units, an outlet supplying luminaire(s) shall be calculated based on the VA rating of the luminaire, or the maximum VA the luminaire is listed to provide."
+    },
+    {
+      "id": "je-535",
+      "question": "For track lighting in dwelling units, the load is calculated at how many VA per linear foot of track?",
+      "options": ["100 VA", "150 VA", "180 VA", "200 VA"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 220.14(F)", "url": ""},
+      "explanation": "Per NEC 220.14(F)(3), for track lighting in dwelling units or guest rooms, the load shall be calculated at 180 VA for every 600 mm (2 ft) of track lighting or fraction thereof."
+    },
+    {
+      "id": "je-536",
+      "question": "Recessed luminaires installed in insulated ceilings must be listed as what?",
+      "options": ["UL Listed", "IC rated (Insulation Contact)", "NEMA rated", "Plenum rated"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 410.116(B)", "url": ""},
+      "explanation": "Per NEC 410.116(B), a recessed luminaire installed where it is likely to be in contact with combustible material shall be listed as Type IC (Insulation Contact)."
+    },
+    {
+      "id": "je-537",
+      "question": "What clearance is required between a non-IC rated recessed luminaire and thermal insulation?",
+      "options": ["1 inch", "3 inches from sides, above open to air", "6 inches", "12 inches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 410.116(A)(1)", "url": ""},
+      "explanation": "Per NEC 410.116(A)(1), non-IC rated recessed luminaires shall have 3-inch clearance from the sides and shall be open to the air at the top (above ceiling)."
+    },
+    {
+      "id": "je-538",
+      "question": "A ceiling-suspended paddle fan must be supported by what?",
+      "options": ["Any standard outlet box", "An outlet box listed for the purpose or other approved means", "A device box", "A junction box"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 422.18", "url": ""},
+      "explanation": "Per NEC 422.18, ceiling-suspended (paddle) fans shall be supported by outlet boxes or outlet box systems identified for such use."
+    },
+    {
+      "id": "je-539",
+      "question": "What is the maximum weight that a standard outlet box can support for a luminaire without additional support?",
+      "options": ["25 pounds", "35 pounds", "50 pounds", "70 pounds"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 314.27(A)", "url": ""},
+      "explanation": "Per NEC 314.27(A), outlet boxes that support luminaires shall support luminaires weighing not more than 50 pounds."
+    },
+    {
+      "id": "je-540",
+      "question": "A luminaire weighing more than 50 pounds must be supported independently of what?",
+      "options": ["The ceiling", "The outlet box", "The electrical supply", "The building structure"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 314.27(A)(2)", "url": ""},
+      "explanation": "Per NEC 314.27(A)(2), luminaires exceeding 50 pounds shall be supported independently of the outlet box unless the outlet box is listed and identified for the weight to be supported."
+    },
+    {
+      "id": "je-541",
+      "question": "The maximum standard rating of a branch circuit fuse is what amperage?",
+      "options": ["400 amps", "600 amps", "800 amps", "6000 amps"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.6(A)", "url": ""},
+      "explanation": "Per NEC 240.6(A), standard fuse ampere ratings include values up to 6000 amperes, but common branch circuit sizes go up to 600 amperes for fuses."
+    },
+    {
+      "id": "je-542",
+      "question": "What standard ampere ratings are available for fuses and inverse time circuit breakers per 240.6(A)?",
+      "options": ["Any amperage", "15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 110, 125, 150... (and higher)", "Only multiples of 10", "Only multiples of 15"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 240.6(A)", "url": ""},
+      "explanation": "Per NEC 240.6(A), the standard ampere ratings for fuses and inverse time circuit breakers are: 15, 20, 25, 30, 35, 40, 45, 50, 60, 70, 80, 90, 100, 110, 125, 150, 175, 200, and higher values as listed."
+    },
+    {
+      "id": "je-543",
+      "question": "Each disconnect must clearly indicate what?",
+      "options": ["The installer's name", "Whether it is in the open (off) or closed (on) position", "The installation date", "The circuit number"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 404.7", "url": ""},
+      "explanation": "Per NEC 404.7, switches and circuit breakers shall clearly indicate whether they are in the open (off) or closed (on) position."
+    },
+    {
+      "id": "je-544",
+      "question": "Switches controlling lighting loads must be located where?",
+      "options": ["Inside closets only", "So that they can be operated without entering the space served", "At the light fixture", "At eye level"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 404.8(C)", "url": ""},
+      "explanation": "Per NEC 404.8(C), switches shall not be installed within wet or damp locations in bathrooms unless part of a listed bathroom accessory or integral to listed equipment."
+    },
+    {
+      "id": "je-545",
+      "question": "A switch controlling a bathroom exhaust fan must be installed where?",
+      "options": ["Inside the shower", "Outside the wet location or be part of a listed assembly", "At the ceiling", "At the floor"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 404.4(C)", "url": ""},
+      "explanation": "Per NEC 404.4(C), switches installed in wet or damp locations shall be enclosed in weatherproof enclosures or be part of a listed assembly."
+    },
+    {
+      "id": "je-546",
+      "question": "What is required for switches installed in a grounded metal box to ensure grounding?",
+      "options": ["Nothing additional", "A grounding connection to the box", "Insulated bushings", "Double insulation"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 404.9(B)", "url": ""},
+      "explanation": "Per NEC 404.9(B), snap switches shall be connected to an equipment grounding conductor through the switch yoke, a grounding conductor, or a device with a self-grounding yoke."
+    },
+    {
+      "id": "je-547",
+      "question": "When a neutral conductor is required at a switch location for future use, what size must it be?",
+      "options": ["Same as the ungrounded conductors", "Not smaller than #14 AWG", "Not smaller than the switch rating", "Any size"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 404.2(C)", "url": ""},
+      "explanation": "Per NEC 404.2(C), the neutral conductor shall be the same size as the ungrounded conductors in the switch box to support future electronic switches that require a neutral."
+    },
+    {
+      "id": "je-548",
+      "question": "A grounded conductor is required at switch locations for lighting loads. What exceptions apply?",
+      "options": ["No exceptions", "Switches not integral to luminaire, occupancy sensors, switches near service equipment within sight of the neutral", "Only outdoor switches", "Only 3-way switches"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 404.2(C) Exceptions", "url": ""},
+      "explanation": "Per NEC 404.2(C) exceptions, a neutral conductor is not required in certain situations including switches integral to luminaires, occupancy sensors not requiring a neutral, and switch locations with access to a grounded conductor."
+    },
+    {
+      "id": "je-549",
+      "question": "What is the proper installation method for a knife switch with an exposed blade?",
+      "options": ["Blade up when in open position", "Blade down when in open position", "Horizontal mounting only", "Any position"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 404.10(A)", "url": ""},
+      "explanation": "Per NEC 404.10(A), single-throw knife switches with exposed blades shall be installed so that gravity will not tend to close them (blade should be down in open position)."
+    },
+    {
+      "id": "je-550",
+      "question": "All 125-volt, 15- and 20-ampere receptacles installed in dwelling unit bedrooms must have what protection?",
+      "options": ["GFCI only", "AFCI only", "Both AFCI and GFCI", "Surge protection"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 210.12(A)", "url": ""},
+      "explanation": "Per NEC 210.12(A), all 125-volt, 15- and 20-ampere branch circuits supplying outlets and devices in bedrooms of dwelling units shall be protected by a listed arc-fault circuit interrupter."
+    }
+  ]
+}

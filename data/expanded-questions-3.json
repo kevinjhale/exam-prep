@@ -1,0 +1,404 @@
+{
+  "questions": [
+    {
+      "id": "je-301",
+      "question": "Electric vehicle charging equipment must be supplied by what type of branch circuit?",
+      "options": ["Any branch circuit", "A dedicated branch circuit for each EVSE", "A shared circuit", "An appliance branch circuit"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 625.40", "url": ""},
+      "explanation": "Per NEC 625.40, the electric vehicle charging system shall be supplied by an individual branch circuit that supplies no other loads."
+    },
+    {
+      "id": "je-302",
+      "question": "What is the continuous load calculation for an electric vehicle charging circuit?",
+      "options": ["80% of circuit rating", "100% of nameplate rating", "125% of maximum load", "150% of rated current"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 625.41", "url": ""},
+      "explanation": "Per NEC 625.41, for EVSE rated as a continuous load, the branch circuit conductors and overcurrent protection shall be sized at 125% of the maximum load."
+    },
+    {
+      "id": "je-303",
+      "question": "EVSE cord sets shall not exceed what length?",
+      "options": ["15 feet", "20 feet", "25 feet", "Length specified in listing"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 625.17(B)", "url": ""},
+      "explanation": "Per NEC 625.17(B), EVSE cords shall not exceed the length specified in the listing for the equipment."
+    },
+    {
+      "id": "je-304",
+      "question": "What ventilation is required for indoor electric vehicle charging areas?",
+      "options": ["Natural ventilation", "Mechanical ventilation per manufacturer requirements", "Not required", "Exhaust fans only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 625.52", "url": ""},
+      "explanation": "Per NEC 625.52, ventilation shall be provided for indoor sites in accordance with the mechanical code and manufacturer instructions."
+    },
+    {
+      "id": "je-305",
+      "question": "The maximum voltage for EVSE equipment in dwelling units is typically what?",
+      "options": ["120 volts", "208 volts", "240 volts", "600 volts"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 625", "url": ""},
+      "explanation": "EVSE in dwelling units can operate at voltages up to 600 volts, though common residential installations use 240V single-phase."
+    },
+    {
+      "id": "je-306",
+      "question": "Article 680 requires all underwater pool luminaires to operate at what maximum voltage unless listed for higher voltage?",
+      "options": ["12 volts", "15 volts", "30 volts", "150 volts"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.23(A)(3)", "url": ""},
+      "explanation": "Per NEC 680.23(A)(3), no underwater luminaire shall be installed for operation on supply circuits over 15 volts between conductors, unless specifically listed for higher voltages."
+    },
+    {
+      "id": "je-307",
+      "question": "Pool equipotential bonding grid conductors shall be not smaller than what size?",
+      "options": ["#10 AWG", "#8 AWG solid copper", "#6 AWG", "#4 AWG"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.26(C)", "url": ""},
+      "explanation": "Per NEC 680.26(C), equipotential bonding for pools shall be provided using solid copper conductors, insulated, covered, or bare, not smaller than 8 AWG."
+    },
+    {
+      "id": "je-308",
+      "question": "The equipotential bonding grid for a permanently installed pool must extend horizontally how far from the inside walls?",
+      "options": ["18 inches", "3 feet", "5 feet", "10 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.26(B)(1)", "url": ""},
+      "explanation": "Per NEC 680.26(B)(1), perimeter surfaces shall extend for 3 feet (1.0m) horizontally beyond the inside walls of the pool."
+    },
+    {
+      "id": "je-309",
+      "question": "Pool pump motors must be protected by what?",
+      "options": ["Standard breaker", "Class A GFCI", "Fuse only", "No specific protection required"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.21(C)", "url": ""},
+      "explanation": "Per NEC 680.21(C), all outlets supplying pool pump motors shall be provided with Class A GFCI protection."
+    },
+    {
+      "id": "je-310",
+      "question": "What is the minimum distance required between a receptacle and the inside wall of a permanently installed pool?",
+      "options": ["3 feet", "5 feet", "6 feet", "10 feet"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 680.22(A)(1)", "url": ""},
+      "explanation": "Per NEC 680.22(A)(1), receptacles shall be located not less than 6 feet (1.8m) from the inside walls of a pool."
+    },
+    {
+      "id": "je-311",
+      "question": "At least one receptacle is required within what distance of the inside wall of a permanent pool?",
+      "options": ["6-10 feet", "6-20 feet", "10-15 feet", "10-20 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.22(A)(3)", "url": ""},
+      "explanation": "Per NEC 680.22(A)(3), at least one receptacle outlet shall be located between 6 feet (1.8m) and 20 feet (6.0m) from the inside wall of the pool."
+    },
+    {
+      "id": "je-312",
+      "question": "Luminaires, lighting outlets, and ceiling-suspended paddle fans must be at least how far horizontally from the inside walls of a pool?",
+      "options": ["3 feet", "5 feet", "10 feet", "12 feet"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 680.22(B)(1)", "url": ""},
+      "explanation": "Per NEC 680.22(B)(1), luminaires, lighting outlets, and ceiling-suspended paddle fans shall be located at least 5 feet (1.5m) horizontally from the inside walls of a pool."
+    },
+    {
+      "id": "je-313",
+      "question": "What NEC article covers hazardous (classified) locations?",
+      "options": ["Article 480", "Article 500", "Article 504", "Article 600"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 500", "url": ""},
+      "explanation": "NEC Article 500 covers general requirements for electrical equipment and wiring in hazardous (classified) locations."
+    },
+    {
+      "id": "je-314",
+      "question": "Class I locations contain what type of hazard?",
+      "options": ["Combustible dust", "Easily ignitable fibers", "Flammable gases, flammable liquid-produced vapors, or combustible liquid-produced vapors", "Corrosive materials"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 500.5(B)", "url": ""},
+      "explanation": "Per NEC 500.5(B), Class I locations are those in which flammable gases, flammable liquid-produced vapors, or combustible liquid-produced vapors are or may be present."
+    },
+    {
+      "id": "je-315",
+      "question": "Class II locations contain what type of hazard?",
+      "options": ["Flammable gases", "Combustible dust", "Ignitable fibers", "Liquefied petroleum gas"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 500.5(C)", "url": ""},
+      "explanation": "Per NEC 500.5(C), Class II locations are those that are hazardous because of the presence of combustible dust."
+    },
+    {
+      "id": "je-316",
+      "question": "Class III locations contain what type of hazard?",
+      "options": ["Flammable gases", "Combustible dust", "Easily ignitable fibers or flyings", "Corrosive vapors"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 500.5(D)", "url": ""},
+      "explanation": "Per NEC 500.5(D), Class III locations are those that are hazardous because of the presence of easily ignitable fibers or flyings."
+    },
+    {
+      "id": "je-317",
+      "question": "Division 1 locations are where hazardous conditions exist under what circumstances?",
+      "options": ["Only during abnormal operation", "Under normal operating conditions, or frequently during maintenance", "Only during emergencies", "Never under normal conditions"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 500.5", "url": ""},
+      "explanation": "Per NEC 500.5, Division 1 locations are those where ignitable concentrations of hazardous materials exist under normal operating conditions or frequently during repair or maintenance."
+    },
+    {
+      "id": "je-318",
+      "question": "Division 2 locations are where hazardous conditions exist under what circumstances?",
+      "options": ["Under normal operating conditions", "Only under abnormal conditions", "Continuously", "During maintenance only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 500.5", "url": ""},
+      "explanation": "Per NEC 500.5, Division 2 locations are those where ignitable concentrations are handled, processed, or used, but under normal conditions are confined within closed systems and might be released only through abnormal operation or failure."
+    },
+    {
+      "id": "je-319",
+      "question": "What wiring method is commonly required in Class I, Division 1 locations?",
+      "options": ["Type NM cable", "EMT", "Threaded rigid metal conduit or MI cable", "Flexible metal conduit"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 501.10(A)", "url": ""},
+      "explanation": "Per NEC 501.10(A), wiring methods in Class I, Division 1 locations shall be threaded rigid metal conduit, threaded steel intermediate metal conduit, MI cable, or other approved methods."
+    },
+    {
+      "id": "je-320",
+      "question": "Sealing fittings are required in hazardous location conduit systems to prevent what?",
+      "options": ["Water intrusion", "Passage of gases, vapors, or flames from one portion to another", "Mechanical damage", "Corrosion"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 501.15", "url": ""},
+      "explanation": "Per NEC 501.15, sealing fittings are required to prevent the passage of gases, vapors, or flames from one portion of the electrical installation to another through the conduit."
+    },
+    {
+      "id": "je-321",
+      "question": "What NEC article covers motor fuel dispensing facilities (gas stations)?",
+      "options": ["Article 500", "Article 511", "Article 514", "Article 515"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 514", "url": ""},
+      "explanation": "NEC Article 514 covers locations where gasoline or other volatile flammable liquids or liquefied flammable gases are transferred to fuel tanks of vehicles."
+    },
+    {
+      "id": "je-322",
+      "question": "Commercial garages where flammable fuels are dispensed or repaired fall under what NEC article?",
+      "options": ["Article 500", "Article 511", "Article 514", "Article 520"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 511", "url": ""},
+      "explanation": "NEC Article 511 covers commercial garages used for service and repair operations on vehicles using volatile flammable liquids for fuel."
+    },
+    {
+      "id": "je-323",
+      "question": "What NEC article covers bulk storage plants for flammable liquids?",
+      "options": ["Article 511", "Article 514", "Article 515", "Article 516"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 515", "url": ""},
+      "explanation": "NEC Article 515 covers areas where flammable liquids are received by tank vessel, pipelines, tank car, or tank vehicle and are stored or blended in bulk for distribution."
+    },
+    {
+      "id": "je-324",
+      "question": "Spray application, dipping, coating, and printing processes are covered by what NEC article?",
+      "options": ["Article 514", "Article 515", "Article 516", "Article 517"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 516", "url": ""},
+      "explanation": "NEC Article 516 covers locations where flammable liquids, combustible liquids, or combustible powders are applied by spray operations and other processes."
+    },
+    {
+      "id": "je-325",
+      "question": "Agricultural buildings housing livestock are covered by what NEC article?",
+      "options": ["Article 520", "Article 545", "Article 547", "Article 550"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 547", "url": ""},
+      "explanation": "NEC Article 547 covers agricultural buildings and the associated electrical systems in areas of buildings or adjacent areas where excessive dust and dust with water, corrosive atmosphere, or a combination of these exist."
+    },
+    {
+      "id": "je-326",
+      "question": "What type of equipment grounding conductor is permitted in agricultural buildings with corrosive environments?",
+      "options": ["Any metal type", "Copper only", "Aluminum only", "Bare copper prohibited"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 547.5(F)", "url": ""},
+      "explanation": "Per NEC 547.5(F), equipment grounding conductors in agricultural buildings with corrosive atmospheres shall be copper or copper-clad."
+    },
+    {
+      "id": "je-327",
+      "question": "Mobile homes and manufactured housing are covered by what NEC article?",
+      "options": ["Article 545", "Article 547", "Article 550", "Article 551"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 550", "url": ""},
+      "explanation": "NEC Article 550 covers the electrical conductors and equipment installed within or on mobile homes and manufactured homes."
+    },
+    {
+      "id": "je-328",
+      "question": "What is the minimum service or feeder for a mobile home?",
+      "options": ["60 amps", "100 amps", "150 amps", "200 amps"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 550.32", "url": ""},
+      "explanation": "Per NEC 550.32, a mobile home service shall be rated at not less than 100 amperes at 120/240 volts."
+    },
+    {
+      "id": "je-329",
+      "question": "Recreational vehicles (RVs) are covered by what NEC article?",
+      "options": ["Article 550", "Article 551", "Article 552", "Article 553"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 551", "url": ""},
+      "explanation": "NEC Article 551 covers the electrical conductors and equipment for recreational vehicles."
+    },
+    {
+      "id": "je-330",
+      "question": "The standard 30-amp RV power supply connection uses what type of plug configuration?",
+      "options": ["NEMA 5-30P", "NEMA 14-30P", "NEMA TT-30P", "NEMA L5-30P"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 551", "url": ""},
+      "explanation": "The standard 30-amp, 125-volt recreational vehicle power supply uses the NEMA TT-30P plug configuration."
+    },
+    {
+      "id": "je-331",
+      "question": "RV parks and campgrounds are covered by what NEC article?",
+      "options": ["Article 550", "Article 551", "Article 552", "Article 553"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 552", "url": ""},
+      "explanation": "NEC Article 552 covers electrical equipment and installations in park trailers and recreational vehicle parks."
+    },
+    {
+      "id": "je-332",
+      "question": "Floating buildings are covered by what NEC article?",
+      "options": ["Article 552", "Article 553", "Article 555", "Article 600"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 553", "url": ""},
+      "explanation": "NEC Article 553 covers floating buildings and the electrical installation for floating buildings."
+    },
+    {
+      "id": "je-333",
+      "question": "Marinas and boatyards are covered by what NEC article?",
+      "options": ["Article 553", "Article 555", "Article 600", "Article 680"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 555", "url": ""},
+      "explanation": "NEC Article 555 covers the installation of wiring and equipment in marinas, boatyards, boat basins, and similar occupancies."
+    },
+    {
+      "id": "je-334",
+      "question": "Shore power receptacles for boats must be protected by what?",
+      "options": ["Standard breaker", "AFCI", "GFCI or GFPE", "No specific protection required"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 555.3", "url": ""},
+      "explanation": "Per NEC 555.3, power outlets supplying shore power to boats shall have GFCI protection for 125V and 15, 20, or 30-amp circuits, or GFPE for larger circuits."
+    },
+    {
+      "id": "je-335",
+      "question": "Temporary wiring for construction sites is covered by what NEC article?",
+      "options": ["Article 525", "Article 527", "Article 590", "Article 600"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 590", "url": ""},
+      "explanation": "NEC Article 590 covers temporary electrical power and lighting installations."
+    },
+    {
+      "id": "je-336",
+      "question": "Temporary wiring installations are permitted for what maximum time period?",
+      "options": ["30 days", "90 days", "180 days", "The period of construction, remodeling, maintenance, repair, or demolition"],
+      "correct": 3,
+      "source": {"name": "NEC 2026 Article 590.3(A)", "url": ""},
+      "explanation": "Per NEC 590.3(A), temporary electrical power and lighting installations shall be permitted during the period of construction, remodeling, maintenance, repair, or demolition of buildings."
+    },
+    {
+      "id": "je-337",
+      "question": "GFCI protection is required on temporary wiring construction sites for what circuits?",
+      "options": ["All 125V circuits", "All 125V, 15, 20, and 30-amp receptacle outlets", "Only 15-amp circuits", "Only outdoor receptacles"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 590.6(A)", "url": ""},
+      "explanation": "Per NEC 590.6(A), all 125-volt, single-phase, 15-, 20-, and 30-ampere receptacle outlets used for temporary power during construction shall have GFCI protection."
+    },
+    {
+      "id": "je-338",
+      "question": "Article 700 emergency systems must restore power within what time frame?",
+      "options": ["5 seconds", "10 seconds", "30 seconds", "60 seconds"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 700.12(B)", "url": ""},
+      "explanation": "Per NEC 700.12(B), emergency systems shall automatically restore power within 10 seconds of interruption of the normal supply."
+    },
+    {
+      "id": "je-339",
+      "question": "What NEC article covers legally required standby systems?",
+      "options": ["Article 700", "Article 701", "Article 702", "Article 705"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 701", "url": ""},
+      "explanation": "NEC Article 701 covers legally required standby systems, which are those required by codes to provide power to selected loads in the event of normal power failure."
+    },
+    {
+      "id": "je-340",
+      "question": "Legally required standby systems must restore power within what time frame?",
+      "options": ["10 seconds", "30 seconds", "60 seconds", "2 minutes"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 701.12(B)", "url": ""},
+      "explanation": "Per NEC 701.12(B), legally required standby systems shall have power available within 60 seconds of failure of the normal power source."
+    },
+    {
+      "id": "je-341",
+      "question": "What NEC article covers optional standby systems?",
+      "options": ["Article 700", "Article 701", "Article 702", "Article 705"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 702", "url": ""},
+      "explanation": "NEC Article 702 covers optional standby systems that provide power for selected loads when the normal supply fails."
+    },
+    {
+      "id": "je-342",
+      "question": "Optional standby systems are those intended to supply what types of loads?",
+      "options": ["Life safety loads", "Legally required loads", "Loads where life safety does not depend on the system", "Emergency egress lighting"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 702.2", "url": ""},
+      "explanation": "Per NEC 702.2, optional standby systems are intended to supply power to public or private facilities or property where life safety does not depend on the performance of the system."
+    },
+    {
+      "id": "je-343",
+      "question": "What NEC article covers interconnected electric power production sources?",
+      "options": ["Article 700", "Article 702", "Article 705", "Article 710"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 705", "url": ""},
+      "explanation": "NEC Article 705 covers the installation of one or more electric power production sources operating in parallel with a primary source(s) of electricity."
+    },
+    {
+      "id": "je-344",
+      "question": "Solar photovoltaic systems are covered by what NEC article?",
+      "options": ["Article 690", "Article 691", "Article 692", "Article 705"],
+      "correct": 0,
+      "source": {"name": "NEC 2026 Article 690", "url": ""},
+      "explanation": "NEC Article 690 covers solar photovoltaic (PV) electrical energy systems, including the array circuit(s), inverter(s), and controller(s)."
+    },
+    {
+      "id": "je-345",
+      "question": "What is the maximum voltage for most residential solar PV systems?",
+      "options": ["300 volts", "480 volts", "600 volts", "1000 volts"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 690.7", "url": ""},
+      "explanation": "Per NEC 690.7, PV systems for other than dwelling units are permitted up to 1000 volts. Dwelling unit PV systems are typically limited to 600 volts."
+    },
+    {
+      "id": "je-346",
+      "question": "PV system circuit conductors must be sized at what percentage of maximum current?",
+      "options": ["100%", "115%", "125%", "150%"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 690.9", "url": ""},
+      "explanation": "Per NEC 690.9, PV source circuit and output circuit conductor ampacity shall be not less than 125% of the maximum current."
+    },
+    {
+      "id": "je-347",
+      "question": "What type of disconnecting means is required for PV systems?",
+      "options": ["Fused disconnect only", "Circuit breaker only", "A means to disconnect all current-carrying conductors from all sources simultaneously", "Manual switch only"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 690.15", "url": ""},
+      "explanation": "Per NEC 690.15, means shall be provided to disconnect all current-carrying dc conductors of a PV system from all other conductors in a building or structure."
+    },
+    {
+      "id": "je-348",
+      "question": "PV system disconnects must be located where?",
+      "options": ["Inside only", "Outside only", "In a readily accessible location", "At the meter only"],
+      "correct": 2,
+      "source": {"name": "NEC 2026 Article 690.15", "url": ""},
+      "explanation": "Per NEC 690.15, the PV system disconnecting means shall be installed at a readily accessible location."
+    },
+    {
+      "id": "je-349",
+      "question": "What labeling is required for a building with a PV system?",
+      "options": ["None required", "Warning sign at service indicating PV system present", "Output voltage only", "Installer information only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 690.56", "url": ""},
+      "explanation": "Per NEC 690.56, a permanent plaque or directory identifying the PV system shall be installed at or near the service equipment and at each normal power source disconnect."
+    },
+    {
+      "id": "je-350",
+      "question": "Energy storage systems (batteries) connected to PV systems are covered by what article in addition to Article 690?",
+      "options": ["Article 480 only", "Article 480 and Article 706", "Article 700", "Article 705 only"],
+      "correct": 1,
+      "source": {"name": "NEC 2026 Article 706, 690", "url": ""},
+      "explanation": "Energy storage systems are covered by Article 706 for ESS requirements and Article 480 for stationary battery installations, in addition to Article 690 for PV-connected systems."
+    }
+  ]
+}
